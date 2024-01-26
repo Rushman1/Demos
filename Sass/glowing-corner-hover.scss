@@ -1,0 +1,51 @@
+@import '_base';
+
+body {
+    background-color: #222;
+}
+
+.container {
+    //position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    & .card {
+        position: relative;
+        width: 320px;
+        height: 400px;
+        background-color: rgba(45, 45, 45, 1);
+        border-radius: 20px;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: var(--y);
+            left: var(--x);
+            transform: translate(-50%, -50%);
+            background: radial-gradient(var(--clr), transparent, transparent);
+            width: 700px;
+            height: 700px;
+            opacity: 0;
+            transition:
+                0.5s,
+                top 0s,
+                left 0s;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background-color: rgba(45, 45, 45, 0.9);
+            border-radius: 20px;
+        }
+    }
+}

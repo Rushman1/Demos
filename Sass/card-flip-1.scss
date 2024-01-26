@@ -1,0 +1,136 @@
+@import '_base.scss';
+
+body {
+    background-color: #222;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+
+    & .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        & .content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 25px;
+            gap: 10px;
+            transition-delay: 0.5s;
+            transition: 0.5s;
+            opacity: 0;
+
+            & h2 {
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                color: var(--clr);
+            }
+
+            & p {
+                text-align: center;
+                color: var(--white);
+            }
+
+            & a {
+                color: var(--white);
+                text-transform: uppercase;
+            }
+        }
+
+        &:hover .content {
+            transition-delay: 0.5s;
+            opacity: 1;
+        }
+
+        & .imgBx,
+        & .textBx {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+
+        & .imgBx {
+            background-color: var(--white);
+            height: 120px;
+            z-index: 1;
+            transform-origin: bottom;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 144px;
+                height: 74px;
+                background-color: var(--white);
+                bottom: -70px;
+                border-bottom-left-radius: 80px;
+                border-bottom-right-radius: 80px;
+                z-index: 1;
+            }
+
+            & img {
+                position: relative;
+                top: 48px;
+                z-index: 1000;
+            }
+        }
+
+        & .textBx {
+            height: 280px;
+            background-color: var(--clr);
+            border-top: 8px solid #333;
+            transform-origin: top;
+            transition-delay: 0.5s;
+            align-items: flex-end;
+            overflow: hidden;
+
+            & h2 {
+                color: #222;
+                font-size: 1.25em;
+                letter-spacing: 0.15em;
+                font-weight: 500;
+                text-transform: uppercase;
+                background-color: var(--white);
+                padding: 5px 25px;
+                box-shadow: 0 0 0 8px #333;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -8px;
+                width: 160px;
+                height: 80px;
+                background-color: #333;
+                border-bottom-left-radius: 80px;
+                border-bottom-right-radius: 80px;
+            }
+        }
+
+        &:hover .imgBx {
+            transform: translateY(-100%) rotateX(90deg);
+        }
+        &:hover .textBx {
+            transform: translateY(100%) rotateX(90deg);
+        }
+    }
+}

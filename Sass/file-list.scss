@@ -1,0 +1,27 @@
+@import "_base";
+
+body {
+    background: var(--background);
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+ul {
+    column-count: 3;
+}
+li {
+    list-style: none;
+
+    & a {
+        color: white;
+        text-decoration: none;
+        transition: 0.25s;
+
+        &:visited {
+            color: #777;
+        }
+
+        &:hover {
+            font-size: 1.015em;
+        }
+    }
+}

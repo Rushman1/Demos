@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-background: hsl(228, 7%, 14%);
+  --background: hsl(204, 46%, 12%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-background-color: hsl(0, 0%, 18%);
+  --darkmode-text: hsl(0, 0%, 87%);
+  --light-grey: hsl(0, 0%, 47%);
+  --med-light-grey: hsl(0, 0%, 33%);
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%);
+  --pink: hsl(339, 100%, 62%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.tabs input {
+  visibility: hidden;
+  display: none;
+}
+.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1), .tabs input:nth-child(2):checked ~ .buttons label:nth-child(2), .tabs input:nth-child(3):checked ~ .buttons label:nth-child(3), .tabs input:nth-child(4):checked ~ .buttons label:nth-child(4), .tabs input:nth-child(5):checked ~ .buttons label:nth-child(5) {
+  color: var(--white);
+  opacity: 1;
+  filter: drop-shadow(0 0 10px var(--white)) drop-shadow(0 0 20px var(--white));
+}
+.tabs input:nth-child(1):checked ~ .buttons .underline {
+  left: 0;
+}
+.tabs input:nth-child(2):checked ~ .buttons .underline {
+  left: 20%;
+}
+.tabs input:nth-child(3):checked ~ .buttons .underline {
+  left: 40%;
+}
+.tabs input:nth-child(4):checked ~ .buttons .underline {
+  left: 60%;
+}
+.tabs input:nth-child(5):checked ~ .buttons .underline {
+  left: 80%;
+}
+.tabs .buttons {
+  position: relative;
+  display: flex;
+  gap: 80px;
+  padding: 30px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--buttonsBackground);
+  overflow: hidden;
+  border-radius: 20px;
+}
+.tabs .buttons label {
+  width: 20%;
+  font-size: 1.75em;
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.tabs .buttons label:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px var(--white)) drop-shadow(0 0 20px var(--white));
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 21%;
+  height: 5px;
+  transition: 0.5s;
+}
+.underline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 43px;
+  height: 100%;
+  background: var(--white);
+  border-radius: 4px;
+  filter: drop-shadow(0 0 10px var(--white)) drop-shadow(0 0 20px var(--white)) drop-shadow(0 0 30px var(--white)) drop-shadow(0 0 50px var(--white));
+}
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 100%;
+  background: var(--white);
+  border-radius: 4px;
+  filter: drop-shadow(0 0 10px var(--white)) drop-shadow(0 0 20px var(--white)) drop-shadow(0 0 30px var(--white)) drop-shadow(0 0 50px var(--white)) blur(5px);
+}/*# sourceMappingURL=css-only-nav-tab.css.map */

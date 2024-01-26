@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --clr: #083d41;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+section#button-section {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn {
+  padding: 1rem 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  min-width: 250px;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn ion-icon {
+  line-height: 1.25rem;
+  vertical-align: middle;
+}
+.checkbox-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: var(--clr);
+}
+.spin {
+  animation-name: spin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

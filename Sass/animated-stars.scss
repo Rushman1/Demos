@@ -1,0 +1,27 @@
+@import '_base.scss';
+
+.sec {
+    position: relative;
+    background-color: #111;
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.star {
+    position: relative;
+    color: #222;
+
+    &::before {
+        content: '\f005';
+        font-family: fontAwesome;
+    }
+
+    &.animate {
+        color: #0f0;
+        text-shadow:
+            0 0 5px #0f0,
+            0 0 20px #0f0,
+            0 0 50px #0f0;
+    }
+}

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-background: hsl(228, 7%, 14%);
+    --background: hsl(228, 20%, 10%); /*#14161E*/
+    --glassmorphism-background: hsl(257, 43%, 31%);
+    --footerBackground: hsl(216, 100%, 60%);
+    --buttonsBackground: hsl(205, 43%, 16%);
+    --green: hsl(132, 99%, 58%);
+    --circularbg2: hsl(54, 100%, 62%);
+    --section-background: hsl(240, 23%, 11%);
+    --menu-marker-bg-color: hsl(213, 100%, 68%);
+    --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+    --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+    --light-grey: hsl(0, 0%, 47%); /*#787878*/
+    --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+    --med-grey: hsl(0, 0%, 20%); /*#333*/
+    --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+    --pink: hsl(339, 100%, 62%);
+    --red: hsl(0, 100%, 50%);
+    --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+    --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+    --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+    --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+    --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+.sidebar {
+    position: absolute;
+    width: 80px;
+    height: 100vh;
+    background-color: var(--white);
+    padding-left: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+
+    &.active {
+        width: 300px;
+    }
+
+    & ul {
+        position: relative;
+        height: 100vh;
+
+        & li {
+            position: relative;
+            list-style: none;
+
+            &.active {
+                background-color: var(--background);
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -20px;
+                    right: 0px;
+                    width: 20px;
+                    height: 20px;
+                    border-bottom-right-radius: 20px;
+                    box-shadow: 5px 5px 0 5px var(--background);
+                    background-color: transparent;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 70px;
+                    right: 0px;
+                    width: 20px;
+                    height: 20px;
+                    border-top-right-radius: 20px;
+                    box-shadow: 5px -5px 0 5px var(--background);
+                    background-color: transparent;
+                }
+
+                & a .icon {
+                    color: var(--white);
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        inset: 5px;
+                        width: 60px;
+                        border-radius: 50%;
+                        background-color: var(--bg);
+                    }
+                }
+
+                & a .text {
+                    color: var(--bg);
+                }
+            }
+
+            &:hover.active a .icon::before {
+                background-color: var(--white);
+            }
+
+            &.logo {
+                margin-bottom: 50px;
+
+                & .icon {
+                    font-size: 2em;
+                    color: var(--background);
+                }
+
+                & .text {
+                    font-size: 1.2em;
+                    font-weight: 500;
+                    color: var(--background);
+                }
+            }
+
+            & a {
+                position: relative;
+                display: flex;
+                white-space: nowrap;
+                text-decoration: none;
+
+                & .icon {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-width: 60px;
+                    padding-left: 10px;
+                    height: 70px;
+                    font-size: 1.5em;
+                    color: #333;
+                    transition: 0.5s;
+                }
+
+                & .text {
+                    position: relative;
+                    height: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1em;
+                    color: #333;
+                    padding-left: 15px;
+                    letter-spacing: 0.05em;
+                    transition: 0.5s;
+                }
+            }
+
+            &:hover a .icon,
+            &:hover a .text {
+                color: var(--bg);
+            }
+        }
+    }
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.menuToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--menu-marker-bg-color);
+    z-index: 1100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: var(--white);
+        transform: translateY(-9px);
+        transition: 0.5s;
+        box-shadow: 0 9px 0 var(--white);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: var(--white);
+        transform: translateY(9px);
+        transition: 0.5s;
+    }
+}
+
+.menuToggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 var(--white);
+}
+.menuToggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+    //box-shadow: 0 0 0 var(--white);
+}

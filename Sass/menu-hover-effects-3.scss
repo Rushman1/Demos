@@ -1,0 +1,50 @@
+@import '_base.scss';
+
+body {
+    background-color: var(--dark-background-111);
+}
+
+.list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    & li {
+        list-style: none;
+
+        & a {
+            position: relative;
+            display: flex;
+            font-size: 4em;
+            line-height: 1em;
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+
+            & span {
+                position: relative;
+                transition: 0.5s;
+                overflow: hidden;
+
+                & .out {
+                    display: inline-flex;
+                }
+
+                & .in {
+                    position: absolute;
+                    left: 0;
+                    color: #2aa1ff;
+                    transform: translateY(100%);
+                }
+            }
+
+            &:hover span .out {
+                transform: translateY(-100%);
+            }
+
+            &:hover span .in {
+                transform: translateY(0);
+            }
+        }
+    }
+}

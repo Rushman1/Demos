@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-backgound: hsl(228,7%,14%);
+    --background: hsl(0,0%,94%);
+    --green: hsl(132,99%,58%);
+    --section-background: hsl(240,23%,11%);
+    --menu-marker-bg-color: hsl(213,100%,68%);
+    --menu-background-color: hsl(0, 0%, 18%);
+    --darkmode-text: hsl(0,0%,87%);
+    --light-grey: hsl(0,0%,47%);
+    --med-light-grey: hsl(0,0%,33%);
+    --med-grey: hsl(0,0%,20%);
+    --dark-grey: hsl(0,0%,19%);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background);
+    transition: 0.5s;
+}
+.darkMode {
+    background: var(--dark-backgound);
+}
+.box {
+    position: relative;
+    width: 300px;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 4px;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.05);    
+    transition: 0.5s;
+}
+.darkMode .box {
+    background: var(--dark-grey);
+}
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile .imgBx {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile .imgBx img {
+    position: absolut;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile .text {
+    font-weight: 500;
+    color: var(--light-grey);
+    line-height: 1.2em;
+    transition: 0.5s;;
+}
+.darkMode .profile .text {
+    color: var(--darkmode-text);
+}
+.profile .text span {
+    font-weight: 400;
+    font-size: .85em;
+    color: var(--med-light-grey);
+    transition: 0.5s;
+}
+.darkMode .profile .text span {
+    color: #aaa;
+}
+.menu {
+    position: relative;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+.darkMode .menu {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+.menu li {
+    list-style: none;
+    margin: 8px 0;
+}
+.menu li label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.menu li label span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    color: var(--light-grey);
+    transition: 0.5s;
+}
+.darkMode .menu li label span {
+    color: #AAA;
+}
+.menu li label span ion-icon {
+    margin-right: 10px;
+}
+.menu li label .action {
+    position: relative;
+}
+/* CHECK BOX */
+.menu li label .action input {
+    appearance: none;
+}
+.menu li label .action input:checked ~ i {
+    background: var(--green);
+}
+.menu li label .action i {
+    position: relative;
+    width: 30px;
+    height: 15px;
+    background: #ddd;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.darkMode .menu li label .action i {
+    background: #666;
+}
+.menu li label .action i::before {
+    content: '';
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+.menu li label .action input:checked ~ i::before {
+    left: calc(100% - 12.5px); /* 12.5px is the width of the circle along with the position */
+}
+/* END CHECK BOX */

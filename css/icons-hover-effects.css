@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--black);
+}
+
+ul {
+  position: relative;
+  display: flex;
+  gap: 50px;
+}
+ul li {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  box-shadow: 0px 0px 0px 10px var(--clr), 0 0 0 20px var(--black), 0 0 0 22px var(--clr);
+  transition: 0.5s;
+}
+ul li:hover::before {
+  inset: 15px;
+}
+ul li:hover::after {
+  inset: -10px;
+  transform: rotate(0deg);
+}
+ul li:hover a ion-icon {
+  color: var(--clr);
+  transform: translateY(-40%);
+}
+ul li:hover a span {
+  opacity: 1;
+  transform: scale(1) translateY(100%);
+}
+ul li:hover a ion-icon, ul li:hover a span {
+  filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+}
+ul li::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--black);
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+ul li a {
+  position: relative;
+  text-decoration: none;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li a ion-icon {
+  font-size: 2em;
+  transition: 0.5s;
+  color: var(--clr);
+}
+ul li a span {
+  position: absolute;
+  font-family: consolas;
+  color: var(--clr);
+  opacity: 0;
+  transition: 0.5s;
+  transform: scale(0) translateY(200%);
+}/*# sourceMappingURL=icons-hover-effects.css.map */

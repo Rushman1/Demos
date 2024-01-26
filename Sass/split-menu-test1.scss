@@ -1,0 +1,402 @@
+@import '_base.scss';
+
+:root {
+    --menu-background-color: rgb(35, 35, 36);
+    --menu-background-highlight-color: rgb(255, 255, 255, 0.05);
+}
+
+body {
+    background-color: var(--off-white);
+    min-height: 100vh;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 150px;
+    }
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 100px 100px [content-start] 1fr [content-end] 100px 100px;
+
+    & > * {
+        grid-column: content;
+    }
+}
+
+// HEADER
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    min-height: 80px;
+
+    &.navLeft {
+        left: 0;
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        flex-direction: row;
+        width: 500px;
+        //background-color: var(--menu-background-color);
+        // background: linear-gradient(black, var(--med-grey), var(--med-light-grey), var(--med-grey), black);
+        // border-right: solid 2px rgb(0, 0, 0);
+        // border-bottom: solid 2px rgb(0, 0, 0);
+        // box-shadow: inset 0px 10px 10px var(--menu-background-highlight-color);
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     height: 40px;
+        //     width: 40px;
+        //     border-radius: 50%;
+        //     transform: translateY(100%);
+        //     background-color: transparent;
+        //     border: solid 2px rgb(0, 0, 0);
+        //     box-shadow: -20px -20px 0 var(--menu-background-color);
+        //     clip-path: polygon(-100% -50%, -100% 100%, 50% 0%);
+        // }
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: -2px;
+        //     right: -2px;
+        //     height: 40px;
+        //     width: 40px;
+        //     border-radius: 50%;
+        //     background-color: transparent;
+        //     border: solid 2px rgb(0, 0, 0);
+        //     box-shadow: 20px 20px 0 var(--white);
+        //     clip-path: polygon(100% 50%, 100% 100%, 50% 100%);
+        // }
+
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            text-decoration: none;
+            color: var(--menu-marker-bg-color-darker);
+            transition: 0.25s;
+
+            &:hover {
+                color: var(--light-grey);
+            }
+
+            & span.logo-icon {
+                margin-right: 10px;
+                background-image: url('../images/YingYang-TriColor-Version2.png');
+                background-size: cover;
+                height: 50px;
+                width: 50px;
+            }
+
+            & span.logo {
+                display: inline-block;
+                transform: scale(1, 1.5);
+                height: 100%;
+                font-size: 2.2em;
+                text-transform: uppercase;
+                font-weight: 200;
+                letter-spacing: -0.1em;
+            }
+        }
+    }
+
+    &.navRight {
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 500px;
+        //background-color: var(--menu-background-color);
+        // background: linear-gradient(black, var(--med-grey), var(--med-light-grey), var(--med-grey), black);
+        // border-left: solid 2px rgb(0, 0, 0);
+        // border-bottom: solid 2px rgb(0, 0, 0);
+        // box-shadow: inset 0px 10px 10px var(--menu-background-highlight-color);
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: -2px;
+        //     left: -2px;
+        //     height: 40px;
+        //     width: 40px;
+        //     border-radius: 50%;
+        //     background-color: transparent;
+        //     border: solid 2px rgb(0, 0, 0);
+        //     box-shadow: -20px 20px 0 var(--white);
+        //     clip-path: polygon(0% 50%, -100% 100%, 50% 100%);
+        // }
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: 0;
+        //     right: 0;
+        //     height: 40px;
+        //     width: 40px;
+        //     border-radius: 50%;
+        //     background-color: transparent;
+        //     transform: translateY(100%);
+        //     border: solid 2px rgb(0, 0, 0);
+        //     box-shadow: 20px -20px 0 black;
+        //     clip-path: polygon(50% 0%, 100% 50%, 100% 0%);
+        // }
+
+        & ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+
+            & li {
+                list-style: none;
+
+                & a {
+                    text-decoration: none;
+                    color: var(--menu-marker-bg-color-darker);
+                    font-size: 1.2em;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+
+                    & span {
+                        transition: 0.25s;
+                        transition-delay: calc(0.05s * var(--i));
+
+                        &:nth-child(2) {
+                            position: absolute;
+                            transform: translateY(35px);
+                            font-size: 1.2em;
+                        }
+                    }
+
+                    &:hover {
+                        color: var(--light-grey);
+                    }
+                }
+            }
+        }
+
+        &.icon ul li a {
+            color: var(--menu-marker-bg-color-darker);
+        }
+        &.icon ul li a span:nth-child(1) {
+            transform: translateY(-30px);
+        }
+        &.icon ul li a span:nth-child(2) {
+            transform: translateY(2px);
+        }
+        &.icon ul li:hover a span:nth-child(2) {
+            color: var(--light-grey);
+        }
+    }
+}
+
+div#profile-picture {
+    background-image: url('../images/updatdAvatar-400x400.png');
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        height: 50px;
+        width: 50px;
+        margin: 0 5px;
+    }
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 400px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+
+    & .sub-menu {
+        background-color: var(--menu-marker-bg-color-darker);
+        padding: 20px;
+        color: var(--white);
+        margin: 10px;
+        border-radius: 20px;
+
+        & .user-info {
+            & img {
+                height: 60px;
+                border-radius: 50%;
+                margin-right: 15px;
+                border: 2px solid var(--menu-marker-bg-color);
+            }
+
+            display: flex;
+            align-items: center;
+
+            & h3 {
+                font-weight: 500;
+            }
+        }
+
+        & hr {
+            width: 100%;
+            border: 0;
+            height: 1px;
+            background-color: var(--off-white);
+            margin: 15px 0 10px;
+        }
+
+        & .sub-menu-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--off-white);
+            margin: 12px 0;
+            transition: color 0.5s;
+
+            & p {
+                width: 100%;
+            }
+
+            & ion-icon {
+                width: 40px;
+                background-color: var(--menu-marker-bg-color);
+                color: white;
+                border-radius: 50%;
+                padding: 14px 8px;
+                margin-right: 15px;
+            }
+
+            & span {
+                font-size: 22px;
+                transition: 0.5s;
+            }
+
+            &:hover {
+                color: var(--white);
+                & p {
+                    font-weight: 600;
+                }
+                & span {
+                    transform: translateX(5px);
+                }
+            }
+        }
+
+        & button.close-button {
+            position: absolute;
+            top: 20px;
+            right: 14px;
+            border: 0;
+            background-color: transparent;
+            padding: 5px 15px;
+            cursor: pointer;
+
+            & ion-icon {
+                font-size: 1.9em;
+                color: var(--off-white);
+                transition: transform 1.4s ease-in-out;
+                transition: color 0.5s;
+                &:hover {
+                    color: var(--menu-marker-bg-color);
+                    --ionicon-stroke-width: 2em;
+                    animation: rotating-two 0.5s linear;
+                }
+            }
+        }
+    }
+
+    &.hide {
+        max-height: 0px;
+    }
+}
+
+// FOOTER
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--menu-marker-bg-color-darker);
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & .social_icon,
+    & .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+    & .social_icon {
+        & li {
+            list-style: none;
+
+            & a {
+                font-size: 2em;
+                color: var(--white);
+                margin: 0 10px;
+                display: inline-block;
+                transition: 0.5s;
+
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+    & .menu {
+        & li {
+            list-style: none;
+
+            & a {
+                font-size: 1.2em;
+                color: var(--white);
+                text-decoration: none;
+                margin: 0 10px;
+                display: inline-block;
+                transition: 0.5s;
+                opacity: 0.6;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes rotating-two {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-180deg);
+    }
+}

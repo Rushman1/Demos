@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(/images/bg-1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(/images/bg-2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+body.signup .container {
+  height: 440px;
+}
+body.signup .container::before {
+  filter: hue-rotate(140deg);
+}
+body.signup .container span::before, body.signup .container span::after {
+  background: url(/images/bg-2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+}
+body.signup form#signinform {
+  left: -100%;
+}
+body.signup form#registrationform {
+  left: 0;
+}
+body.signup::after {
+  opacity: 1;
+}
+
+.container {
+  position: relative;
+  width: 350px;
+  height: 340px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(from var(--a), #45f3ff 0%, #45f3ff 10%, transparent 10%, transparent 80%, #45f3ff 100%);
+  border-radius: 20px;
+  animation: animate 2.5s linear infinite;
+}
+.container span {
+  position: absolute;
+  inset: 5px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.container span::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: url(/images/bg-1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+}
+.container span::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: url(/images/bg-1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+}
+
+form {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  transition: 0.5s;
+}
+form h2 {
+  position: relative;
+  color: var(--white);
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+form .inputBox {
+  position: relative;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+form .inputBox a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.85em;
+}
+form .inputBox a:nth-child(2) {
+  text-decoration: underline;
+}
+form .inputBox input {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.15);
+  padding: 6px 15px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: var(--white);
+}
+form .inputBox input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+form .inputBox input[type=submit] {
+  background: #2196f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+form#registrationform {
+  left: 100%;
+}
+form#registrationform .inputBox input[type=submit] {
+  background: #f4242f;
+}
+form#registrationform b {
+  font-weight: 500;
+  color: #ffeb3b;
+  text-decoration: underline;
+}
+
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}/*# sourceMappingURL=glassmorphism-login.css.map */

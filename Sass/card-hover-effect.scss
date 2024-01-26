@@ -1,0 +1,48 @@
+@import '_base';
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    & .card {
+        position: relative;
+        width: 320px;
+        height: 320px;
+        background-color: var(--card-hover-background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            font-weight: 800;
+            font-size: 3em;
+            color: transparent;
+            text-transform: uppercase;
+            transform: rotate(-45deg);
+            -webkit-text-stroke: 1px var(--white);
+            text-align: center;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: var(--img);
+            background-size: cover;
+            clip-path: circle(0px at 0 0);
+            z-index: 2;
+        }
+
+        &:hover::after {
+            clip-path: circle(150px at var(--x) var(--y));
+        }
+    }
+}

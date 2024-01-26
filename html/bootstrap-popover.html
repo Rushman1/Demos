@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+        <title>JS Bin</title>
+    </head>
+
+    <body>
+
+        <h3>Bootstrap tooltips &amp; popovers, and the <code>selector</code> option</h3>
+
+        <p>This JS Bin demonstrates the use of the <code>selector</code> option passed to the Bootstrap tooltip and popover JavaScript plugins.</p>
+
+        <p>The <code>selector</code> option essentially allows you to run tooltips and popovers using jQuery's <code>on</code> function, which means that you can allow dynamically added HTML with the correct selectors to trigger popups as if they were present in the originally loaded DOM. Without the selector option, only elements present in the initial DOM will trigger tooltips; any that are dynamically added will not.</p>
+
+        <p>Toggle the checkbox below and click the 'add new popover' button to observe the behavioral differences between using the selector option, and not using it.</p>
+
+        <hr>
+
+        <div class="checkbox">
+            <label id="use-selector-label">
+                <input id="use-selector" type="checkbox">
+                <span data-title="you must re-run this JS Bin to change the selector option once you've started the demo">Use selector option</span>
+            </label>
+        </div>
+
+        <pre id="with-selector-code">
+$('body').popover({
+  selector: '.has-popover'
+});
+</pre>
+
+        <pre id="without-selector-code">
+$('.has-popover').popover();
+</pre>
+
+        <button class="btn btn-primary" id="add-button">Add new popover</button>
+
+        <div class="buttons">
+            <hr>
+
+            <button class="btn btn-block btn-success has-popover" data-title="Static" data-content="This button was specified in the initial HTML document" data-placement="top">Working popover</button>
+        </div>
+
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.js"></script>
+
+
+        <script>
+            function usingSelectorOption() {
+                return $('#use-selector').is(':checked');
+            }
+
+            function updateCodeView() {
+                $('#with-selector-code').toggle(usingSelectorOption());
+                $('#without-selector-code').toggle(!usingSelectorOption());
+            }
+
+            $(function () {
+                // Update code view when checkbox is toggled
+                updateCodeView();
+                $('#use-selector').click(function () {
+                    updateCodeView();
+                });
+
+
+                var startedDemo = false;
+                $('#add-button').click(function () {
+                    // One-time initialization
+                    if (!startedDemo) {
+                        if (usingSelectorOption()) {
+                            $('body').popover({
+                                selector: '.has-popover'
+                            });
+                        } else {
+                            $('.has-popover').popover();
+                        }
+
+                        startedDemo = true;
+                    }
+
+                    // Disable selector checkbox, put a tooltip on it, and show the buttons panel
+                    $('#use-selector').attr('disabled', 'disabled');
+                    $('#use-selector-label span').tooltip();
+                    $('.buttons').show();
+
+                    // Add a new button that triggers (or doesn't) a popover, with the appropriate message
+                    var button = null;
+                    if (usingSelectorOption()) {
+                        button = $('<button class="btn btn-block btn-success has-popover" data-title="Dynamic" data-content="This button was added dynamically by JavaScript" data-placement="top">Working dynamically added button</button>');
+                    } else {
+                        button = $('<button class="btn btn-block btn-default has-popover" data-title="Dynamic" data-content="This button was added dynamically by JavaScript" data-placement="top">Non-working dynamically added button</button>');
+                    }
+
+                    button.appendTo('.buttons');
+                });
+            });
+        </script>
+    </body>
+
+</html>

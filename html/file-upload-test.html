@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>File Upload Test</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous" defer></script>
+        <script src="../scripts/file-upload-script.js" type="text/javascript" defer></script>
+        <style>
+            .visually-hidden {
+                position: absolute !important;
+                height: 1px;
+                width: 1px;
+                overflow: hidden;
+                clip: rect(1px 1px 1px 1px);
+            }
+
+            /* input.visually-hidden:is(:focus, :focus-within) + label {
+            outline: thin dotted;
+        } */
+            .test-div {
+                border: 1px solid black;
+                border-radius: 3px;
+                width: 300px;
+                min-height: 10px;
+            }
+
+            .outer {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .test-div-inner-1,
+            .test-div-inner-2 {
+                width: 100%;
+                height: 100px;
+            }
+
+            .test-div-inner-1 {
+                border: 1px dashed red;
+            }
+
+            .test-div-inner-2 {
+                border: 1px dotted blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <input
+        type="file"
+        id="file-chooser"
+        accept="image/*"
+        style="display:none" />
+    <button id="fileSelect" type="button">Select a file</button>
+    <div id="file-holder"></div> -->
+
+        <input type="file" id="fileElem" accept="image/*" class="visually-hidden" />
+        <span>Full Path: \\LAS2W1APIXIO01\Apixio\Affiliate CE Scans\2023\<label for="fileElem" id="fileLabel" style="font-weight: bold;">==CLICK HERE TO SELECT A FILE==</label></span>
+
+        <div class="test-div">
+            <div class="outer">
+                <div class="test-div-inner-1"></div>
+                <div class="test-div-inner-2"></div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <select id="mySelect" data-property="myProperty">
+            <option value="0">Select</option>
+        </select>
+
+        <br>
+        <br>
+        <div>
+            <span>Vendor Information</span>
+        </div>
+
+    </body>
+
+</html>

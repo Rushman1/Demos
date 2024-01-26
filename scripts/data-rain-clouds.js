@@ -1,0 +1,29 @@
+function randomText() {
+  var text = '!@#$%^&*()_+';
+  letters = text[Math.floor(Math.random() * text.length)];
+  return letters;
+}
+
+function rain() {
+  let cloud = document.querySelector('.cloud');
+  let e = document.createElement('div');
+  let left = Math.floor(Math.random() * 290);
+  let size = Math.random() * 1.5;
+  let duration = Math.random() * 1;
+
+  e.innerText = randomText();
+  e.style.left = `${left}px`;
+  e.style.fontSize = `${0.5 + size}em`;
+  e.style.animationDuration = `${1 + duration}s`;
+
+  e.classList.add('drop');
+  cloud.appendChild(e);
+
+  setTimeout(function () {
+    cloud.removeChild(e);
+  }, 2000);
+}
+
+setInterval(function () {
+  rain();
+}, 20);

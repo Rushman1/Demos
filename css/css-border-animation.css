@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --background: hsl(203, 24%, 13%);
+    --green: hsl(138,99%,51%);
+    --section-background: hsl(240,23%,11%);
+    --menu-marker-bg-color: hsl(213,100%,68%);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background);
+}
+.card {
+    position: relative;
+    background: hsl(225, 52%, 28%);
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.card span:nth-child(1){
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #17f3fd);
+    animation:  animate_one 2s linear infinite;
+}
+
+@keyframes animate_one {
+    0% { transform: translateX(-100%);}
+    100% {transform: translateX(100%);}
+}
+
+.card span:nth-child(2){
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #17f3fd);
+    animation:  animate_two 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate_two {
+    0% { transform: translateY(-100%);}
+    100% {transform: translateY(100%);}
+}
+
+.card span:nth-child(3){
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #17f3fd);
+    animation:  animate_three 2s linear infinite;
+}
+
+@keyframes animate_three {
+    0% { transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+}
+
+.card span:nth-child(4){
+    position: absolute;
+    bottom : 0px;
+    left: 0px;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #17f3fd);
+    animation:  animate_four 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate_four {
+    0% { transform: translateY(100%);}
+    100% {transform: translateY(-100%);}
+}

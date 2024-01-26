@@ -1,0 +1,108 @@
+@import '_base';
+
+body {
+    background: var(--black);
+}
+
+.container {
+    position: relative;
+    top: 100px;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: animateColor 5s linear infinite;
+
+    & .cloud {
+        position: relative;
+        width: 300px;
+        z-index: 100;
+        filter: drop-shadow(0 0 35px var(--green));
+
+        & h2 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            color: var(--green);
+            font-size: 2em;
+            font-weight: 400;
+            z-index: 1000;
+            color: var(--black);
+            background: var(--green);
+            padding: 0 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -115px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 100px;
+                width: 120%;
+                height: 100px;
+                background-color: var(--green);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: -150px;
+                left: 25px;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background-color: var(--green);
+                box-shadow: 120px -30px 0 40px var(--green);
+            }
+        }
+
+        & .drop {
+            position: absolute;
+            top: 60px;
+            height: 20px;
+            line-height: 20px;
+            color: var(--green);
+            transform-origin: bottom;
+            animation: animate 2s linear infinite;
+        }
+    }
+}
+
+@keyframes animateColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes animate {
+    0% {
+        transform: translateY(0) scaleY(0);
+        transform-origin: top;
+    }
+    10% {
+        transform: translateY(0) scaleY(0.25);
+        transform-origin: bottom;
+    }
+    20% {
+        transform: translateY(0) scaleY(1);
+    }
+    70% {
+        transform: translateY(300px) scaleY(1);
+        transform-origin: bottom;
+    }
+    80% {
+        transform: translateY(300px) scaleY(1);
+        transform-origin: bottom;
+    }
+    100% {
+        transform: translateY(300px) scaleY(0);
+        transform-origin: bottom;
+        text-shadow:
+            -180px 0 0 var(--green),
+            180px 0 0 var(--green);
+    }
+}

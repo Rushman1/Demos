@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--dark-background);
+}
+
+ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  grid-row: auto;
+}
+ul li {
+  list-style: none;
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--dark-background-2);
+  transition: 0.5s;
+}
+ul li div.icon {
+  --_background-color: var(--background-color, var(--dark-background-2));
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--_background-color);
+  color: white;
+  z-index: 2;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+ul li div.icon ion-icon {
+  font-size: 5.5em;
+  color: var(--white);
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+ul li div.content {
+  position: relative;
+  padding: 20px;
+  color: var(--white);
+  text-align: center;
+  margin-top: 100px;
+  z-index: 1;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+ul li div.content {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+ul li div.content h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+}
+ul li div.content p {
+  font-weight: 300;
+  line-height: 1.5em;
+}
+ul li.design div.icon {
+  --background-color: var(--services-design);
+}
+ul li.development div.icon {
+  --background-color: var(--services-development);
+}
+ul li.search div.icon {
+  --background-color: var(--services-search);
+}
+ul li.analytics div.icon {
+  --background-color: var(--services-analytics);
+}
+ul li.video div.icon {
+  --background-color: var(--services-video);
+}
+ul li.games div.icon {
+  --background-color: var(--services-games);
+}
+ul li:hover div.icon {
+  top: 30px;
+  left: calc(50% - 40px);
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  transition-delay: 0s;
+}
+ul li:hover div.icon ion-icon {
+  font-size: 2em;
+  transition-delay: 0s;
+}
+ul li:hover div.content {
+  transform: scale(1);
+  transition-delay: 0.2s;
+}/*# sourceMappingURL=responsive-services-selection.css.map */

@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--dark-background-111);
+  transition: 0.5s;
+}
+body:has(.box[data-color=clr1]:hover) {
+  background-color: rgb(2, 65, 17);
+}
+body:has(.box[data-color=clr2]:hover) {
+  background-color: #4c1f10;
+}
+body:has(.box[data-color=clr3]:hover) {
+  background-color: #e6ba9d;
+}
+body:has(.box[data-color=clr4]:hover) {
+  background-color: #040731;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.container .box {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.container .box .imgBx {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.container .box ul {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.container .box ul a {
+  color: var(--off-white);
+  font-size: 1.25em;
+  scale: 0;
+  transition: 0.25s;
+  transition-delay: calc(0.2s * var(--i));
+  transition-property: scale;
+}
+.container .box ul a:hover {
+  color: var(--white);
+}
+.container .box:hover {
+  transform: rotate(-15deg);
+}
+.container .box:hover ul a {
+  scale: 1;
+}
+.container .box:hover .glass {
+  scale: 1;
+  opacity: 1;
+  transform: rotate(20deg);
+}
+.container .box:hover.imgBx img {
+  opacity: 0.5;
+}
+.container .box .glass {
+  position: absolute;
+  inset: 0;
+  background-color: linear-gradient(rgba(255, 255, 255, 0.1333333333), transparent);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  scale: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.container .box .glass::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.container .box .glass h3 {
+  font-size: 1.25em;
+  color: var(--white);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 0.8em;
+}
+.container .box .glass h3 span {
+  font-weight: 400;
+  font-size: 0.5em;
+}/*# sourceMappingURL=glassmorphism-card-hover-effects.css.map */

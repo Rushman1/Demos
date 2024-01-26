@@ -1,0 +1,145 @@
+@import '_base';
+
+body {
+    background-color: var(--buttonsBackground);
+    justify-content: start;
+    align-items: start;
+}
+header {
+    position: absolute;
+    width: 100%;
+    min-height: 66px;
+    background-color: var(--menu-marker-bg-color);
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .logo {
+        color: var(--white);
+        font-size: 1.75em;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    & ul {
+        position: relative;
+
+        & li {
+            position: relative;
+            list-style: none;
+            float: left;
+
+            & a {
+                color: var(--white);
+                font-size: 1.1em;
+                padding: 20px 25px;
+                text-decoration: none;
+                display: flex;
+                justify-content: space-between;
+
+                &:hover {
+                    background-color: var(--menu-marker-bg-color-darker);
+                }
+            }
+
+            & ul {
+                position: absolute;
+                left: 0;
+                width: 200px;
+                background-color: #445964;
+                display: none;
+
+                & li {
+                    position: relative;
+                    width: 100%;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+
+                    & ul {
+                        top: 0;
+                        left: 200px;
+                    }
+                }
+            }
+
+            &:hover > ul {
+                display: block;
+            }
+        }
+    }
+}
+/* now, make it responsive */
+@media (max-width: 900px) {
+    header {
+        padding: 10px 20px;
+
+        & nav {
+            position: absolute;
+            width: 100%;
+            top: 66px;
+            left: 0;
+            background-color: #445964;
+            display: none;
+
+            & ul li {
+                width: 100%;
+
+                & ul {
+                    position: relative;
+                    width: 100%;
+                    left: 0;
+                }
+
+                &:hover ul li {
+                    background-color: #546e7b;
+                }
+            }
+        }
+
+        & ul li ul li ul {
+            top: 0;
+            left: 0;
+        }
+
+        &.active nav {
+            display: initial;
+        }
+
+        &.active .menuToggle::before {
+            transform: rotate(45deg);
+            box-shadow: 0 0 var(--white);
+        }
+        &.active .menuToggle::after {
+            transform: rotate(-45deg);
+        }
+    }
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var(--white);
+            transform: translateY(-12px);
+            box-shadow: 0 12px var(--white);
+            transition: 0.5s;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var(--white);
+            transform: translateY(12px);
+            transition: 0.5s;
+        }
+    }
+}

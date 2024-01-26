@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/clock.css">
+        <title>Clock Test</title>
+    </head>
+
+    <body>
+        <div id="time">
+            <div class="circle" style="--clr:hsl(340,100%,58%)">
+                <div class="dots sec_dot"></div>
+                <svg>
+                    <circle cx="120" cy="120" r="120" id="ss"></circle>
+                </svg>
+            </div>
+            <div class="circle" style="--clr:hsl(55,100%,50%)">
+                <div class="dots min_dot"></div>
+                <svg>
+                    <circle cx="100" cy="100" r="100" id="mm"></circle>
+                </svg>
+            </div>
+            <div class="circle" style="--clr:hsl(135,98%,50%)">
+                <div class="dots hr_dot"></div>
+                <svg>
+                    <circle cx="80" cy="80" r="80" id="hh"></circle>
+                </svg>
+            </div>
+            <div class="timeBox">
+                <div id="hours" style="--c:hsl(135,98%,50%)">00</div>
+                <div id="minutes" style="--c:hsl(55,100%,50%)">00</div>
+                <div id="seconds" style="--c:hsl(340,100%,58%)">00</div>
+                <div class="ap" style="--c:hsl(0,100%,100%)">
+                    <div id="ampm">AM</div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function formatHoursTo12(date) {
+                return date.getHours() % 12 || 12;
+            }
+
+            window.setInterval(() => {
+                let hh = document.getElementById('hh');
+                let mm = document.getElementById('mm');
+                let ss = document.getElementById('ss');
+                let sec_dot = document.querySelector('.sec_dot');
+                let min_dot = document.querySelector('.min_dot');
+                let hr_dot = document.querySelector('.hr_dot');
+
+                let hours = document.getElementById('hours');
+                let minutes = document.getElementById('minutes');
+                let seconds = document.getElementById('seconds');
+                let ampm = document.getElementById('ampm');
+
+                let h = formatHoursTo12(new Date());
+                let am = new Date().getHours() >= 12 ? 'PM' : 'AM';
+                let m = new Date().getMinutes();
+                let s = new Date().getSeconds();
+
+                hours.innerHTML = h < 10 ? `0${h}` : h;
+                minutes.innerHTML = m < 10 ? `0${m}` : m;
+                seconds.innerHTML = s < 10 ? `0${s}` : s;
+                ampm.innerHTML = am;
+
+                // 12 hour clock
+                hh.style.strokeDashoffset = 510 - (510 * h) / 12;
+                mm.style.strokeDashoffset = 630 - (630 * m) / 60;
+                ss.style.strokeDashoffset = 760 - (760 * s) / 60;
+
+                sec_dot.style.transform = `rotateZ(${s * 6}deg)`;
+                min_dot.style.transform = `rotateZ(${m * 6}deg)`;
+                hr_dot.style.transform = `rotateZ(${h * 30}deg)`;
+
+            }, 1000);
+        </script>
+    </body>
+
+</html>

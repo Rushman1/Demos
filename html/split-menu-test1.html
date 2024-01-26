@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Split Menu</title>
+        <link rel="stylesheet" href="../css/split-menu-test1.css" type='text/css'>
+        <link rel="shortcut icon" href="../images/picture.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <header>
+            <nav class='navbar navLeft'>
+                <a href="#" class='brand'>
+                    <!-- <span class='icon'><img src="../images/YingYang-TriColor-Icon.png" alt="Savage Creations Logo"></span> -->
+                    <span class='logo-icon'></span>
+                    <span class='logo'>Savage Creations</span>
+                </a>
+            </nav>
+            <nav class='navbar navRight' id='navbar'>
+                <ul>
+                    <li style="--i:0">
+                        <a href="#">
+                            <span>Home</span>
+                            <span><ion-icon name="home-outline"></ion-icon></span>
+                        </a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#">
+                            <span>Videos</span>
+                            <span><ion-icon name="videocam-outline"></ion-icon></span>
+                        </a>
+                    </li>
+                    <li style="--i:2">
+                        <a href="#">
+                            <span>Photos</span>
+                            <span><ion-icon name="camera-outline"></ion-icon></span>
+                        </a>
+                    </li>
+                    <li style="--i:3">
+                        <a href="#">
+                            <span>Team</span>
+                            <span><ion-icon name="people-outline"></ion-icon></span>
+                        </a>
+                    </li>
+                    <li style="--i:4">
+                        <a href="#">
+                            <span>Contact</span>
+                            <span><ion-icon name="mail-open-outline"></ion-icon></span>
+                        </a>
+                    </li>
+                </ul>
+                <div id='profile-picture'></div>
+                <div class="sub-menu-wrap hide">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="../images/updatdAvatar-400x400.png">
+                            <h3>TJ Savage</h3>
+                        </div>
+                        <button type='button' class='close-button' title='Close Popup'><ion-icon name="close-circle-outline"></ion-icon></button>
+                        <hr>
+                        <a href="#" class="sub-menu-link">
+                            <ion-icon name="person"></ion-icon>
+                            <p>Edit Profile</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <ion-icon name="settings-outline"></ion-icon>
+                            <p>Settings & Privacy</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <ion-icon name="help-circle"></ion-icon>
+                            <p>Help & Support</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <ion-icon name="log-out"></ion-icon>
+                            <p>Logout</p>
+                            <span>></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class='content-grid'>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
+        </main>
+        <footer>
+            <ul class='social_icon'>
+                <li><a href='#'><ion-icon name='logo-linkedin'></ion-icon></a></li>
+                <li><a href='#'><ion-icon name='logo-github'></ion-icon></a></li>
+                <li><a href='#'><ion-icon name='logo-youtube'></ion-icon></a></li>
+            </ul>
+            <ul class="menu">'
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="../scripts/split-menu-test1.js" type='text/javascript'></script>
+    </body>
+
+</html>

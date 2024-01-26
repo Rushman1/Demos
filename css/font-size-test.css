@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --clr: hsl(203, 28%, 39%);
+    --popup-background-color: hsl(201, 15%, 25%);
+    --popup-button-background-color: hsl(164, 90%, 43%);
+    font-size: 62.5%;
+}
+
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    min-height: 100vh;
+    background: var(--clr);
+    margin: 2rem;
+}
+h1 {
+    font-size: 3.5rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+h4 {
+    font-size: 2rem;
+}
+h5 {
+    font-size: 1.5rem;
+}
+h6 {
+    font-size: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 1.5rem;
+}
+.mb-3 {
+    margin-bottom: 2rem;
+}
+.mb-4 {
+    margin-bottom: 2.5rem;
+}
+.mb-5 {
+    margin-bottom: 3rem;
+}
+.mb-6 {
+    margin-bottom: 3.5rem;
+}
+
+
+.flexbox-container {
+    height: 700px;
+    background-color: yellow;
+    display: flex;
+    /*Used to WRAP the content inside the container if the container gets to narrow*/
+    /* flex-wrap: wrap; */
+    /*Used to make columns in the container. Will stack everything in one column unless the item specifies that it will go into a different column*/
+    /* flex-direction: column; */
+    /*Using Justify Content Center will center the items vertically in the column*/
+    /* justify-content: center; */
+    /*To Align content to center of the container*/
+    /* align-items: center; */
+
+    
+    /*Align all items at the top and keep the height of the item*/
+    /* align-items: flex-start; */
+    /*Align all items at the bottom and keep the height of the item*/
+    /* align-items: flex-end; */
+    /*Align all items in the center and keep the height of the item*/
+    /* align-items: center; */
+    /*Align all items to take up all available space heighth-wise (default)*/
+    /* align-items: stretch; */
+}
+.flexbox-item {
+    width: 20rem;
+    margin: 1rem;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.flexbox-item-1 {
+    min-height: 10rem;
+    /*To stop an item (inside a container) from shrinking as the container gets smaller use the flex-shrink: 0*/
+    flex-shrink: 0;
+    position: relative;
+    /*Align-self property overrides the containers alignment*/
+    align-self: flex-start;
+    /*Use the Order property to override the ordering of the items in the container*/
+    /*The order property does not change the HTML only the display of the content*/
+    /*Use with caution because screen readers and the Tab function will go in the order of the HTML*/
+    order: 3;
+}
+.flexbox-item-2 {
+    min-height: 20rem;
+    position: relative;
+    /*To make an item (inside a container) grow to take up the available extra space use flex-grow: 1*/
+    flex-grow: 2;
+    /*Flex Basis sets the starting size for the grow*/
+    /*0 starts from a width of zero pixels*/
+    flex-basis: 0;
+    /*Align-self property overrides the containers alignment*/
+    align-self: center;
+    /*Use the Order property to override the ordering of the items in the container*/
+    /*The order property does not change the HTML only the display of the content*/
+    /*Use with caution because screen readers will go in the order of the HTML*/
+    order: 1;
+}
+.flexbox-item-3 {
+    min-height: 30rem;
+    position: relative;
+    /*To make an item (inside a container) grow to take up the available extra space use flex-grow: 1*/
+    flex-grow: 1;
+    /*Flex Basis sets the starting size for the grow*/
+    /*0 starts from a width of zero pixels*/
+    flex-basis: 0;
+    /*Align-self property overrides the containers alignment*/
+    align-self: flex-end;
+    /*Use the Order property to override the ordering of the items in the container*/
+    /*The order property does not change the HTML only the display of the content*/
+    /*Use with caution because screen readers will go in the order of the HTML*/
+    order: 2;
+}
+
+.flexbox-item-1::before,
+.flexbox-item-2::before,
+.flexbox-item-3::before {
+    content: 'Flexbox Item';
+    margin: 1rem;
+    font-size: 2rem;
+}
+.flexbox-item-1::after {
+    content: '1';
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 2rem;
+}
+.flexbox-item-2::after {
+    content: '2';
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 2rem;
+}
+.flexbox-item-3::after {
+    content: '3';
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 2rem;
+}

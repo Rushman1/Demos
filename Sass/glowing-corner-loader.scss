@@ -1,0 +1,50 @@
+@import '_base.scss';
+
+body {
+    background-color: var(--dark-background-111);
+    gap: 40px;
+}
+
+.loader {
+    background-color: var(--dark-background);
+    position: relative;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    transform: rotate(calc(90deg * var(--i)));
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(var(--color), transparent, transparent);
+        animation: animate 1.5s linear infinite;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 4px;
+        overflow: hidden;
+        background-color: hsla(0, 0%, 7%, 0.95);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-150px, -150px);
+    }
+    25% {
+        transform: translate(0, -150px);
+    }
+    50% {
+        transform: translate(0px, 0px);
+    }
+    75% {
+        transform: translate(-150px, 0px);
+    }
+    100% {
+        transform: translate(-150px, -150px);
+    }
+}

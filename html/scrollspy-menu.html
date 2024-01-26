@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scrollspy Menu</title>
+        <link rel="stylesheet" href="../css/scrollspy-menu.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="#home" style="--clr:#F3218B;" class="active">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Home</span>
+                </a>
+                <a href="#profile" style="--clr:#2196F3;">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="text">Profile</span>
+                </a>
+                <a href="#messages" style="--clr:#008A1B;">
+                    <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                    <span class="text">Messages</span>
+                </a>
+                <a href="#photos" style="--clr:#DC1DFF;">
+                    <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                    <span class="text">Photos</span>
+                </a>
+                <a href="#settings" style="--clr:#D56F1D;">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="text">Settings</span>
+                </a>
+                <div class="indicator"></div>
+            </nav>
+        </header>
+        <section id="home">Home</section>
+        <section id="profile">Profile</section>
+        <section id="messages">Messages</section>
+        <section id="photos">Photos</section>
+        <section id="settings">Settings</section>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <script src="../scripts/scrollspy-menu.js"></script>
+    </body>
+
+</html>

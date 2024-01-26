@@ -1,0 +1,124 @@
+@import '_base';
+
+body {
+    background-color: var(--black);
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+
+    &:hover {
+        width: 600px;
+        transition-delay: 0.5s;
+
+        & .circle::before {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: var(--clr);
+            transition-delay: 0.5s;
+        }
+
+        & .circle .logo {
+            transform: scale(0);
+            transition-delay: 0s;
+        }
+
+        & .product_img {
+            transition-delay: 0.75s;
+            top: 25%;
+            left: 72%;
+            transform: translate(-50%, -50%) scale(1) rotate(15deg);
+            height: 500px;
+        }
+
+        & .content {
+            transition-delay: 0.75s;
+            opacity: 1;
+            visibility: visible;
+            left: 20px;
+        }
+    }
+
+    & .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background-color: var(--black);
+            border: 8px solid var(--clr);
+            filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+            transition: 0.5s;
+            transition-delay: 0.75s, 1s;
+        }
+
+        & .logo {
+            position: relative;
+            width: 250px;
+            transition: 0.5s;
+            transition-delay: 0.5s;
+        }
+    }
+
+    & .product_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0) rotate(315deg);
+        height: 300px;
+        transition: 0.5s ease-in-out;
+    }
+
+    & .content {
+        position: absolute;
+        width: 55%;
+        left: 20%;
+        padding: 20px 20px 20px 40px;
+        opacity: 0;
+        transition: 0.5s;
+        visibility: hidden;
+        & h2 {
+            color: var(--white);
+            text-transform: uppercase;
+            font-size: 2.5em;
+            line-height: 1em;
+        }
+        & p {
+            color: var(--white);
+            font-weight: 300;
+        }
+
+        & a {
+            position: relative;
+            color: #111;
+            background-color: var(--white);
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+    }
+}

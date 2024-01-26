@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+:root {
+  --menu-background-color: rgb(35, 35, 36);
+  --menu-background-highlight-color: rgb(255, 255, 255, 0.05);
+}
+
+body {
+  background-color: var(--off-white);
+  min-height: 100vh;
+  position: relative;
+}
+body::after {
+  content: "";
+  display: block;
+  height: 150px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 100px 100px [content-start] 1fr [content-end] 100px 100px;
+}
+.content-grid > * {
+  grid-column: content;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  min-height: 80px;
+}
+.navbar.navLeft {
+  left: 0;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-direction: row;
+  width: 500px;
+}
+.navbar.navLeft a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: var(--menu-marker-bg-color-darker);
+  transition: 0.25s;
+}
+.navbar.navLeft a:hover {
+  color: var(--light-grey);
+}
+.navbar.navLeft a span.logo-icon {
+  margin-right: 10px;
+  background-image: url("../images/YingYang-TriColor-Version2.png");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+}
+.navbar.navLeft a span.logo {
+  display: inline-block;
+  transform: scale(1, 1.5);
+  height: 100%;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: -0.1em;
+}
+.navbar.navRight {
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 500px;
+}
+.navbar.navRight ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.navbar.navRight ul li {
+  list-style: none;
+}
+.navbar.navRight ul li a {
+  text-decoration: none;
+  color: var(--menu-marker-bg-color-darker);
+  font-size: 1.2em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.navbar.navRight ul li a span {
+  transition: 0.25s;
+  transition-delay: calc(0.05s * var(--i));
+}
+.navbar.navRight ul li a span:nth-child(2) {
+  position: absolute;
+  transform: translateY(35px);
+  font-size: 1.2em;
+}
+.navbar.navRight ul li a:hover {
+  color: var(--light-grey);
+}
+.navbar.navRight.icon ul li a {
+  color: var(--menu-marker-bg-color-darker);
+}
+.navbar.navRight.icon ul li a span:nth-child(1) {
+  transform: translateY(-30px);
+}
+.navbar.navRight.icon ul li a span:nth-child(2) {
+  transform: translateY(2px);
+}
+.navbar.navRight.icon ul li:hover a span:nth-child(2) {
+  color: var(--light-grey);
+}
+
+div#profile-picture {
+  background-image: url("../images/updatdAvatar-400x400.png");
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0px 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+div#profile-picture:hover {
+  height: 50px;
+  width: 50px;
+  margin: 0 5px;
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  width: 320px;
+  max-height: 400px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.sub-menu-wrap .sub-menu {
+  background-color: var(--menu-marker-bg-color-darker);
+  padding: 20px;
+  color: var(--white);
+  margin: 10px;
+  border-radius: 20px;
+}
+.sub-menu-wrap .sub-menu .user-info {
+  display: flex;
+  align-items: center;
+}
+.sub-menu-wrap .sub-menu .user-info img {
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid var(--menu-marker-bg-color);
+}
+.sub-menu-wrap .sub-menu .user-info h3 {
+  font-weight: 500;
+}
+.sub-menu-wrap .sub-menu hr {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-color: var(--off-white);
+  margin: 15px 0 10px;
+}
+.sub-menu-wrap .sub-menu .sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--off-white);
+  margin: 12px 0;
+  transition: color 0.5s;
+}
+.sub-menu-wrap .sub-menu .sub-menu-link p {
+  width: 100%;
+}
+.sub-menu-wrap .sub-menu .sub-menu-link ion-icon {
+  width: 40px;
+  background-color: var(--menu-marker-bg-color);
+  color: white;
+  border-radius: 50%;
+  padding: 14px 8px;
+  margin-right: 15px;
+}
+.sub-menu-wrap .sub-menu .sub-menu-link span {
+  font-size: 22px;
+  transition: 0.5s;
+}
+.sub-menu-wrap .sub-menu .sub-menu-link:hover {
+  color: var(--white);
+}
+.sub-menu-wrap .sub-menu .sub-menu-link:hover p {
+  font-weight: 600;
+}
+.sub-menu-wrap .sub-menu .sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+.sub-menu-wrap .sub-menu button.close-button {
+  position: absolute;
+  top: 20px;
+  right: 14px;
+  border: 0;
+  background-color: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.sub-menu-wrap .sub-menu button.close-button ion-icon {
+  font-size: 1.9em;
+  color: var(--off-white);
+  transition: transform 1.4s ease-in-out;
+  transition: color 0.5s;
+}
+.sub-menu-wrap .sub-menu button.close-button ion-icon:hover {
+  color: var(--menu-marker-bg-color);
+  --ionicon-stroke-width: 2em;
+  animation: rotating-two 0.5s linear;
+}
+.sub-menu-wrap.hide {
+  max-height: 0px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--menu-marker-bg-color-darker);
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .social_icon, footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+footer .social_icon li {
+  list-style: none;
+}
+footer .social_icon li a {
+  font-size: 2em;
+  color: var(--white);
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social_icon li a:hover {
+  transform: translateY(-10px);
+}
+footer .menu li {
+  list-style: none;
+}
+footer .menu li a {
+  font-size: 1.2em;
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  opacity: 0.6;
+}
+footer .menu li a:hover {
+  opacity: 1;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotating-two {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}/*# sourceMappingURL=split-menu-test1.css.map */

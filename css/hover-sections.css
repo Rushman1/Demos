@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%; /* 10 px */
+}
+
+:root {
+    --text-font-size: 1.5rem;
+    --box-background: hsl(0, 0%, 18%);
+    --font-color: hsl(0, 0%, 47%);
+    --base-transition: 0.5s ease-in-out;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+h4 {
+    font-size: 2rem;
+}
+h5 {
+    font-size: 1.5rem;
+}
+h6 {
+    font-size: 1rem;
+}
+p, a {
+    font-size: var(--text-font-size);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: hsl(0, 0%, 13%);
+
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 6rem 0;
+    gap: 6rem;
+}
+.container .box {
+    position: relative;
+    width: 30rem;
+    height: 35rem;
+    background: var(--box-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .box::before {
+    content: '';
+    position: absolute;
+    inset: -1rem 5rem;
+    border-top: 4px solid var(--clr);
+    border-bottom: 4px solid var(--clr);
+    z-index: -1;
+    transform: skewY(15deg);
+    transition: var(--base-transition);
+}
+.container .box:hover::before {
+    transform: skewY(0deg);
+    inset: -1rem 4rem;
+}
+.container .box::after {
+    content: '';
+    position: absolute;
+    inset: 6rem -1rem;
+    border-left: 4px solid var(--clr);
+    border-right: 4px solid var(--clr);
+    z-index: -1;
+    transform: skew(15deg);
+    transition: var(--base-transition);
+}
+.container .box:hover::after {
+    transform: skew(0deg);
+    inset: 6rem -1rem;
+}
+.container .box .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 2rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container .box .content .icon {
+    color: var(--clr);
+    width: 8rem;
+    height: 8rem;
+    box-shadow: 0 0 0 4px var(--box-background), 0 0 0 6px var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    background: var(--box-background);
+    transition: 0.5s ease-in-out;
+}
+.container .box:hover .content .icon {
+    background: var(--clr);
+    color: var(--box-background);
+    box-shadow: 0 0 0 4px var(--box-background), 0 0 0 300px var(--clr);
+}
+.container .box .content .text h3 {
+    color: white;
+    font-weight: 500;
+    transition: var(--base-transition);
+}
+.container .box:hover .content .text h3 {
+    color: var(--box-background);
+}
+.container .box .content .text p {
+    color: var(--font-color);
+    transition: var(--base-transition);
+}
+.container .box:hover .content .text p {
+    color: var(--box-background);
+}
+.container .box .content .text a {
+    position: relative;
+    background: var(--clr);
+    color: var(--box-background);
+    padding: 8px 15px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top : 1rem;
+    transition: var(--base-transition);
+}
+.container .box:hover .content .text a {
+    background: var(--box-background);
+    color: var(--clr);   
+}

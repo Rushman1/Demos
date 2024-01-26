@@ -1,0 +1,97 @@
+@import '_base';
+
+body {
+    background-color: var(--black);
+}
+
+ul {
+    position: relative;
+    display: flex;
+    gap: 50px;
+
+    & li {
+        position: relative;
+        list-style: none;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.5s;
+        //box-shadow: 0px 0px 0px 3px var(--clr);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 30px;
+            box-shadow:
+                0px 0px 0px 10px var(--clr),
+                0 0 0 20px var(--black),
+                0 0 0 22px var(--clr);
+            transition: 0.5s;
+        }
+
+        &:hover {
+            &::before {
+                inset: 15px;
+            }
+            &::after {
+                //inset: 0px;
+                inset: -10px;
+                transform: rotate(0deg);
+            }
+
+            & a {
+                & ion-icon {
+                    color: var(--clr);
+                    transform: translateY(-40%);
+                }
+
+                & span {
+                    opacity: 1;
+                    transform: scale(1) translateY(100%);
+                }
+            }
+
+            & a ion-icon,
+            & a span {
+                filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr))
+                    drop-shadow(0 0 60px var(--clr));
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: var(--black);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+
+        & a {
+            position: relative;
+            text-decoration: none;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & ion-icon {
+                font-size: 2em;
+                transition: 0.5s;
+                color: var(--clr);
+            }
+
+            & span {
+                position: absolute;
+                font-family: consolas;
+                color: var(--clr);
+                opacity: 0;
+                transition: 0.5s;
+                transform: scale(0) translateY(200%);
+            }
+        }
+    }
+}
