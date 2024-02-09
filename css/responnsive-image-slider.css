@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  width: 100svw;
+  background-color: var(--dark-background-111);
+}
+.container input {
+  appearance: none;
+}
+.container input:nth-child(1):checked ~ .dots label:nth-child(1), .container input:nth-child(2):checked ~ .dots label:nth-child(2), .container input:nth-child(3):checked ~ .dots label:nth-child(3), .container input:nth-child(4):checked ~ .dots label:nth-child(4), .container input:nth-child(5):checked ~ .dots label:nth-child(5), .container input:nth-child(6):checked ~ .dots label:nth-child(6), .container input:nth-child(7):checked ~ .dots label:nth-child(7), .container input:nth-child(8):checked ~ .dots label:nth-child(8), .container input:nth-child(9):checked ~ .dots label:nth-child(9), .container input:nth-child(10):checked ~ .dots label:nth-child(10), .container input:nth-child(11):checked ~ .dots label:nth-child(11) {
+  opacity: 1;
+}
+.container .dots {
+  position: absolute;
+  bottom: 70px;
+  z-index: 10000;
+  display: flex;
+  gap: 6px;
+}
+.container .dots label {
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.5;
+  border: 2px solid var(--dark-background-111);
+}
+.container .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--img);
+  background-size: cover;
+  clip-path: circle(0% at 0% 50%);
+  transition: 1.5s;
+  transition-delay: 0s;
+  background-position: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.container .slider .slide:nth-child(even) {
+  clip-path: circle(0% at 100% 50%);
+  background-position: right;
+}
+.container input:nth-child(1):checked ~ .slider .slide:nth-child(1), .container input:nth-child(2):checked ~ .slider .slide:nth-child(2), .container input:nth-child(3):checked ~ .slider .slide:nth-child(3), .container input:nth-child(4):checked ~ .slider .slide:nth-child(4), .container input:nth-child(5):checked ~ .slider .slide:nth-child(5), .container input:nth-child(6):checked ~ .slider .slide:nth-child(6), .container input:nth-child(7):checked ~ .slider .slide:nth-child(7), .container input:nth-child(8):checked ~ .slider .slide:nth-child(8), .container input:nth-child(9):checked ~ .slider .slide:nth-child(9), .container input:nth-child(10):checked ~ .slider .slide:nth-child(10), .container input:nth-child(11):checked ~ .slider .slide:nth-child(11) {
+  clip-path: circle(150% at 50% 50%);
+  transition-delay: 1s;
+  background-position: center;
+}
+
+.content {
+  position: relative;
+  padding: 50px 50px 120px 80px;
+  max-width: 550px;
+}
+.content h2 {
+  color: white;
+  font-size: 3em;
+}
+.content p {
+  color: white;
+}/*# sourceMappingURL=responnsive-image-slider.css.map */
