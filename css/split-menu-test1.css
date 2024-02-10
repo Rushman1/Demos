@@ -15,6 +15,7 @@
   --dark-background: hsl(228, 7%, 14%); /*#212226*/
   --background: hsl(206, 45%, 12%); /*#11212D*/
   --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --dark-background-222: hsl(0, 0%, 13%); /*#222222*/
   --glassmorphism-background: hsl(257, 43%, 31%);
   --footerBackground: hsl(216, 100%, 60%);
   --buttonsBackground: hsl(205, 43%, 16%);
@@ -114,18 +115,12 @@ body::after {
   display: block;
   height: 150px;
 }
-body header, body main, body footer {
-  opacity: 0;
-  visibility: hidden;
-}
 
 .content-grid {
+  margin: auto 20px;
   display: grid;
-  grid-template-columns: 100px 100px [content-start] 1fr [content-end] 100px 100px;
-  min-height: 100svh;
-}
-.content-grid > * {
-  grid-column: content;
+  grid-template-columns: 1fr 200px;
+  column-gap: 20px;
 }
 
 header {
@@ -392,6 +387,11 @@ footer .menu li a:hover {
 
 aside {
   background-color: var(--menu-marker-bg-color);
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+aside li {
+  list-style: none;
 }
 
 @keyframes rotating {

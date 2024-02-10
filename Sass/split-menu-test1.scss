@@ -27,23 +27,13 @@ body {
         display: block;
         height: 150px;
     }
-
-    & header,
-    & main,
-    & footer {
-        opacity: 0;
-        visibility: hidden;
-    }
 }
 
 .content-grid {
+    margin: auto 20px;
     display: grid;
-    grid-template-columns: 100px 100px [content-start] 1fr [content-end] 100px 100px;
-    min-height: 100svh;
-
-    & > * {
-        grid-column: content;
-    }
+    grid-template-columns: 1fr 200px;
+    column-gap: 20px;
 }
 
 // HEADER
@@ -419,12 +409,12 @@ footer {
 }
 
 aside {
-    // height: 500px;
-    // width: 200px;
     background-color: var(--menu-marker-bg-color);
-    //position: fixed;
-    //top: 150px;
-    //right: 300px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    & li {
+        list-style: none;
+    }
 }
 
 @keyframes rotating {
