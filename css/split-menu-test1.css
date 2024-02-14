@@ -335,6 +335,10 @@ div#profile-picture:hover {
   max-height: 0px;
 }
 
+main {
+  padding-bottom: 50px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -385,10 +389,17 @@ footer .menu li a:hover {
   opacity: 1;
 }
 
-aside {
-  background-color: var(--menu-marker-bg-color);
-  border-radius: 20px;
+aside .aside-card {
   padding: 10px 15px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+aside .aside-card.list {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+aside .aside-card.news {
+  min-height: 150px;
+  background-color: rgba(0, 255, 0, 0.2);
 }
 aside li {
   list-style: none;
