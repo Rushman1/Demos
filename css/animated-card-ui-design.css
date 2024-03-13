@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --dark-background-222: hsl(0, 0%, 13%); /*#222222*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--dark-background);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.container .card {
+  position: relative;
+  width: 320px;
+  height: 250px;
+  background-color: var(--white);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container .card:hover {
+  height: 350px;
+}
+.container .card:hover .imgBx {
+  inset: -50px 60px 270px 60px;
+  box-shadow: 0 0 0 10px var(--dark-background);
+}
+.container .card:hover .imgBx::before {
+  opacity: 1;
+  transform: translateY(50px);
+}
+.container .card:hover .imgBx::after {
+  opacity: 1;
+  transform: translateY(50px);
+}
+.container .card:hover p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(40px);
+}
+.container .card:hover h2 {
+  padding: 5px 25px;
+  background-color: #65ff50;
+  bottom: -25px;
+  border-radius: 15px;
+  box-shadow: 0 0 0 10px var(--dark-background);
+}
+.container .card .imgBx {
+  position: absolute;
+  inset: 20px 20px 50px 20px;
+  background-color: rebeccapurple;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.container .card .imgBx::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  left: -30px;
+  border-top-right-radius: 20px;
+  transform: translateY(-100px);
+  opacity: 0;
+  box-shadow: 5px -5px 0 4px var(--dark-background);
+  pointer-events: none;
+  transition: 0.5s;
+}
+.container .card .imgBx::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  right: -30px;
+  border-top-left-radius: 20px;
+  transform: translateY(-100px);
+  opacity: 0;
+  box-shadow: -5px -5px 0 4px var(--dark-background);
+  pointer-events: none;
+  transition: 0.5s;
+}
+.container .card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.container .card p {
+  position: relative;
+  padding: 40px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50px);
+  transition: 0.5s;
+}
+.container .card h2 {
+  position: absolute;
+  bottom: 8px;
+  color: #333;
+  transition: 0.5s;
+  font-weight: 600;
+}/*# sourceMappingURL=animated-card-ui-design.css.map */
