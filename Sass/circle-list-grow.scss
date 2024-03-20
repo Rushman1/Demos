@@ -1,0 +1,47 @@
+@import '_base.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatars {
+    --avatar-count: 5;
+    --avatar-size: 75px;
+
+    --column-size: calc(var(--avatar-size) / 2);
+
+    display: grid;
+    grid-template-columns: repeat(var(--avatar-count), var(--column-size));
+    transition: 500ms;
+
+    &:hover {
+        --column-size: calc(var(--avatar-size) * 1.5);
+        transition-delay: 0ms;
+    }
+}
+
+.avatar {
+    height: var(--avatar-size);
+    border: 4px solid white;
+    border-radius: 100vw;
+    background-size: contain;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    transition: scale 500ms;
+
+    &:hover {
+        scale: 2;
+        z-index: 2;
+    }
+}
+
+@supports selector(:has(+ *)) {
+    .avatar:hover + .avatar,
+    .avatar:has(+ .avatar:hover) {
+        scale: 1.5;
+    }
+}

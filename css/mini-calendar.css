@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   display: flex;
@@ -45,9 +45,9 @@ body {
   cursor: pointer;
 }
 .week li.current::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: 46px;
+  top: 45px;
   left: -35px;
   width: 30px;
   height: 30px;
@@ -56,9 +56,9 @@ body {
   box-shadow: 5px -6px #222327;
 }
 .week li.current::after {
-  content: "";
+  content: '';
   position: absolute;
-  top: 46px;
+  top: 45px;
   right: -35px;
   width: 30px;
   height: 30px;
