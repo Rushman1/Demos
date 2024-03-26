@@ -44,6 +44,7 @@
   --services-analytics: hsl(51, 75%, 54%);
   --services-video: hsl(120, 34%, 39%);
   --services-games: hsl(300, 43%, 51%);
+  --responsive-bar-background: hsl(200, 18%, 46%) /*#607d8b*/;
 }
 
 body {

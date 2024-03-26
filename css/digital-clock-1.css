@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --dark-background-222: hsl(0, 0%, 13%); /*#222222*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+  --responsive-bar-background: hsl(200, 18%, 46%) /*#607d8b*/;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--dark-background-222);
+}
+
+#clock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+#secDots,
+#minDots,
+#hrDots {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  rotate: 90deg;
+}
+#secDots::before,
+#minDots::before,
+#hrDots::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25), 10px 10px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(255, 255, 255, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+#secDots h2,
+#minDots h2,
+#hrDots h2 {
+  position: absolute;
+  transform: rotate(-90deg);
+  text-align: center;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 4em;
+  font-weight: 500;
+  color: var(--clr);
+}
+#secDots h2 span,
+#minDots h2 span,
+#hrDots h2 span {
+  position: absolute;
+  font-size: 0.25em;
+  bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+#secDots strong,
+#minDots strong,
+#hrDots strong {
+  position: absolute;
+  color: var(--white);
+  display: inline-flex;
+  transform: rotate(-90deg) translate(-30px, 90px);
+}
+#secDots .dot,
+#minDots .dot,
+#hrDots .dot {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 3px;
+  background-color: var(--clr);
+  transform-origin: 100px;
+}
+#secDots .dot:nth-child(5n+5),
+#minDots .dot:nth-child(5n+5),
+#hrDots .dot:nth-child(5n+5) {
+  width: 20px;
+}
+#secDots .dot.active,
+#minDots .dot.active,
+#hrDots .dot.active {
+  background-color: var(--clr);
+  box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr);
+}
+#secDots .dot.active ~ .dot,
+#minDots .dot.active ~ .dot,
+#hrDots .dot.active ~ .dot {
+  background-color: #555;
+}
+
+#hrDots .dot {
+  width: 20px;
+}
+#hrDots .dot.active ~ .dot::before {
+  background-color: #555;
+  box-shadow: 1.5px 10px #555, 4.5px 20px #555, 8px 30px #555;
+}
+#hrDots .dot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--clr);
+  box-shadow: 1.5px 10px var(--clr), 4.5px 20px var(--clr), 8px 30px var(--clr);
+}/*# sourceMappingURL=digital-clock-1.css.map */

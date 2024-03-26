@@ -1,0 +1,122 @@
+@import '_base.scss';
+
+body {
+    background-color: var(--dark-background-222);
+}
+
+#clock {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+#secDots,
+#minDots,
+#hrDots {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    rotate: 90deg;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -20px;
+        border-radius: 50%;
+        box-shadow:
+            25px 25px 75px rgba(0, 0, 0, 0.25),
+            10px 10px 70px rgba(0, 0, 0, 0.25),
+            inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+            inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+            inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    }
+
+    & h2 {
+        position: absolute;
+        transform: rotate(-90deg);
+        text-align: center;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 4em;
+        font-weight: 500;
+        color: var(--clr);
+
+        & span {
+            position: absolute;
+            font-size: 0.25em;
+            bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    }
+}
+
+#secDots,
+#minDots,
+#hrDots {
+    & strong {
+        position: absolute;
+        color: var(--white);
+        display: inline-flex;
+        transform: rotate(-90deg) translate(-30px, 90px);
+    }
+    & .dot {
+        position: absolute;
+        top: 50%;
+        width: 10px;
+        height: 3px;
+        background-color: var(--clr);
+        transform-origin: 100px;
+
+        &:nth-child(5n + 5) {
+            width: 20px;
+        }
+
+        &.active {
+            background-color: var(--clr);
+            box-shadow:
+                0 0 10px var(--clr),
+                0 0 20px var(--clr),
+                0 0 30px var(--clr);
+
+            & ~ .dot {
+                background-color: #555;
+            }
+        }
+    }
+}
+
+#hrDots .dot {
+    width: 20px;
+
+    &.active {
+        & ~ .dot::before {
+            background-color: #555;
+            box-shadow:
+                1.5px 10px #555,
+                4.5px 20px #555,
+                8px 30px #555;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: var(--clr);
+        box-shadow:
+            1.5px 10px var(--clr),
+            4.5px 20px var(--clr),
+            8px 30px var(--clr);
+    }
+}
