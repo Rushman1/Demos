@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Split Menu</title>
+        <title>Split menu Test 2</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../css/split-menu-test1.css" type='text/css'>
+        <link rel="stylesheet" href="../css/split-menu-test-2.css">
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     </head>
 
@@ -16,39 +16,39 @@
                 <a href="#" class='brand'>
                     <!-- <span class='icon'><img src="../images/YingYang-TriColor-Icon.png" alt="Savage Creations Logo"></span> -->
                     <span class='logo-icon'></span>
-                    <span class='logo'>Savage Creations</span>
+                    <span class='logo'>Total Care Review</span>
                 </a>
             </nav>
-            <nav class='navbar navRight' id='navbar'>
-                <ul>
+            <nav class='navbar navRight' id='navbar__outer'>
+                <ul class='navbar__menu' id='navbar'>
                     <li style="--i:0">
                         <a href="#">
                             <span>Home</span>
-                            <span><ion-icon name="home-outline"></ion-icon></span>
+                            <span title='Home'><i class="fa-solid fa-house"></i></span>
                         </a>
                     </li>
                     <li style="--i:1">
                         <a href="#">
-                            <span>Videos</span>
-                            <span><ion-icon name="videocam-outline"></ion-icon></span>
+                            <span>Member Lookup</span>
+                            <span title='Member Lookup'><i class="fa-solid fa-users"></i></span>
                         </a>
                     </li>
                     <li style="--i:2">
                         <a href="#">
-                            <span>Photos</span>
-                            <span><ion-icon name="camera-outline"></ion-icon></span>
+                            <span>Encounters</span>
+                            <span title='Encounters'><i class="fa-solid fa-briefcase-medical"></i></span>
                         </a>
                     </li>
                     <li style="--i:3">
-                        <a href="#">
-                            <span>Team</span>
-                            <span><ion-icon name="people-outline"></ion-icon></span>
+                        <a href="#" class='pink_flag__navbar'>
+                            <span>Pink Flags</span>
+                            <span title='Pink Flags'><i class="fa-solid fa-flag"></i></span>
                         </a>
                     </li>
                     <li style="--i:4">
                         <a href="#">
-                            <span>Contact</span>
-                            <span><ion-icon name="mail-open-outline"></ion-icon></span>
+                            <span>Accounts Payable</span>
+                            <span title='Accounts Payable'><i class="fa-solid fa-file-invoice-dollar"></i></span>
                         </a>
                     </li>
                 </ul>
@@ -59,34 +59,33 @@
                             <img src="../images/updatdAvatar-400x400.png">
                             <h3>TJ Savage</h3>
                         </div>
-                        <button type='button' class='close-button' title='Close Popup'><ion-icon name="close-circle-outline"></ion-icon></button>
+                        <button type='button' class='close-button' title='Close Popup'><i class="fa-solid fa-circle-xmark"></i></button>
                         <hr>
                         <a href="#" class="sub-menu-link">
-                            <ion-icon name="person"></ion-icon>
-                            <p>Edit Profile</p>
+                            <i class="fa-solid fa-user-lock"></i>
+                            <p>Administration</p>
                             <span>></span>
                         </a>
                         <a href="#" class="sub-menu-link">
-                            <ion-icon name="settings-outline"></ion-icon>
-                            <p>Settings & Privacy</p>
+                            <i class="fa-solid fa-file-invoice"></i>
+                            <p>Reports</p>
                             <span>></span>
                         </a>
                         <a href="#" class="sub-menu-link">
-                            <ion-icon name="help-circle"></ion-icon>
-                            <p>Help & Support</p>
-                            <span>></span>
-                        </a>
-                        <a href="#" class="sub-menu-link">
-                            <ion-icon name="log-out"></ion-icon>
+                            <i class="fa-solid fa-right-from-bracket"></i>
                             <p>Logout</p>
-                            <span>></span>
                         </a>
                     </div>
                 </div>
+                <a href='javascript:void(0);' class='navbar__close-button' onclick='showHideMenu()'>
+                    <i class='fa fa-bars'></i>
+                </a>
             </nav>
         </header>
-        <section class='content-grid'>
-            <main>
+        <main class='container__main'>
+            <section class="content-grid">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
@@ -129,55 +128,119 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam labore id ab quis nostrum. Incidunt non quis earum fuga est cumque amet magni! Ipsa ea numquam soluta, libero aliquid beatae.</p>
-            </main>
-            <aside>
-                <div class="aside-card list">
-                    <h3>Links</h3>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                    </ul>
-                </div>
-                <div class="aside-card news">
-                    <h3>News</h3>
-                </div>
-                <div class="aside-card news">
-                    <h3>News</h3>
 
+            </section>
+            <section class="side-bar col-4">
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 1
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
                 </div>
-                <div class="aside-card news">
-                    <h3>News</h3>
-
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 2
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
                 </div>
-                <div class="aside-card news">
-                    <h3>News</h3>
-
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 3
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
                 </div>
-            </aside>
-        </section>
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 4
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
+                </div>
+            </section>
+            <section class="side-bar col-3">
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 1
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
+                </div>
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 2
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
+                </div>
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 3
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
+                </div>
+            </section>
+            <section class="side-bar col-2">
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 1
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
+                </div>
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 2
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
+                </div>
+            </section>
+            <section class="side-bar col-1">
+                <div class="side-bar__section">
+                    <div class="side-bar__header">
+                        <a href='#' class='accord-header expanded' data-section-id='1'>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Section 1
+                        </a>
+                    </div>
+                    <div class="side-bar__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde animi est expedita aspernatur perspiciatis? Distinctio!</div>
+                </div>
+            </section>
+        </main>
         <footer>
-            <ul class='social_icon'>
-                <li><a href='#'><ion-icon name='logo-linkedin'></ion-icon></a></li>
-                <li><a href='#'><ion-icon name='logo-github'></ion-icon></a></li>
-                <li><a href='#'><ion-icon name='logo-youtube'></ion-icon></a></li>
-            </ul>
-            <ul class="menu">'
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">Photos</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <div class="version__footer">
+                Total Care Review v3.0
+            </div>
+            <div class="info__footer">
+                <span class='user-info__footer'>Last Login: 2024-03-28 11:53 AM</span>
+            </div>
+            <div class="copyright__footer">
+                &copy;&nbsp;2024 Intermountain Health
+            </div>
         </footer>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script src="../scripts/split-menu-test1.js" type='text/javascript'></script>
+        <script src='../scripts/split-menu-test-2.js' type='text/javascript'></script>
     </body>
 
 </html>

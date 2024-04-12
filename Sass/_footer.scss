@@ -1,0 +1,19 @@
+// FOOTER
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--menu-marker-bg-color-darker);
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    color: var(--off-white);
+
+    & div.version__footer,
+    & div.copyright__footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

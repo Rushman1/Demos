@@ -1,0 +1,18 @@
+.accord-header {
+    //padding: 0px 3px;
+    color: var(--white);
+    text-decoration: none;
+    width: 100%;
+
+    & i {
+        margin-right: 4px;
+        margin-left: 4px;
+        transition: 500ms;
+    }
+
+    &.expanded {
+        & i {
+            transform: rotate(90deg);
+        }
+    }
+}
