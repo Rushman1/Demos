@@ -1,0 +1,47 @@
+$black: #000000;
+$white: #ffffff;
+$red: #ff0000;
+$green: #00ff00;
+$blue: #0000ff;
+
+$darkBackground: #071111;
+
+/*BUTTONS*/
+$borderThickness: 3px;
+$cornerSize: .45em;
+$color: $white;
+$hoverColor: hsl(196, 100%, 50%);
+
+/*RESPONSIVE CARD HOVER*/
+$cardBackground: hsl(202, 55%, 19%);
+$contentColor: hsl(0, 0%, 7%);
+
+/*INFINITY SYMBOL*/
+$infinityBackground: hsl(120, 78%, 7%);
+$circleColor: hsl(122, 100%, 50%);
+
+/*SIDEBAR*/
+$sidebarBackground: hsl(290, 100%, 5%);
+$menuBackground: hsl(291, 82%, 15%);
+$menuHoverBackground: hsl(340, 83%, 52%);
+
+/*DROPDOWN MENU*/
+$bodyBackground: hsl(206, 66%, 24%);
+$menuToggleBackground: hsl(340, 100%, 63%);
+$menuToggleActiveBackground: hsl(207, 90%, 54%);
+$menuListHover: hsl(199, 98%, 48%);
+
+/*ANIMATED ACTIVE LINK INDICATOR*/
+$bodyBackground-Indicator: hsl(222, 25%, 8%);
+/*#0f1219*/
+$navBackground-Indicator: hsl(222, 22%, 15%);
+/*#1e232f*/
+$markerBackground-Indicator: hsl(181, 100%, 52%);
+/*#08f9ff*/
+$markerBackgroundGradient-Indicator: hsla(181, 100%, 52%, 0.2);
+/*#08f9ff33*/
+
+/*MODERN NAVIGATION*/
+$modernBackGround: hsl(210, 50%, 13%);
+/*#112233*/
+$modernNavBackground: rgb(69, 92, 115);

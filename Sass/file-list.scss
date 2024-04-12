@@ -1,27 +1,90 @@
 @import "_base";
+@import "_colors";
 
 body {
-    background: var(--background);
-    flex-direction: column;
-    flex-wrap: wrap;
+    background: $darkBackground;
+    align-items: start;
 }
+
+h3 {
+    color: white;
+}
+
 ul {
-    column-count: 3;
+
+    & li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        list-style-type: none;
+        padding: 0.2rem;
+    }
 }
-li {
-    list-style: none;
 
-    & a {
-        color: white;
-        text-decoration: none;
-        transition: 0.25s;
+// a {
+//   padding: calc(.5em + $cornerSize) calc(.9em + $cornerSize);
+//   color: $color;
+//   background: conic-gradient(from 90deg at $borderThickness $borderThickness, $black 90deg, $color 0) $cornerSize $cornerSize/calc(100% - $borderThickness - 2*$cornerSize) calc(100% - $borderThickness - 2*$borderThickness);
+//   transition: .3s linear, color 0s, background-color 0s;
+//   outline: $borderThickness solid $black;
+//   outline-offset: .6em;
+//   font-size: 16px;
 
-        &:visited {
-            color: #777;
-        }
+//   border: 0;
 
-        &:hover {
-            font-size: 1.015em;
-        }
+//   user-select: none;
+//   -webkit-user-select: none;
+//   touch-action: manipulation;
+
+//   &:hover,
+//   &:focus-visible {
+//     outline-color: $color;
+//     outline-offset: .05em;
+//     ;
+//   }
+
+//   &:active {
+//     background: $color;
+//     color: $white;
+//   }
+// }
+
+a {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #373B44;
+
+    padding: calc(.5em + $cornerSize) calc(.9em + $cornerSize);
+    color: $color;
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at $borderThickness $borderThickness, #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - $borderThickness - 2*var(--_p)) calc(100% - $borderThickness - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: $borderThickness solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    width: 100%;
+    text-decoration: none;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    &:hover,
+    &:focus-visible {
+        --_p: 0px;
+        background-color: $hoverColor;
+        outline-color: $hoverColor;
+        outline-offset: .05em;
+    }
+
+    &:active {
+        background: $hoverColor;
+        color: #fff;
     }
 }

@@ -63,7 +63,9 @@ body {
   background-color: var(--dark-background-111);
 }
 .container input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .container input:nth-child(1):checked ~ .dots label:nth-child(1), .container input:nth-child(2):checked ~ .dots label:nth-child(2), .container input:nth-child(3):checked ~ .dots label:nth-child(3), .container input:nth-child(4):checked ~ .dots label:nth-child(4), .container input:nth-child(5):checked ~ .dots label:nth-child(5), .container input:nth-child(6):checked ~ .dots label:nth-child(6), .container input:nth-child(7):checked ~ .dots label:nth-child(7), .container input:nth-child(8):checked ~ .dots label:nth-child(8), .container input:nth-child(9):checked ~ .dots label:nth-child(9), .container input:nth-child(10):checked ~ .dots label:nth-child(10), .container input:nth-child(11):checked ~ .dots label:nth-child(11) {
   opacity: 1;
@@ -99,7 +101,8 @@ body {
   height: 100%;
   background: var(--img);
   background-size: cover;
-  clip-path: circle(0% at 0% 50%);
+  -webkit-clip-path: circle(0% at 0% 50%);
+          clip-path: circle(0% at 0% 50%);
   transition: 1.5s;
   transition-delay: 0s;
   background-position: left;
@@ -108,11 +111,13 @@ body {
   align-items: flex-end;
 }
 .container .slider .slide:nth-child(even) {
-  clip-path: circle(0% at 100% 50%);
+  -webkit-clip-path: circle(0% at 100% 50%);
+          clip-path: circle(0% at 100% 50%);
   background-position: right;
 }
 .container input:nth-child(1):checked ~ .slider .slide:nth-child(1), .container input:nth-child(2):checked ~ .slider .slide:nth-child(2), .container input:nth-child(3):checked ~ .slider .slide:nth-child(3), .container input:nth-child(4):checked ~ .slider .slide:nth-child(4), .container input:nth-child(5):checked ~ .slider .slide:nth-child(5), .container input:nth-child(6):checked ~ .slider .slide:nth-child(6), .container input:nth-child(7):checked ~ .slider .slide:nth-child(7), .container input:nth-child(8):checked ~ .slider .slide:nth-child(8), .container input:nth-child(9):checked ~ .slider .slide:nth-child(9), .container input:nth-child(10):checked ~ .slider .slide:nth-child(10), .container input:nth-child(11):checked ~ .slider .slide:nth-child(11) {
-  clip-path: circle(150% at 50% 50%);
+  -webkit-clip-path: circle(150% at 50% 50%);
+          clip-path: circle(150% at 50% 50%);
   transition-delay: 1s;
   background-position: center;
 }

@@ -96,6 +96,7 @@ body {
 .container .container-body .body-inner {
   position: relative;
   margin: 0 auto;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .container .container-body .body-inner form#registrationform {
