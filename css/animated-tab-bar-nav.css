@@ -37,9 +37,7 @@ body {
   width: 400px;
   height: 80px;
   z-index: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .tab ul.menu {
   position: absolute;

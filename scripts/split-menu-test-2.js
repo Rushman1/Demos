@@ -65,3 +65,72 @@ let accordHeader = document
     });
   });
 let accordBody = document.querySelectorAll('div.accord-body');
+let tooltipTimeout = null;
+// Tooltip Functions
+let tooltips = document.querySelectorAll('.tooltip').forEach((item) => {
+  item.addEventListener(
+    'mouseover',
+    function (e) {
+      let t = item.attributes['tooltip-title'];
+      let ce = document.getElementById('my_id');
+
+      if (ce) {
+        return false;
+      }
+
+      let pp = document.createElement('div');
+      pp.setAttribute('id', 'my_id');
+      //let sp = document.createElement('span');
+      pp.innerText = t.value;
+      //pp.appendChild(sp);
+      pp.classList.add('tooltiptext');
+      item.appendChild(pp);
+    },
+    false
+  );
+  item.addEventListener(
+    'mouseout',
+    function (e) {
+      window.setTimeout(function () {
+        console.log('We are not showing this tooltip any more');
+        let createdElement = document.getElementById('my_id');
+        if (createdElement) {
+          createdElement.parentNode.removeChild(createdElement);
+        }
+      }, 500);
+    },
+    false
+  );
+
+  // item.addEventListener('mousemove', function (e) {
+  //   let tt = document.elementFromPoint(e.clientX, e.clientY);
+  //   let at = tt.classList.contains('tooltiptext');
+  //   if (at) {
+  //     if (tooltipTimeout) {
+  //       clearTimeout(tooltipTimeout);
+  //     }
+  //   }
+  // });
+});
+
+function getPosition(el) {
+  let xPos = 0;
+  let yPos = 0;
+
+  while (el) {
+    if (el.tagName === 'BODY') {
+      // Handle browser quirks with body/window/document and page scroll
+      const xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+      const yScroll = el.scrollTop || document.documentElement.scrollTop;
+      xPos += el.offsetLeft - xScroll + el.clientLeft;
+      yPos += el.offsetTop - yScroll + el.clientTop;
+    } else {
+      // For all other non-BODY elements
+      xPos += el.offsetLeft - el.scrollLeft + el.clientLeft;
+      yPos += el.offsetTop - el.scrollTop + el.clientTop;
+    }
+    el = el.offsetParent;
+  }
+
+  return { x: xPos, y: yPos };
+}

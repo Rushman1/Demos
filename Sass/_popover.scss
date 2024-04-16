@@ -1,0 +1,19 @@
+.tooltip {
+    text-decoration: underline;
+    position: relative;
+    display: inline-block;
+    background-color: red;
+
+    & .tooltiptext {
+        min-width: 420px;
+        width: fit-content;
+        background-color: burlywood;
+        color: black;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        top: -30px;
+    }
+}

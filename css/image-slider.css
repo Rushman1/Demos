@@ -81,14 +81,12 @@ body {
   flex-shrink: 0;
   flex-basis: 100%;
   scroll-snap-align: start;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .slider-nav {
   display: flex;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   position: absolute;
   bottom: 1.25rem;
   left: 50%;

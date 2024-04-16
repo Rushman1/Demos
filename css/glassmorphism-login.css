@@ -196,9 +196,6 @@ form .inputBox input {
   font-size: 0.85em;
   color: var(--white);
 }
-form .inputBox input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
 form .inputBox input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }

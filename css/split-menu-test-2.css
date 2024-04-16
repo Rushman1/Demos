@@ -84,6 +84,25 @@ footer div.version__footer, footer div.copyright__footer {
   transform: rotate(90deg);
 }
 
+.tooltip {
+  text-decoration: underline;
+  position: relative;
+  display: inline-block;
+  background-color: red;
+}
+.tooltip .tooltiptext {
+  min-width: 420px;
+  width: fit-content;
+  background-color: burlywood;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: -30px;
+}
+
 body {
   background: radial-gradient(farthest-corner at 0px 80px, #dae4f1 100%, var(--off-white) 100%);
   background-attachment: fixed;
@@ -219,25 +238,25 @@ header {
   margin-right: 25px;
 }
 
-.side-bar {
+.section-accord {
   margin: 5px 0px;
   display: grid;
   gap: 5px;
   transition: 300ms;
 }
-.side-bar.col-4 {
+.section-accord.col-4 {
   grid-template-columns: repeat(4, 1fr);
 }
-.side-bar.col-3 {
+.section-accord.col-3 {
   grid-template-columns: repeat(3, 1fr);
 }
-.side-bar.col-2 {
+.section-accord.col-2 {
   grid-template-columns: repeat(2, 1fr);
 }
-.side-bar.col-1 {
+.section-accord.col-1 {
   grid-template-columns: 1fr;
 }
-.side-bar .side-bar__section {
+.section-accord .section-accord__section {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -245,7 +264,7 @@ header {
   overflow: hidden;
   transition: 250ms;
 }
-.side-bar .side-bar__section .side-bar__header {
+.section-accord .section-accord__section .section-accord__header {
   height: 30px;
   width: 100%;
   background-color: var(--dark-background-222);
@@ -255,7 +274,7 @@ header {
   align-items: center;
   color: var(--white);
 }
-.side-bar .side-bar__section .side-bar__body {
+.section-accord .section-accord__section .section-accord__body {
   padding: 10px;
 }
 
@@ -393,9 +412,9 @@ div#profile-picture:hover {
   }
 }
 @media screen and (max-width: 800px) {
-  .side-bar.col-4,
-  .side-bar.col-3,
-  .side-bar.col-2 {
+  .sidsection-accord.col-4,
+  .sidsection-accord.col-3,
+  .sidsection-accord.col-2 {
     grid-template-columns: repeat(2, 1fr);
   }
   .navbar.navRight .navbar__close-button {
