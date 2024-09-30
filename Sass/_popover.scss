@@ -2,18 +2,47 @@
     text-decoration: underline;
     position: relative;
     display: inline-block;
-    background-color: red;
 
-    & .tooltiptext {
-        min-width: 420px;
-        width: fit-content;
-        background-color: burlywood;
-        color: black;
-        text-align: center;
-        padding: 5px;
-        border-radius: 5px;
+    &::before,
+    &::after {
+        --scale: 0;
+        --arrow-size: 10px;
+        --tooltip-color: var(--dark-background-111);
         position: absolute;
-        z-index: 1;
-        top: -30px;
+        top: -0.25rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+        transition: 150ms transform;
+        transform-origin: bottom center;
+    }
+
+    &::before {
+        --translate-y: calc(-100% - var(--arrow-size));
+        content: attr(data-tooltip);
+        color: white;
+        padding: 0.5rem;
+        width: max-content;
+        max-width: 100%;
+        border-radius: 0.3rem;
+        text-align: center;
+        background-color: var(--tooltip-color);
+    }
+
+    &:hover {
+        position: relative;
+        z-index: 10000;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        --scale: 1;
+    }
+
+    &::after {
+        --translate-y: calc(-1 * var(--arrow-size));
+        content: '';
+        border: var(--arrow-size) solid transparent;
+        border-top-color: var(--tooltip-color);
+        transform-origin: top center;
     }
 }

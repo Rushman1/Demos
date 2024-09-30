@@ -54,64 +54,69 @@ let accordHeader = document
     link.addEventListener('click', function (evt) {
       evt.preventDefault();
       link.classList.toggle('expanded');
-      let parentElement = link.parentElement.parentElement;
-      if (parentElement) {
+      let parentElement = link.parentElement;
+      let grandParentElement = link.parentElement.parentElement;
+      if (grandParentElement) {
         if (link.classList.contains('expanded')) {
-          parentElement.style.height = '100%';
+          grandParentElement.style.height = '100%';
+          parentElement.nextElementSibling.style.display = 'inline-block';
         } else {
-          parentElement.style.height = '30px';
+          grandParentElement.style.height = '30px';
+          console.log(parentElement.nextElementSibling);
+          parentElement.nextElementSibling.style.display = 'none';
         }
       }
     });
   });
 let accordBody = document.querySelectorAll('div.accord-body');
 let tooltipTimeout = null;
+
 // Tooltip Functions
-let tooltips = document.querySelectorAll('.tooltip').forEach((item) => {
-  item.addEventListener(
-    'mouseover',
-    function (e) {
-      let t = item.attributes['tooltip-title'];
-      let ce = document.getElementById('my_id');
+// // let tooltips = document.querySelectorAll('.tooltip').forEach((item) => {
+// //   item.addEventListener(
+// //     'mouseover',
+// //     function (e) {
+// //       let t = item.attributes['tooltip-title'];
+// //       let ce = document.getElementById('my_id');
 
-      if (ce) {
-        return false;
-      }
+// //       if (ce) {
+// //         return false;
+// //       }
 
-      let pp = document.createElement('div');
-      pp.setAttribute('id', 'my_id');
-      //let sp = document.createElement('span');
-      pp.innerText = t.value;
-      //pp.appendChild(sp);
-      pp.classList.add('tooltiptext');
-      item.appendChild(pp);
-    },
-    false
-  );
-  item.addEventListener(
-    'mouseout',
-    function (e) {
-      window.setTimeout(function () {
-        console.log('We are not showing this tooltip any more');
-        let createdElement = document.getElementById('my_id');
-        if (createdElement) {
-          createdElement.parentNode.removeChild(createdElement);
-        }
-      }, 500);
-    },
-    false
-  );
+// //       let pp = document.createElement('div');
+// //       pp.setAttribute('id', 'my_id');
+// //       //let sp = document.createElement('span');
+// //       pp.innerText = t.value;
+// //       //pp.appendChild(sp);
+// //       pp.classList.add('tooltiptext');
+// //       item.appendChild(pp);
+// //     },
+// //     false
+// //   );
+// item.addEventListener(
+//   'mouseout',
+//   function (e) {
+//     window.setTimeout(function () {
+//       console.log('We are not showing this tooltip any more');
+//       let createdElement = document.getElementById('my_id');
+//       if (createdElement) {
+//         createdElement.parentNode.removeChild(createdElement);
+//       }
+//     }, 500);
+//   },
+//   false
+// );
 
-  // item.addEventListener('mousemove', function (e) {
-  //   let tt = document.elementFromPoint(e.clientX, e.clientY);
-  //   let at = tt.classList.contains('tooltiptext');
-  //   if (at) {
-  //     if (tooltipTimeout) {
-  //       clearTimeout(tooltipTimeout);
-  //     }
-  //   }
-  // });
-});
+// item.addEventListener('mousemove', function (e) {
+//   let tt = document.elementFromPoint(e.clientX, e.clientY);
+//   let at = tt.classList.contains('tooltiptext');
+//   if (at) {
+//     if (tooltipTimeout) {
+//       clearTimeout(tooltipTimeout);
+//     }
+//   }
+// });
+// //});
 
 function getPosition(el) {
   let xPos = 0;

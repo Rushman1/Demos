@@ -1,17 +1,203 @@
-@import "_base";
-@import "_colors";
+@import '_colors.scss';
+
+@font-face {
+    font-family: 'Rector';
+    font-weight: 500;
+    src:
+        url('../fonts/Rector/Web\ license/Rector/rectorweb-medium.woff2') format('woff2'),
+        url('../fonts/Rector/Web\ license/rectorweb-medium.woff') fomrat('woff');
+}
+
+@font-face {
+    font-family: 'ABC Social';
+    font-weight: normal;
+    src:
+        url('../fonts/ABCSocial/ABCSocial-Regular.woff2') format('woff2'),
+        url('../fonts/ABCSocial/ABCSocial-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ABC Social';
+    font-weight: 500;
+    src:
+        url('../fonts/ABCSocial/ABCSocial-Medium.woff2') format('woff2'),
+        url('../fonts/ABCSocial/ABCSocial-Medium.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ABC Social', sans-serif;
+}
+:root {
+    --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+    --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+    --black: hsl(0, 0%, 0%); /*#000000*/
+    --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+    --dark-background: hsl(228, 7%, 14%); /*#212226*/
+    --background: hsl(206, 45%, 12%); /*#11212D*/
+    --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+    --dark-background-222: hsl(0, 0%, 13%); /*#222222*/
+    --glassmorphism-background: hsl(257, 43%, 31%);
+    --footerBackground: hsl(216, 100%, 60%);
+    --buttonsBackground: hsl(205, 43%, 16%);
+    --green: hsl(132, 99%, 58%);
+    --circularbg2: hsl(54, 100%, 62%);
+    --section-background: hsl(240, 23%, 11%);
+    --menu-marker-bg-color: hsl(213, 100%, 68%);
+    --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+    --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+    --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+    --light-grey: hsl(0, 0%, 47%); /*#787878*/
+    --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+    --med-grey: hsl(0, 0%, 20%); /*#333*/
+    --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+    --pink: hsl(339, 100%, 62%);
+    --red: hsl(0, 100%, 50%);
+    --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+    --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+    --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+    --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+    --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+    --radial-background: hsl(212, 14%, 21%); /*#2f363e*/
+
+    --services-design: hsl(206, 62%, 54%);
+    --services-development: hsl(324, 89%, 64%);
+    --services-search: hsl(120, 70%, 68%);
+    --services-analytics: hsl(51, 75%, 54%);
+    --services-video: hsl(120, 34%, 39%);
+    --services-games: hsl(300, 43%, 51%);
+
+    --responsive-bar-background: hsl(200, 18%, 46%) /*#607d8b*/;
+}
 
 body {
-    background: $darkBackground;
+    background: var(--white);
+    align-items: start;
+    margin: 72px auto 0px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    border-bottom: 2px solid #e1dfe3;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    white-space: nowrap;
+    gap: 8px;
+
+    & div.icon {
+        margin: 8px 16px;
+        display: flex;
+
+        & a.site-name {
+            color: $fontColor;
+            font-family: 'Rector', serif;
+            font-weight: 500;
+            font-size: max(1rem, 1.2rem + 0.5cqi);
+            padding: 0 32px;
+            margin: 0 32px;
+            border: 1px solid transparent;
+            transition: all 300ms;
+            position: relative;
+            border-left: 3px solid #edebe9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+        }
+    }
+    & nav.header-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px; // bewteen buttons / items
+
+        & button.menu-item,
+        & a.menu-item {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            position: relative;
+            background-color: transparent;
+            transition: all 100ms;
+            padding: 16px;
+            outline: 0;
+            gap: 4px; // between icon and words
+            color: #4a00e2;
+            text-decoration: none;
+            margin: 0;
+            border: 2px solid #4a00e2;
+            border-radius: 44px;
+            padding: 7px 16px;
+
+            &.has--icon {
+                & svg {
+                    height: 18px;
+                    width: 18px;
+                    fill: #4a00e2;
+                }
+            }
+
+            &:hover,
+            &.has--icon:hover {
+                background: #e9e6fc;
+                //background: linear-gradient(to bottom right, #bf00e680, #4a00e280);
+                //color: var(--white);
+                border-color: #bf00e6;
+                box-shadow:
+                    0px 9px 27px rgba(0, 0, 0, 0.04),
+                    0px 5.833px 15.813px rgba(0, 0, 0, 0.03),
+                    0px 3.467px 8.6px rgba(0, 0, 0, 0.02),
+                    0px 1.8px 4.387px rgba(0, 0, 0, 0.02),
+                    0px 0.733px 2.2px rgba(0, 0, 0, 0.02),
+                    0px 0.167px 1.063px rgba(0, 0, 0, 0.01);
+
+                & svg {
+                    //fill: #bf00e6;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #110057;
+    & nav {
+        padding: 16px;
+    }
+    & div.footer--sub {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 16px 16px;
+
+        & div.footer--copyright,
+        & div.footer--version {
+            color: #575758;
+        }
+    }
+}
+
+div.menu-list {
+    display: flex;
+    justify-content: center;
     align-items: start;
 }
 
 h3 {
-    color: white;
+    color: $fontColor;
 }
 
 ul {
-
     & li {
         display: flex;
         justify-content: center;
@@ -50,21 +236,24 @@ ul {
 //   }
 // }
 
-a {
+li a {
     --b: 3px;
     /* border thickness */
-    --s: .45em;
+    --s: 0.45em;
     /* size of the corner */
-    --color: #373B44;
+    --color: #110057;
 
-    padding: calc(.5em + $cornerSize) calc(.9em + $cornerSize);
-    color: $color;
+    padding: calc(0.5em + $cornerSize) calc(0.9em + $cornerSize);
+    color: var(--dark-background);
     --_p: var(--s);
-    background:
-        conic-gradient(from 90deg at $borderThickness $borderThickness, #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - $borderThickness - 2*var(--_p)) calc(100% - $borderThickness - 2*var(--_p));
-    transition: .3s linear, color 0s, background-color 0s;
+    background: conic-gradient(from 90deg at $borderThickness $borderThickness, #0000 90deg, var(--color) 0) var(--_p)
+        var(--_p) / calc(100% - $borderThickness - 2 * var(--_p)) calc(100% - $borderThickness - 2 * var(--_p));
+    transition:
+        0.2s linear,
+        color 0s,
+        background-color 0s;
     outline: $borderThickness solid #0000;
-    outline-offset: .6em;
+    outline-offset: 0.6em;
     font-size: 16px;
     width: 100%;
     text-decoration: none;
@@ -80,7 +269,7 @@ a {
         --_p: 0px;
         background-color: $hoverColor;
         outline-color: $hoverColor;
-        outline-offset: .05em;
+        outline-offset: 0.05em;
     }
 
     &:active {

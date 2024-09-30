@@ -37,6 +37,7 @@
   --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
   --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
   --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --radial-background: hsl(212, 14%, 21%); /*#2f363e*/
   --services-design: hsl(206, 62%, 54%);
   --services-development: hsl(324, 89%, 64%);
   --services-search: hsl(120, 70%, 68%);
@@ -53,21 +54,37 @@ body {
   min-height: 100vh;
 }
 
+/*BUTTONS*/
+/*RESPONSIVE CARD HOVER*/
+/*INFINITY SYMBOL*/
+/*SIDEBAR*/
+/*DROPDOWN MENU*/
+/*ANIMATED ACTIVE LINK INDICATOR*/
+/*#0f1219*/
+/*#1e232f*/
+/*#08f9ff*/
+/*#08f9ff33*/
+/*MODERN NAVIGATION*/
+/*#112233*/
 footer {
   position: absolute;
   bottom: 0;
-  background-color: var(--menu-marker-bg-color-darker);
-  height: 75px;
+  margin-top: 20px;
   width: 100%;
+  background-color: #110057;
+}
+footer nav {
+  padding: 16px;
+}
+footer div.footer--sub {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2em;
-  color: var(--off-white);
+  padding: 0px 16px 16px;
 }
-footer div.version__footer, footer div.copyright__footer {
-  padding-left: 20px;
-  padding-right: 20px;
+footer div.footer--sub div.footer--copyright, footer div.footer--sub div.footer--version {
+  color: #575758;
+  font-size: 0.85em;
 }
 
 .accord-header {
@@ -88,30 +105,71 @@ footer div.version__footer, footer div.copyright__footer {
   text-decoration: underline;
   position: relative;
   display: inline-block;
-  background-color: red;
 }
-.tooltip .tooltiptext {
-  min-width: 420px;
-  width: fit-content;
-  background-color: burlywood;
-  color: black;
-  text-align: center;
-  padding: 5px;
-  border-radius: 5px;
+.tooltip::before, .tooltip::after {
+  --scale: 0;
+  --arrow-size: 10px;
+  --tooltip-color: var(--dark-background-111);
   position: absolute;
-  z-index: 1;
-  top: -30px;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+.tooltip::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+  content: attr(data-tooltip);
+  color: white;
+  padding: 0.5rem;
+  width: max-content;
+  max-width: 100%;
+  border-radius: 0.3rem;
+  text-align: center;
+  background-color: var(--tooltip-color);
+}
+.tooltip:hover {
+  position: relative;
+  z-index: 10000;
+}
+.tooltip:hover::before, .tooltip:hover::after {
+  --scale: 1;
+}
+.tooltip::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+  content: "";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
+}
+
+@font-face {
+  font-family: "Rector";
+  font-weight: 500;
+  src: url("../fonts/Rector/Web license/Rector/rectorweb-medium.woff2") format("woff2"), url("../fonts/Rector/Web license/rectorweb-medium.woff") format("woff");
+}
+@font-face {
+  font-family: "ABC Social";
+  font-weight: normal;
+  src: url("../fonts/ABCSocial/ABCSocial-Regular.woff2") format("woff2"), url("../fonts/ABCSocial/ABCSocial-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "ABC Social";
+  font-weight: 500;
+  src: url("../fonts/ABCSocial/ABCSocial-Medium.woff2") format("woff2"), url("../fonts/ABCSocial/ABCSocial-Medium.woff") format("woff");
+}
+* {
+  font-family: "ABC Social", sans-serif;
 }
 
 body {
-  background: radial-gradient(farthest-corner at 0px 80px, #dae4f1 100%, var(--off-white) 100%);
   background-attachment: fixed;
   min-height: 100svh;
   position: relative;
   transition: 0.5s;
   transition-delay: 0.5s;
-  padding-top: 80px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 150px;
   z-index: 0;
 }
 body::after {
@@ -126,7 +184,8 @@ header {
   z-index: 1000;
   position: fixed;
   top: 0;
-  background: radial-gradient(farthest-corner at 0px 0px, #dae4f1 100%, var(--off-white) 100%);
+  background: #ffffff;
+  border-bottom: 2px solid #e1dfe3;
 }
 
 .navbar {
@@ -141,36 +200,35 @@ header {
   justify-content: stretch;
   align-items: center;
   flex-direction: row;
-  width: 500px;
 }
-.navbar.navLeft a {
+.navbar.navLeft a:not(.site-name) {
   display: flex;
   justify-content: start;
   align-items: center;
   padding-left: 20px;
-  width: 100%;
   text-decoration: none;
   color: var(--menu-marker-bg-color-darker);
   transition: 0.25s;
 }
-.navbar.navLeft a:hover {
+.navbar.navLeft a:not(.site-name):hover {
   color: var(--light-grey);
 }
-.navbar.navLeft a span.logo-icon {
-  margin-right: 10px;
-  background-image: url("../images/TCR-IMH-Logo-Design.png");
-  background-size: cover;
-  height: 50px;
-  width: 50px;
-}
-.navbar.navLeft a span.logo {
-  display: inline-block;
-  transform: scale(1, 1.5);
-  height: 100%;
-  font-size: 2.2em;
+.navbar.navLeft a.site-name {
+  color: hsl(252, 100%, 17%);
   text-transform: uppercase;
-  font-weight: 200;
-  letter-spacing: -0.1em;
+  font-family: "Rector", serif;
+  font-weight: 500;
+  font-size: max(1rem, 1.2rem + 0.5cqi);
+  padding: 0 32px;
+  margin: 0 32px;
+  border: 1px solid transparent;
+  transition: all 300ms;
+  position: relative;
+  border-left: 3px solid #edebe9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
 }
 .navbar.navRight {
   right: 0;
@@ -193,13 +251,14 @@ header {
 }
 .navbar.navRight ul li a {
   text-decoration: none;
-  color: var(--menu-marker-bg-color-darker);
+  color: hsl(252, 100%, 17%);
   font-size: 1.2em;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: 35px;
 }
 .navbar.navRight ul li a span {
   transition: 0.25s;
@@ -217,7 +276,7 @@ header {
   color: rgb(184, 77, 95);
 }
 .navbar.navRight.icon ul li a {
-  color: var(--menu-marker-bg-color-darker);
+  color: hsl(252, 100%, 17%);
 }
 .navbar.navRight.icon ul li a span:nth-child(1) {
   transform: translateY(-30px);
@@ -236,6 +295,9 @@ header {
   width: 100%;
   margin-left: 25px;
   margin-right: 25px;
+}
+.container__main div.container__main--heading {
+  padding: 0px 0px 10px;
 }
 
 .section-accord {
@@ -261,7 +323,6 @@ header {
   height: 100%;
   border-radius: 5px;
   border: 1px solid var(--dark-background-222);
-  overflow: hidden;
   transition: 250ms;
 }
 .section-accord .section-accord__section .section-accord__header {

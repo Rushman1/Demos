@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --dark-background-222: hsl(0, 0%, 13%); /*#222222*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --radial-background: hsl(212, 14%, 21%); /*#2f363e*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+  --responsive-bar-background: hsl(200, 18%, 46%) /*#607d8b*/;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--radial-background);
+}
+
+.menu {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu.active .menuToggle {
+  transform: rotate(315deg);
+}
+.menu.active li {
+  transform: rotate(calc(45deg * var(--i)));
+}
+.menu.active li:hover a ion-icon {
+  position: relative;
+  color: var(--radial-background);
+  z-index: 100000;
+}
+.menu.active li:hover a::before {
+  background-color: var(--clr);
+  color: var(--radial-background);
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+}
+.menu.active li a {
+  color: var(--clr);
+}
+.menu.active li a::before {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--clr);
+  box-sizing: inherit;
+  background-color: var(--radial-background);
+  transform: rotate(calc(var(--i) * 90deg)) translate(0px, 0px);
+  transition: transform 500ms, height 500ms, width 500ms;
+  transition-delay: 1s, 1.5s, 1.5s;
+  rotate: 135deg;
+}
+.menu.active li a::after {
+  left: 10px;
+  width: 40px;
+  transform: rotate(calc(var(--i) * 45deg)) translate(50px, 0px);
+}
+.menu li {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transform-origin: 130px;
+  transition: 500ms;
+  transition-delay: calc(0.1s * var(--i));
+  transform: rotate(0deg) translateX(100px);
+}
+.menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  transform: rotate(calc(-45deg * var(--i)));
+  color: transparent;
+  transition: 1000ms;
+  transition-delay: 500ms;
+}
+.menu li a::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--clr);
+  transform: rotate(calc(var(--i) * 90deg)) translate(0px, 25px);
+  transition: height 500ms, width 500ms, transform 500ms;
+  transition-delay: 0s, 0s, 0s;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  width: 20px;
+  height: 2px;
+  background-color: var(--clr);
+  z-index: -1;
+  transform: rotate(calc(var(--i) * 0deg)) translate(15px, 0px);
+  transition: 500ms;
+  transition-delay: 500ms;
+}
+
+.menuToggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2em;
+  transition: transform 1500ms;
+}/*# sourceMappingURL=radial-octagon-menu.css.map */

@@ -1,0 +1,72 @@
+Desktop
+
+1. The User is authorized to install the Font for internal business
+use. “Install” means making the font locally available to
+applications on a device.
+
+2. The User is authorized to install the Font for a defined number of
+sub-users as described in the Invoice (“User Group”). If the User
+is an entity, the User Group must all be employees of the entity. The
+Addendum fee is based upon the total number of employees specified in
+the Invoice (across all geographical sites, measured over one year).
+
+3. “Desktop” means use of the Font on tangible media, enabling
+editing by the User alone; and the display and printing of
+human-readable text on tangible media, internally or as part of the
+User’s commercial activity, and to the exclusion of any use
+expressly granted in other Addenda types and of any commercial use of
+the Font itself.
+
+4. By way of example only and not limitation, the Font may thus be
+used for the design and publication of printed graphics and static
+images, such as books, brochures, catalogs; more generally, as part of
+literary and media publishing activity in which the Font may appear in
+a non-editable, non-embedded form. The Font may be used to create
+non-font static digital documents such as bitmap images on the web,
+and non-font vector images.
+
+5. For the avoidance of doubt, the use of the Font is authorized for
+static text only, not dynamic. Use for dynamic text editable by a
+third party or the displaying and printing of variable data is not
+part of this License. The dynamic display of the Font, and the dynamic
+rasterizing and rendering of the Font as bitmap images, is not
+authorized either.
+
+6. Addendum to Article 3.2 “Copy”: For the exclusive purpose of
+outputting certain files, the User is permitted to transfer a copy of
+the Font used for creating the relevant file to a printer or printing
+service provider, on the condition there be no active use of the Font
+(for example, but not limited to: for text formatting, editing, or
+corrections). In the event active use of the Font is desired, such
+service providers are required to purchase their own license. The User
+is obligated to inform any such service provider about the content and
+restrictions of this Agreement, including the prohibition against
+reproducing, distributing, providing to the public, disseminating,
+executing or more generally exploiting in any way, free or at cost,
+the Font. Copies of the Font shall be deleted immediately after
+performing the service. In the event the User is a service provider
+and licenses the Font for its own use, the license does not cover the
+use of the Font for any of the User’s customers, which must acquire
+their own license.
+
+7. Addendum to Article 3.6 “Embed”: For the exclusive purpose of
+outputting certain files, the User is permitted to embed the Font in
+digital documents only when intended for printing. The User recognizes
+that the transmission of a document in PDF file format set to
+“printing and viewing only” is the first and best method for
+transmitting documents to a service provider. All other provisions of
+Article 3.6 remain in force, especially pertaining to the unauthorized
+distribution of digital documents where the Font is embedded. This
+special authorization is granted without prejudice to the User abiding
+by all other the obligations set out herein, and particularly this
+Addendum and Article 8.
+
+8. The User may install and use the Font in standalone desktop design
+software that relies on a remote cloud server infrastructure and has a
+desktop interface, both conditions being cumulative. The User may
+install the Font on one local file server such as a network font
+manager, for use on a local area network (LAN), solely in the case
+where use of the Font is expressly limited to the total number of
+sub-users that may install the Font under this Agreement,
+corresponding to the total number of persons that may have access to
+the Font at any moment.

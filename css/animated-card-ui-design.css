@@ -38,6 +38,7 @@
   --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
   --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
   --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --radial-background: hsl(212, 14%, 21%); /*#2f363e*/
   --services-design: hsl(206, 62%, 54%);
   --services-development: hsl(324, 89%, 64%);
   --services-search: hsl(120, 70%, 68%);

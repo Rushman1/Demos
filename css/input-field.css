@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   display: flex;
@@ -23,6 +23,7 @@ body {
   width: 100%;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.25);
   background: #1d2b3a;
   border-radius: 5px;
   outline: none;
@@ -60,4 +61,5 @@ body {
 .inputBox input:focus,
 .inputBox input:valid {
   border: 1px solid #00dfc4;
+  border-bottom: 5px solid #00dfc4;
 }

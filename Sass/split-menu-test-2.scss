@@ -1,22 +1,51 @@
 @import '_base.scss';
+@import '_colors.scss';
 @import '_footer.scss';
 @import '_accordion.scss';
 @import '_popover.scss';
 
+@font-face {
+    font-family: 'Rector';
+    font-weight: 500;
+    src:
+        url('../fonts/Rector/Web\ license/Rector/rectorweb-medium.woff2') format('woff2'),
+        url('../fonts/Rector/Web\ license/rectorweb-medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ABC Social';
+    font-weight: normal;
+    src:
+        url('../fonts/ABCSocial/ABCSocial-Regular.woff2') format('woff2'),
+        url('../fonts/ABCSocial/ABCSocial-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ABC Social';
+    font-weight: 500;
+    src:
+        url('../fonts/ABCSocial/ABCSocial-Medium.woff2') format('woff2'),
+        url('../fonts/ABCSocial/ABCSocial-Medium.woff') format('woff');
+}
+
+* {
+    font-family: 'ABC Social', sans-serif;
+}
+
 body {
     //background-color: var(--off-white);
-    background: radial-gradient(
-        farthest-corner at 0px 80px,
-        lighten(hsl(213, 46%, 40%), 50%) 100%,
-        var(--off-white) 100%
-    );
+    // background: radial-gradient(
+    //     farthest-corner at 0px 80px,
+    //     lighten(hsl(213, 46%, 40%), 50%) 100%,
+    //     var(--off-white) 100%
+    // );
     background-attachment: fixed;
     min-height: 100svh;
     position: relative;
     transition: 0.5s;
     transition-delay: 0.5s;
-    padding-top: 80px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 150px;
     z-index: 0;
 
     &::after {
@@ -32,11 +61,8 @@ header {
     z-index: 1000;
     position: fixed;
     top: 0;
-    background: radial-gradient(
-        farthest-corner at 0px 0px,
-        lighten(hsl(213, 46%, 40%), 50%) 100%,
-        var(--off-white) 100%
-    );
+    background: $white;
+    border-bottom: 2px solid #e1dfe3;
 }
 .navbar {
     position: fixed;
@@ -50,14 +76,14 @@ header {
         justify-content: stretch;
         align-items: center;
         flex-direction: row;
-        width: 500px;
+        //width: 500px;
 
-        & a {
+        & a:not(.site-name) {
             display: flex;
             justify-content: start;
             align-items: center;
             padding-left: 20px;
-            width: 100%;
+            //width: 100%;
             text-decoration: none;
             color: var(--menu-marker-bg-color-darker);
             transition: 0.25s;
@@ -65,24 +91,23 @@ header {
             &:hover {
                 color: var(--light-grey);
             }
-
-            & span.logo-icon {
-                margin-right: 10px;
-                background-image: url('../images/TCR-IMH-Logo-Design.png');
-                background-size: cover;
-                height: 50px;
-                width: 50px;
-            }
-
-            & span.logo {
-                display: inline-block;
-                transform: scale(1, 1.5);
-                height: 100%;
-                font-size: 2.2em;
-                text-transform: uppercase;
-                font-weight: 200;
-                letter-spacing: -0.1em;
-            }
+        }
+        & a.site-name {
+            color: $fontColor;
+            text-transform: uppercase;
+            font-family: 'Rector', serif;
+            font-weight: 500;
+            font-size: max(1rem, 1.2rem + 0.5cqi);
+            padding: 0 32px;
+            margin: 0 32px;
+            border: 1px solid transparent;
+            transition: all 300ms;
+            position: relative;
+            border-left: 3px solid #edebe9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
         }
     }
 
@@ -107,13 +132,14 @@ header {
 
                 & a {
                     text-decoration: none;
-                    color: var(--menu-marker-bg-color-darker);
+                    color: $fontColor;
                     font-size: 1.2em;
                     position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     overflow: hidden;
+                    height: 35px;
 
                     & span {
                         transition: 0.25s;
@@ -139,7 +165,7 @@ header {
         }
 
         &.icon ul li a {
-            color: var(--menu-marker-bg-color-darker);
+            color: $fontColor;
         }
         &.icon ul li a span:nth-child(1) {
             transform: translateY(-30px);
@@ -162,6 +188,9 @@ header {
     width: 100%;
     margin-left: 25px;
     margin-right: 25px;
+    & div.container__main--heading {
+        padding: 0px 0px 10px;
+    }
 }
 
 // Side-Bar
@@ -191,7 +220,7 @@ header {
         height: 100%;
         border-radius: 5px;
         border: 1px solid var(--dark-background-222);
-        overflow: hidden;
+        //overflow: hidden;
         transition: 250ms;
 
         & .section-accord__header {

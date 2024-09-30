@@ -1,0 +1,43 @@
+Third Party
+
+1. The User is authorized to install the Font for a defined number of
+sub-users as described in the Invoice (“User Group”). It is
+specified that when the User is a legal entity, the User Group is
+defined as either the members of the household or the members of the
+acquiring legal entity, employees, business unit, but also
+subcontractors, providers, agents. Customers of the User are expressly
+excluded from the User Group.
+
+2. Addenda to article 3.2 “Copy”: The User is permitted to
+transfer a copy of the Font to designated third parties as part of his
+User Group, exclusively for the provision of services and editing
+exclusively in connection with the Brand, Title or Project as
+indicated in the Invoice. The use must be substantially dedicated to
+the licensed brand, and the use must make prominent display and
+identification of the brand (or, if there are multiple brands, they
+are all owned by the User, and the Font is used only for the licensed
+brand).
+
+3. Addenda to article 8.1.c: During the Term, the User agrees to
+maintain a Report, meaning a complete and accurate record of the User
+Group accessing the Font, certified by an officer of the company. The
+User must provide the Report at Production Type’s request, with at
+least ten days’ advance notice. The Report must be provided under
+indexable and editable text data, and include at least:
+
+    1. Name and address of third party
+
+    2. Name, title, email address and phone number of third party
+contact person
+
+4. The User and the User Group may not publicly reproduce, distribute,
+provide to the public, disseminate, execute, or more generally exploit
+in any way, free or at cost, the Font.
+
+5. The User is obliged to inform the User Group about the content and
+restrictions of this Agreement. Copies of the Font shall be deleted
+immediately after performing the service. For greater certainty, it is
+specified that if the User is a service provider and downloads the
+Font for his own use, the license granted does not cover the use of
+the Font for any of the User’s customers. The User’s customer must
+acquire a license as applicable.

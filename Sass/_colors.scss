@@ -8,9 +8,11 @@ $darkBackground: #071111;
 
 /*BUTTONS*/
 $borderThickness: 3px;
-$cornerSize: .45em;
+$cornerSize: 0.45em;
 $color: $white;
-$hoverColor: hsl(196, 100%, 50%);
+$fontColor: hsl(252, 100%, 17%); // #110057
+$hoverColor: hsl(3, 100%, 67%); // #FF5D55
+//$hoverColor: #00bbff;
 
 /*RESPONSIVE CARD HOVER*/
 $cardBackground: hsl(202, 55%, 19%);

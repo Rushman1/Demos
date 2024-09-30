@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DataTables Export Test</title>
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.0.2/css/buttons.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src='https://cdn.datatables.net/2.0.5/js/dataTables.min.js'></script>
+        <script src="https://cdn.datatables.net/buttons/3.0.2/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.0.2/js/buttons.colVis.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.0.2/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/3.0.2/js/buttons.print.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/pdfmake.min.js" integrity="sha512-w61kvDEdEhJPJLSAJpuL+RWp1+zTBUUpgPaP+6pcqCk78wQkOaExjnGWrVbovojeisWGQS7XZKz+gr3L+GPYLg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <style>
+            body {
+                font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+                margin: 0 auto;
+                padding: 0;
+                color: #333;
+                background-color: #fff;
+            }
+
+            .container {
+                margin: 20px 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <table id="example" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                function format(d) {
+                    var html = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                        '<thead>' +
+                        '<tr>' +
+                        '<th> </th>' +
+                        '<th>Result</th>' +
+                        '<th>Notes</th>' +
+                        '</tr>' +
+                        '</thead>';
+                    for (i = 0; i < d.results.length; i++) {
+                        result = d.results[i];
+
+                        html += '<tr>' +
+                            '<td></td>' +
+                            '<td class="text-left">' + result.result + '</td>' +
+                            '<td class="text-left">' + result.note + '</td>' +
+                            '</tr>';
+
+                    }
+
+
+
+                    return html;
+                }
+
+                var data = [
+                    {
+                        id: 1,
+                        name: 'Test 1',
+                        date: '06/15/2018',
+                        description: 'This is test 1',
+                        results: [
+                            {
+                                id: 100,
+                                result: 'passed',
+                                note: 'note 1'
+                            }
+                        ]
+                    },
+                    {
+                        id: 2,
+                        name: 'Test 2',
+                        date: '10/31/2018',
+                        description: 'This is test 2',
+                        results: [
+                            {
+                                id: 200,
+                                result: 'failed 1',
+                                note: 'note 2a'
+                            },
+                            {
+                                id: 201,
+                                result: 'failed 2',
+                                note: 'note 2b'
+                            }
+                        ]
+                    },
+                    {
+                        id: 3,
+                        name: 'Test 3',
+                        date: '03/05/2018',
+                        description: 'This is test 3',
+                        results: [
+                            {
+                                id: 300,
+                                result: 'passed with exception',
+                                note: 'note 3'
+                            }
+                        ]
+                    },
+                ];
+
+                var table = $('#example').DataTable({
+                    data: data,
+                    columns: [
+                        {
+                            data: null,
+                            render: function (data) {
+                                return '';
+                            }
+                        },
+                        {
+                            data: 'id',
+                            visible: false
+                        },
+                        {
+                            data: 'name'
+                        },
+                        {
+                            data: 'date'
+                        },
+                        {
+                            data: 'description'
+                        },
+
+
+
+                    ],
+                    dom: 'Bfrtip',
+                    buttons: [
+                        {
+                            extend: 'excelHtml5',
+                            exportOptions: {
+                                columns: [2, 3, 4],
+                                orthogonal: 'export'
+                            },
+                            title: 'Transaction',
+                            orientation: 'landscape',
+                            customize: function (xlsx) {
+                                var table = $('#example').DataTable();
+
+                                // Get sheet.
+                                var sheet = xlsx.xl.worksheets['sheet1.xml'];
+
+                                // Get a clone of the sheet data.        
+                                var sheetData = $('sheetData', sheet).clone();
+
+                                // Clear the current sheet data for appending rows.
+                                $('sheetData', sheet).empty();
+
+                                // Row count in Excel sheet.
+                                var rowNumber = 1;
+
+                                // CREATE ROWS
+                                // First Row is the TITLE 
+                                // Second Row is the MESSAGE TOP (if exists) (This is a DataTables function that inserts the Message top to the table before iterating through it)
+
+                                $(sheetData).children().each(function (ind) {
+                                    console.log('this', this);
+                                    if (ind === 0) {
+                                        $('sheetData', sheet).append(this.outerHTML);
+                                        rowNumber++;
+                                        return;
+                                    }
+
+                                    if (ind === 1) {
+                                        var row = $(this.outerHTML);
+
+                                        row.attr('r', rowNumber);
+                                        row.children().each(function (i) {
+                                            var cell = $(this);
+
+                                            var rc = cell.attr('r');
+                                            rc = rc.replace(/\d+$/, '') + rowNumber;
+                                            cell.attr('r', rc);
+                                        });
+                                        row = row[0].outerHTML;
+                                        $('sheetData', sheet).append(row);
+                                        rowNumber++;
+                                        return;
+                                    }
+
+                                    // WRITE OUT THE DATA FROM THE TABLE (FOR EACH ROW)
+                                    var r = $(this.outerHTML);
+                                    r.attr('r', rowNumber);
+                                    r.children().each(function (i) {
+                                        var cell = $(this);
+                                        var rc = cell.attr('r');
+                                        rc = rc.replace(/\d+$/, '') + rowNumber;
+                                        cell.attr('r', rc);
+                                    });
+                                    r = r[0].outerHTML;
+                                    console.log('r', r);
+                                    $('sheetData', sheet).append(r);
+                                    rowNumber++;
+
+                                    // GET THE CHILDREN DATA FOR EACH ROW IN THE DATA
+                                    var dataRowIndex = ind - 2;
+                                    var cd = table.row(`:eq(${dataRowIndex})`).data();
+
+                                    if (cd === undefined)
+                                        return;
+
+                                    var childData = cd.results;
+                                    // ADD A HEADER FOR THE CHILD TABLE
+                                    if (childData.length > 0) {
+                                        var headerRow = `<row r='${rowNumber}'><c t='inlineStr' r='A${rowNumber}'><is><t></t></is></c>
+                                            <c t='inlineStr' r='B${rowNumber}' s='7'><is><t>Result</t></is></c>
+                                            <c t='inlineStr' r='C${rowNumber}' s='7'><is><t>Note</t></is></c>
+                                            </row>`;
+                                        $('sheetData', sheet).append(headerRow);
+                                        rowNumber++;
+                                    }
+
+                                    $.each(childData, function (ind, elem) {
+                                        var dataRow = `<row r='${rowNumber}'><c t='inlineStr' r='A${rowNumber}'><is><t></t></is></c>
+                                            <c t='inlineStr' r='B${rowNumber}'><is><t>${elem.result}</t></is></c>
+                                            <c t='inlineStr' r='C${rowNumber}'><is><t>${elem.note}</t></is></c>
+                                            </row>`;
+                                        $('sheetData', sheet).append(dataRow);
+                                        rowNumber++;
+                                    })
+
+
+                                });
+
+
+
+                            },
+                        }]
+                });
+
+                $('#example').on('click', 'tbody td', function () {
+
+                    var tr = $(this).closest('tr');
+                    var row = table.row(tr);
+
+                    if (row.child.isShown()) {
+                        // This row is already open - close it
+                        row.child.hide();
+                        tr.removeClass('shown');
+                    }
+                    else {
+                        // Open this row
+                        var data = row.data();
+
+                        row.child(format(data)).show();
+                        tr.addClass('shown');
+                    }
+                });
+
+
+            });        
+        </script>
+    </body>
+
+</html>
