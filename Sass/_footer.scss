@@ -23,7 +23,7 @@ footer {
     bottom: 0;
     margin-top: 20px;
     width: 100%;
-    background-color: #110057;
+    background-color: $brandDarkBlue;
     & nav {
         padding: 16px;
     }
@@ -35,7 +35,7 @@ footer {
 
         & div.footer--copyright,
         & div.footer--version {
-            color: #575758;
+            color: $brandDarkGray;
             font-size: 0.85em;
         }
     }

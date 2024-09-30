@@ -47,3 +47,15 @@ $markerBackgroundGradient-Indicator: hsla(181, 100%, 52%, 0.2);
 $modernBackGround: hsl(210, 50%, 13%);
 /*#112233*/
 $modernNavBackground: rgb(69, 92, 115);
+
+$brandDarkBlue: hsl(252, 100%, 17%) /*#110057*/;
+$brandCobalt: hsl(260, 100%, 44%) /*#4A00E2*/;
+$brandCoral: hsl(3, 100%, 67%) /*#FF5D55*/;
+$brandSoftBlue: hsl(204, 47%, 65%) /*#7CAFD0*/;
+$brandVividRed: hsl(344, 100%, 50%) /*#FF0044*/;
+$brandDigitalGray: hsl(270, 25%, 97%) /*#F7F5F9*/;
+$brandPurple: hsl(290, 100%, 45%) /*#BF00E6*/;
+$brandGreen: hsl(176, 100%, 26%) /*#00857C*/;
+$brandYellow: hsl(33, 100%, 64%) /*#FFAA45*/;
+$brandDarkGray: hsl(240, 1%, 34%) /*#575758*/;
+$brandLightGray: lighten($brandDarkGray, 50);

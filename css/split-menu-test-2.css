@@ -71,7 +71,7 @@ footer {
   bottom: 0;
   margin-top: 20px;
   width: 100%;
-  background-color: #110057;
+  background-color: hsl(252, 100%, 17%);
 }
 footer nav {
   padding: 16px;
@@ -83,7 +83,7 @@ footer div.footer--sub {
   padding: 0px 16px 16px;
 }
 footer div.footer--sub div.footer--copyright, footer div.footer--sub div.footer--version {
-  color: #575758;
+  color: hsl(240, 1%, 34%);
   font-size: 0.85em;
 }
 
@@ -151,12 +151,12 @@ footer div.footer--sub div.footer--copyright, footer div.footer--sub div.footer-
 @font-face {
   font-family: "ABC Social";
   font-weight: normal;
-  src: url("../fonts/ABCSocial/ABCSocial-Regular.woff2") format("woff2"), url("../fonts/ABCSocial/ABCSocial-Regular.woff") format("woff");
+  src: url("../fonts/ABCSocial/ABCSocialVariable.woff2") format("woff2"), url("../fonts/ABCSocial/ABCSocialVariable.woff") format("woff");
 }
 @font-face {
   font-family: "ABC Social";
   font-weight: 500;
-  src: url("../fonts/ABCSocial/ABCSocial-Medium.woff2") format("woff2"), url("../fonts/ABCSocial/ABCSocial-Medium.woff") format("woff");
+  src: url("../fonts/ABCSocial/ABCSocialVariable.woff2") format("woff2"), url("../fonts/ABCSocial/ABCSocialVariable.woff") format("woff");
 }
 * {
   font-family: "ABC Social", sans-serif;
@@ -185,7 +185,7 @@ header {
   position: fixed;
   top: 0;
   background: #ffffff;
-  border-bottom: 2px solid #e1dfe3;
+  border-bottom: 2px solid #d6d6d7;
 }
 
 .navbar {
@@ -207,11 +207,11 @@ header {
   align-items: center;
   padding-left: 20px;
   text-decoration: none;
-  color: var(--menu-marker-bg-color-darker);
+  color: hsl(260, 100%, 44%);
   transition: 0.25s;
 }
 .navbar.navLeft a:not(.site-name):hover {
-  color: var(--light-grey);
+  color: #d6d6d7;
 }
 .navbar.navLeft a.site-name {
   color: hsl(252, 100%, 17%);
@@ -224,7 +224,7 @@ header {
   border: 1px solid transparent;
   transition: all 300ms;
   position: relative;
-  border-left: 3px solid #edebe9;
+  border-left: 3px solid #d6d6d7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -270,7 +270,7 @@ header {
   font-size: 1.2em;
 }
 .navbar.navRight ul li a:hover {
-  color: var(--light-grey);
+  color: hsl(240, 1%, 34%);
 }
 .navbar.navRight ul li a.pink_flag__navbar, .navbar.navRight ul li a.pink_flag__navbar i {
   color: rgb(184, 77, 95);
@@ -285,7 +285,7 @@ header {
   transform: translateY(2px);
 }
 .navbar.navRight.icon ul li:hover a span:nth-child(2) {
-  color: var(--light-grey);
+  color: hsl(240, 1%, 34%);
 }
 .navbar.navRight .navbar__close-button {
   display: none;
@@ -322,13 +322,13 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  border: 1px solid var(--dark-background-222);
+  border: 1px solid hsl(240, 1%, 34%);
   transition: 250ms;
 }
 .section-accord .section-accord__section .section-accord__header {
-  height: 30px;
+  height: 28px;
   width: 100%;
-  background-color: var(--dark-background-222);
+  background-color: hsl(240, 1%, 34%);
   padding: 0px 5px;
   display: flex;
   justify-content: last baseline;
@@ -365,7 +365,7 @@ div#profile-picture:hover {
   transition: max-height 0.5s;
 }
 .sub-menu-wrap .sub-menu {
-  background-color: var(--menu-marker-bg-color-darker);
+  background-color: hsl(252, 100%, 17%);
   padding: 20px;
   color: var(--white);
   margin: 10px;
@@ -379,7 +379,7 @@ div#profile-picture:hover {
   height: 60px;
   border-radius: 50%;
   margin-right: 15px;
-  border: 2px solid var(--menu-marker-bg-color);
+  border: 2px solid #d6d6d7;
 }
 .sub-menu-wrap .sub-menu .user-info h3 {
   font-weight: 500;
@@ -404,7 +404,7 @@ div#profile-picture:hover {
 }
 .sub-menu-wrap .sub-menu .sub-menu-link i {
   width: 43px;
-  background-color: var(--menu-marker-bg-color);
+  background-color: hsl(252, 100%, 17%);
   color: white;
   border-radius: 50%;
   padding: 12px 14px;
@@ -434,17 +434,46 @@ div#profile-picture:hover {
 }
 .sub-menu-wrap .sub-menu button.close-button i {
   font-size: 1.9em;
-  color: var(--off-white);
+  color: #d6d6d7;
   transition: transform 1.4s ease-in-out;
   transition: color 0.5s;
 }
 .sub-menu-wrap .sub-menu button.close-button i:hover {
-  color: var(--menu-marker-bg-color);
+  color: hsl(240, 1%, 34%);
   --ionicon-stroke-width: 2em;
   animation: rotating-two 0.5s linear;
 }
 .sub-menu-wrap.hide {
   max-height: 0px;
+}
+
+.whats-new {
+  margin: 0 10px;
+  font-size: 1.2em;
+  color: hsl(252, 100%, 17%);
+  position: relative;
+}
+.whats-new a {
+  transition: transform 0.5s ease;
+}
+.whats-new a:hover {
+  transform: scale(1.2);
+}
+
+.alert-badge {
+  height: 10px;
+  width: 10px;
+  border: 1px solid hsl(252, 100%, 17%);
+  border-radius: 50%;
+  background-color: hsl(176, 100%, 26%);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+/* UTILITIES */
+.hidden {
+  display: none;
 }
 
 @keyframes rotating {
@@ -502,7 +531,7 @@ div#profile-picture:hover {
     background-color: var(--white);
   }
   .navbar.navRight ul.navbar__menu.responsive li:hover {
-    background-color: var(--dark-background);
+    background-color: hsl(252, 100%, 17%);
   }
   .navbar.navRight ul.navbar__menu.responsive li a {
     padding: 10px 115px;
@@ -521,6 +550,6 @@ div#profile-picture:hover {
     display: block;
   }
   .navbar.navRight ul.navbar__menu.responsive li a span:nth-child(2) i {
-    color: var(--light-grey);
+    color: #d6d6d7;
   }
 }/*# sourceMappingURL=split-menu-test-2.css.map */
