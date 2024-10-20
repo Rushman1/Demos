@@ -10,7 +10,7 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: url(../images/bg-1.jpg);
+    background: url(./images/bg-1.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -20,7 +20,7 @@ body::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: url(../images/bg-2.jpg);
+    background: url(./images/bg-2.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -38,7 +38,7 @@ body.signup {
 
         & span::before,
         & span::after {
-            background: url(../images/bg-2.jpg);
+            background: url(./images/bg-2.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -97,7 +97,7 @@ body.signup {
             content: "";
             position: absolute;
             inset: 5px;
-            background: url(../images/bg-1.jpg);
+            background: url(./images/bg-1.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -108,7 +108,7 @@ body.signup {
             content: "";
             position: absolute;
             inset: 5px;
-            background: url(../images/bg-1.jpg);
+            background: url(./images/bg-1.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
