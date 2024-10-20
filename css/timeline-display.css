@@ -87,6 +87,7 @@ body {
   content: attr(data-tooltip);
   color: white;
   padding: 0.5rem;
+  width: -moz-max-content;
   width: max-content;
   max-width: 100%;
   border-radius: 0.3rem;
