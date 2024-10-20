@@ -30,15 +30,24 @@
     box-sizing: border-box;
     font-family: 'ABC Social', sans-serif;
 }
+
 :root {
-    --white: hsl(0, 100%, 100%); /*#FFFFFF*/
-    --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
-    --black: hsl(0, 0%, 0%); /*#000000*/
-    --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
-    --dark-background: hsl(228, 7%, 14%); /*#212226*/
-    --background: hsl(206, 45%, 12%); /*#11212D*/
-    --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
-    --dark-background-222: hsl(0, 0%, 13%); /*#222222*/
+    --white: hsl(0, 100%, 100%);
+    /*#FFFFFF*/
+    --off-white: hsla(0, 0%, 100%, 0.533);
+    /*#FFFFFF88*/
+    --black: hsl(0, 0%, 0%);
+    /*#000000*/
+    --dark-background-2: hsl(0, 0%, 21%);
+    /*#353535*/
+    --dark-background: hsl(228, 7%, 14%);
+    /*#212226*/
+    --background: hsl(206, 45%, 12%);
+    /*#11212D*/
+    --dark-background-111: hsl(0, 0%, 7%);
+    /*#111111*/
+    --dark-background-222: hsl(0, 0%, 13%);
+    /*#222222*/
     --glassmorphism-background: hsl(257, 43%, 31%);
     --footerBackground: hsl(216, 100%, 60%);
     --buttonsBackground: hsl(205, 43%, 16%);
@@ -47,20 +56,32 @@
     --section-background: hsl(240, 23%, 11%);
     --menu-marker-bg-color: hsl(213, 100%, 68%);
     --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
-    --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
-    --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
-    --light-grey: hsl(0, 0%, 47%); /*#787878*/
-    --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
-    --med-grey: hsl(0, 0%, 20%); /*#333*/
-    --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+    --menu-background-color: hsl(0, 0%, 18%);
+    /*#2e2e2e*/
+    --darkmode-text: hsl(0, 0%, 87%);
+    /*#dedede  #dddddd*/
+    --light-grey: hsl(0, 0%, 47%);
+    /*#787878*/
+    --med-light-grey: hsl(0, 0%, 33%);
+    /*#545454*/
+    --med-grey: hsl(0, 0%, 20%);
+    /*#333*/
+    --dark-grey: hsl(0, 0%, 19%);
+    /*#303030*/
     --pink: hsl(339, 100%, 62%);
     --red: hsl(0, 100%, 50%);
-    --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
-    --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
-    --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
-    --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
-    --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
-    --radial-background: hsl(212, 14%, 21%); /*#2f363e*/
+    --light-switch-border: hsl(0, 0%, 93%);
+    /*#eee*/
+    --light-switch-border-dark: hsl(0, 0%, 80%);
+    /*#ccc*/
+    --light-switch-dark: hsl(0, 0%, 47%);
+    /*#777777*/
+    --creative-text-border-color: hsl(228, 19%, 27%);
+    /*#383d52*/
+    --card-hover-background: hsl(234, 24%, 23%);
+    /*#2C2F48*/
+    --radial-background: hsl(212, 14%, 21%);
+    /*#2f363e*/
 
     --services-design: hsl(206, 62%, 54%);
     --services-development: hsl(324, 89%, 64%);
@@ -69,7 +90,9 @@
     --services-video: hsl(120, 34%, 39%);
     --services-games: hsl(300, 43%, 51%);
 
-    --responsive-bar-background: hsl(200, 18%, 46%) /*#607d8b*/;
+    --responsive-bar-background: hsl(200, 18%, 46%)
+        /*#607d8b*/
+    ;
 }
 
 body {
@@ -112,6 +135,7 @@ header {
             text-decoration: none;
         }
     }
+
     & nav.header-menu {
         display: flex;
         align-items: center;
@@ -157,10 +181,6 @@ header {
                     0px 1.8px 4.387px rgba(0, 0, 0, 0.02),
                     0px 0.733px 2.2px rgba(0, 0, 0, 0.02),
                     0px 0.167px 1.063px rgba(0, 0, 0, 0.01);
-
-                & svg {
-                    //fill: #bf00e6;
-                }
             }
         }
     }
@@ -171,9 +191,11 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #110057;
+
     & nav {
         padding: 16px;
     }
+
     & div.footer--sub {
         display: flex;
         justify-content: space-between;
@@ -246,8 +268,7 @@ li a {
     padding: calc(0.5em + $cornerSize) calc(0.9em + $cornerSize);
     color: var(--dark-background);
     --_p: var(--s);
-    background: conic-gradient(from 90deg at $borderThickness $borderThickness, #0000 90deg, var(--color) 0) var(--_p)
-        var(--_p) / calc(100% - $borderThickness - 2 * var(--_p)) calc(100% - $borderThickness - 2 * var(--_p));
+    background: conic-gradient(from 90deg at $borderThickness $borderThickness, #0000 90deg, var(--color) 0) var(--_p) var(--_p) / calc(100% - $borderThickness - 2 * var(--_p)) calc(100% - $borderThickness - 2 * var(--_p));
     transition:
         0.2s linear,
         color 0s,
