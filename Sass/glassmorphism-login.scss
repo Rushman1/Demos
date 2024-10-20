@@ -1,4 +1,5 @@
 @import "_base";
+
 @property --a {
     syntax: "<angle>";
     inherits: false;
@@ -9,22 +10,24 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: url(/images/bg-1.jpg);
+    background: url(../images/bg-1.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
+
 body::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: url(/images/bg-2.jpg);
+    background: url(../images/bg-2.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     opacity: 0;
     transition: 0.5s;
 }
+
 body.signup {
     & .container {
         height: 440px;
@@ -35,7 +38,7 @@ body.signup {
 
         & span::before,
         & span::after {
-            background: url(/images/bg-2.jpg);
+            background: url(../images/bg-2.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -46,6 +49,7 @@ body.signup {
     & form#signinform {
         left: -100%;
     }
+
     & form#registrationform {
         left: 0;
     }
@@ -54,6 +58,7 @@ body.signup {
         opacity: 1;
     }
 }
+
 .container {
     position: relative;
     width: 350px;
@@ -72,14 +77,12 @@ body.signup {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: repeating-conic-gradient(
-            from var(--a),
-            #45f3ff 0%,
-            #45f3ff 10%,
-            transparent 10%,
-            transparent 80%,
-            #45f3ff 100%
-        );
+        background: repeating-conic-gradient(from var(--a),
+                #45f3ff 0%,
+                #45f3ff 10%,
+                transparent 10%,
+                transparent 80%,
+                #45f3ff 100%);
         border-radius: 20px;
         animation: animate 2.5s linear infinite;
     }
@@ -94,17 +97,18 @@ body.signup {
             content: "";
             position: absolute;
             inset: 5px;
-            background: url(/images/bg-1.jpg);
+            background: url(../images/bg-1.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
             filter: blur(10px);
         }
+
         &::after {
             content: "";
             position: absolute;
             inset: 5px;
-            background: url(/images/bg-1.jpg);
+            background: url(../images/bg-1.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -171,6 +175,7 @@ form {
             }
         }
     }
+
     &#registrationform {
         left: 100%;
 
@@ -190,6 +195,7 @@ form {
     0% {
         --a: 0deg;
     }
+
     100% {
         --a: 360deg;
     }
