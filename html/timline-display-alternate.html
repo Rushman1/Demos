@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timeline Display Alternate</title>
+        <link rel="stylesheet" href="../css/timeline-display-alternate.css" type='text/css'>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="upper-ball"></div>
+            <div class="lower-ball"></div>
+            <div class="template-holder"></div>
+        </div>
+
+        <script id='line-item-template' type='text/x-jsrender'>
+            <div class="outer-template-holder">
+                <div class="inner-template-holder">
+                    <div class="inner-template-display-holder">
+                <p class="line-item-template__title">{{> title }}</p>
+                <p class="line-item-template__message tooltip" data-tooltip='{{> message }}'>{{> message.length > 100 ? `${message.substring(0, 100)}...` : message }}</p>
+                <span>
+                    <span class="line-item-template__createdby">{{> createdBy }}</span>
+                    <span class="line-item-template__date">{{> dateCreated.toLocaleString('en-US', dateOptions) }}</span>
+                </span>
+                <div class="line-item-template__tags">
+                    <div>
+                        {{for tags}}
+                            <span>{{:name}}</span>
+                        {{/for}}
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/1.0.15/jsrender.min.js" integrity="sha512-6heofwTnm0osmeEuz47jQLMVpAe2/ww+hZ4xvyv/kgedYO0b9mhNnsh8nUQZrmcdbaDkxrN+1K4SV6L+V4EH6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src='../scripts/utilities.js' type='text/javascript'></script>
+        <script src="../scripts/timeline-display-alternate.js" type='text/javascript'></script>
+    </body>
+
+</html>

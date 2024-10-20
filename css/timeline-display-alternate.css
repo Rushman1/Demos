@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Oswald", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%); /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
+  --dark-background: hsl(228, 7%, 14%); /*#212226*/
+  --background: hsl(206, 45%, 12%); /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
+  --dark-background-222: hsl(0, 0%, 13%); /*#222222*/
+  --glassmorphism-background: hsl(257, 43%, 31%);
+  --footerBackground: hsl(216, 100%, 60%);
+  --buttonsBackground: hsl(205, 43%, 16%);
+  --green: hsl(132, 99%, 58%);
+  --circularbg2: hsl(54, 100%, 62%);
+  --section-background: hsl(240, 23%, 11%);
+  --menu-marker-bg-color: hsl(213, 100%, 68%);
+  --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
+  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%); /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
+  --med-grey: hsl(0, 0%, 20%); /*#333*/
+  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --pink: hsl(339, 100%, 62%);
+  --red: hsl(0, 100%, 50%);
+  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
+  --radial-background: hsl(212, 14%, 21%); /*#2f363e*/
+  --services-design: hsl(206, 62%, 54%);
+  --services-development: hsl(324, 89%, 64%);
+  --services-search: hsl(120, 70%, 68%);
+  --services-analytics: hsl(51, 75%, 54%);
+  --services-video: hsl(120, 34%, 39%);
+  --services-games: hsl(300, 43%, 51%);
+  --responsive-bar-background: hsl(200, 18%, 46%) /*#607d8b*/;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*BUTTONS*/
+/*RESPONSIVE CARD HOVER*/
+/*INFINITY SYMBOL*/
+/*SIDEBAR*/
+/*DROPDOWN MENU*/
+/*ANIMATED ACTIVE LINK INDICATOR*/
+/*#0f1219*/
+/*#1e232f*/
+/*#08f9ff*/
+/*#08f9ff33*/
+/*MODERN NAVIGATION*/
+/*#112233*/
+.tooltip {
+  text-decoration: underline;
+  position: relative;
+  display: inline-block;
+}
+.tooltip::before, .tooltip::after {
+  --scale: 0;
+  --arrow-size: 10px;
+  --tooltip-color: var(--dark-background-111);
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+.tooltip::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+  content: attr(data-tooltip);
+  color: white;
+  padding: 0.5rem;
+  width: max-content;
+  max-width: 100%;
+  border-radius: 0.3rem;
+  text-align: center;
+  background-color: var(--tooltip-color);
+}
+.tooltip:hover {
+  position: relative;
+  z-index: 10000;
+}
+.tooltip:hover::before, .tooltip:hover::after {
+  --scale: 1;
+}
+.tooltip::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+  content: "";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
+}
+
+html {
+  background: linear-gradient(0.25turn, #ccc, #fff);
+}
+
+body {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  margin: 30px;
+}
+
+p {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+  --container-padding-top: 30px;
+  padding: 30px 10px 10px 10px;
+}
+.container div.upper-ball {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  z-index: 1000;
+  transform: translate(-50%, calc(-50% - 15px));
+}
+.container div.lower-ball {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  z-index: 1000;
+  transform: translate(-50%, calc(50% + 15px));
+}
+
+.template-holder::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30px);
+  position: absolute;
+}
+.template-holder > div.outer-template-holder div.inner-template-holder p.line-item-template__title {
+  font-size: 2rem;
+}
+.template-holder > div.outer-template-holder:nth-child(odd) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: transparent;
+}
+.template-holder > div.outer-template-holder:nth-child(odd) > div.inner-template-holder {
+  width: 50%;
+  position: relative;
+  text-align: start;
+  padding: 5px 10px 5px 0px;
+  padding-left: 18px;
+}
+.template-holder > div.outer-template-holder:nth-child(odd) > div.inner-template-holder::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+}
+.template-holder > div.outer-template-holder:nth-child(odd) > div.inner-template-holder::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50%;
+  left: calc(0% - 5px);
+  transform: translateY(-50%);
+}
+.template-holder > div.outer-template-holder:nth-child(odd) > div.inner-template-holder .line-item-template__tags {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.template-holder > div.outer-template-holder:nth-child(odd) > div.inner-template-holder .line-item-template__tags > div {
+  border-top: 1px solid #aaa;
+  margin-top: 5px;
+  padding-top: 5px;
+  width: 75%;
+}
+.template-holder > div.outer-template-holder:nth-child(odd) > div.inner-template-holder > div.inner-template-display-holder {
+  padding-left: 10px;
+  border-left: 1px solid black;
+  border-radius: 10px;
+}
+.template-holder > div.outer-template-holder:nth-child(even) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: transparent;
+}
+.template-holder > div.outer-template-holder:nth-child(even) > div.inner-template-holder {
+  width: 50%;
+  position: relative;
+  padding: 5px 0px 5px 10px;
+  padding-right: 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: end;
+}
+.template-holder > div.outer-template-holder:nth-child(even) > div.inner-template-holder::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 98%;
+  transform: translateY(-50%);
+}
+.template-holder > div.outer-template-holder:nth-child(even) > div.inner-template-holder::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 5px);
+  transform: translateY(-50%);
+}
+.template-holder > div.outer-template-holder:nth-child(even) > div.inner-template-holder .line-item-template__tags {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.template-holder > div.outer-template-holder:nth-child(even) > div.inner-template-holder .line-item-template__tags > div {
+  border-top: 1px solid #aaa;
+  margin-top: 5px;
+  padding-top: 5px;
+  width: 75%;
+}
+.template-holder > div.outer-template-holder:nth-child(even) > div.inner-template-holder > div.inner-template-display-holder {
+  padding-right: 10px;
+  border-right: 1px solid black;
+  border-radius: 10px;
+}
+
+.line-item-template__date {
+  font-size: 0.7em;
+}
+
+.line-item-template__createdby {
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-right: 10px;
+  padding-top: 10px;
+}/*# sourceMappingURL=timeline-display-alternate.css.map */
