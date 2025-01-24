@@ -90,9 +90,11 @@ body {
   inset: 0;
   background-image: var(--img);
   background-size: cover;
-  clip-path: circle(0px at 0 0);
+  -webkit-clip-path: circle(0px at 0 0);
+          clip-path: circle(0px at 0 0);
   z-index: 2;
 }
 .container .card:hover::after {
-  clip-path: circle(150px at var(--x) var(--y));
+  -webkit-clip-path: circle(150px at var(--x) var(--y));
+          clip-path: circle(150px at var(--x) var(--y));
 }/*# sourceMappingURL=card-hover-effect.css.map */

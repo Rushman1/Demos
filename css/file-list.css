@@ -33,14 +33,22 @@
 }
 
 :root {
-  --white: hsl(0, 100%, 100%); /*#FFFFFF*/
-  --off-white: hsla(0, 0%, 100%, 0.533); /*#FFFFFF88*/
-  --black: hsl(0, 0%, 0%); /*#000000*/
-  --dark-background-2: hsl(0, 0%, 21%); /*#353535*/
-  --dark-background: hsl(228, 7%, 14%); /*#212226*/
-  --background: hsl(206, 45%, 12%); /*#11212D*/
-  --dark-background-111: hsl(0, 0%, 7%); /*#111111*/
-  --dark-background-222: hsl(0, 0%, 13%); /*#222222*/
+  --white: hsl(0, 100%, 100%);
+  /*#FFFFFF*/
+  --off-white: hsla(0, 0%, 100%, 0.533);
+  /*#FFFFFF88*/
+  --black: hsl(0, 0%, 0%);
+  /*#000000*/
+  --dark-background-2: hsl(0, 0%, 21%);
+  /*#353535*/
+  --dark-background: hsl(228, 7%, 14%);
+  /*#212226*/
+  --background: hsl(206, 45%, 12%);
+  /*#11212D*/
+  --dark-background-111: hsl(0, 0%, 7%);
+  /*#111111*/
+  --dark-background-222: hsl(0, 0%, 13%);
+  /*#222222*/
   --glassmorphism-background: hsl(257, 43%, 31%);
   --footerBackground: hsl(216, 100%, 60%);
   --buttonsBackground: hsl(205, 43%, 16%);
@@ -49,27 +57,40 @@
   --section-background: hsl(240, 23%, 11%);
   --menu-marker-bg-color: hsl(213, 100%, 68%);
   --menu-marker-bg-color-darker: hsl(213, 46%, 40%);
-  --menu-background-color: hsl(0, 0%, 18%); /*#2e2e2e*/
-  --darkmode-text: hsl(0, 0%, 87%); /*#dedede  #dddddd*/
-  --light-grey: hsl(0, 0%, 47%); /*#787878*/
-  --med-light-grey: hsl(0, 0%, 33%); /*#545454*/
-  --med-grey: hsl(0, 0%, 20%); /*#333*/
-  --dark-grey: hsl(0, 0%, 19%); /*#303030*/
+  --menu-background-color: hsl(0, 0%, 18%);
+  /*#2e2e2e*/
+  --darkmode-text: hsl(0, 0%, 87%);
+  /*#dedede  #dddddd*/
+  --light-grey: hsl(0, 0%, 47%);
+  /*#787878*/
+  --med-light-grey: hsl(0, 0%, 33%);
+  /*#545454*/
+  --med-grey: hsl(0, 0%, 20%);
+  /*#333*/
+  --dark-grey: hsl(0, 0%, 19%);
+  /*#303030*/
   --pink: hsl(339, 100%, 62%);
   --red: hsl(0, 100%, 50%);
-  --light-switch-border: hsl(0, 0%, 93%); /*#eee*/
-  --light-switch-border-dark: hsl(0, 0%, 80%); /*#ccc*/
-  --light-switch-dark: hsl(0, 0%, 47%); /*#777777*/
-  --creative-text-border-color: hsl(228, 19%, 27%); /*#383d52*/
-  --card-hover-background: hsl(234, 24%, 23%); /*#2C2F48*/
-  --radial-background: hsl(212, 14%, 21%); /*#2f363e*/
+  --light-switch-border: hsl(0, 0%, 93%);
+  /*#eee*/
+  --light-switch-border-dark: hsl(0, 0%, 80%);
+  /*#ccc*/
+  --light-switch-dark: hsl(0, 0%, 47%);
+  /*#777777*/
+  --creative-text-border-color: hsl(228, 19%, 27%);
+  /*#383d52*/
+  --card-hover-background: hsl(234, 24%, 23%);
+  /*#2C2F48*/
+  --radial-background: hsl(212, 14%, 21%);
+  /*#2f363e*/
   --services-design: hsl(206, 62%, 54%);
   --services-development: hsl(324, 89%, 64%);
   --services-search: hsl(120, 70%, 68%);
   --services-analytics: hsl(51, 75%, 54%);
   --services-video: hsl(120, 34%, 39%);
   --services-games: hsl(300, 43%, 51%);
-  --responsive-bar-background: hsl(200, 18%, 46%) /*#607d8b*/;
+  --responsive-bar-background: hsl(200, 18%, 46%)
+      /*#607d8b*/ ;
 }
 
 body {
@@ -144,6 +165,7 @@ header nav.header-menu button.menu-item:hover, header nav.header-menu button.men
   border-color: #bf00e6;
   box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.04), 0px 5.833px 15.813px rgba(0, 0, 0, 0.03), 0px 3.467px 8.6px rgba(0, 0, 0, 0.02), 0px 1.8px 4.387px rgba(0, 0, 0, 0.02), 0px 0.733px 2.2px rgba(0, 0, 0, 0.02), 0px 0.167px 1.063px rgba(0, 0, 0, 0.01);
 }
+
 footer {
   position: relative;
   bottom: 0;
@@ -199,7 +221,8 @@ li a {
   width: 100%;
   text-decoration: none;
   border: 0;
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }

@@ -15,7 +15,7 @@ let months = [
 let date = new Date();
 let dayNum = date.getDay();
 let day = date.getDate();
-let month = months[date.getMonth() + 1];
+let month = months[date.getMonth()];
 let year = date.getFullYear();
 
 let active = document.querySelector(".week li:nth-child(" + dayNum + ")");
