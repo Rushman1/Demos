@@ -53,3 +53,15 @@ body {
   opacity: 0.5;
   background: linear-gradient(transparent, var(--base-color));
 }
+
+.training-callout {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
