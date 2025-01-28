@@ -76,41 +76,29 @@ body {
 .container h2:nth-child(2) {
   color: #03a9f4;
   text-shadow: -2px 2px 0 #0375a9, -4px 4px 0 #0375a9, -6px 6px 0 #0375a9, -8px 8px 0 #0375a9, -10px 10px 0 #0375a9, -10px 10px 0 #0375a9, -12px 12px 0 #0375a9, -14px 14px 0 #0375a9, -16px 16px 0 #0375a9, -18px 18px 20px #000, -18px 18px 30px #000, -18px 18px 50px #000, -18px 18px 150px #000;
-  -webkit-clip-path: circle(20% at 50% 100%);
-          clip-path: circle(20% at 50% 100%);
-  transition: -webkit-clip-path 2.5s;
+  clip-path: circle(20% at 50% 100%);
   transition: clip-path 2.5s;
-  transition: clip-path 2.5s, -webkit-clip-path 2.5s;
 }
 .container h2:hover:nth-child(2) {
-  -webkit-clip-path: circle(50% at 50% 100%);
-          clip-path: circle(50% at 50% 100%);
+  clip-path: circle(50% at 50% 100%);
   z-index: 100;
 }
 .container h2:nth-child(3) {
   color: #2cff37;
   text-shadow: -2px 2px 0 #08a010, -4px 4px 0 #08a010, -6px 6px 0 #08a010, -8px 8px 0 #08a010, -10px 10px 0 #08a010, -10px 10px 0 #08a010, -12px 12px 0 #08a010, -14px 14px 0 #08a010, -16px 16px 0 #08a010, -18px 18px 20px #000, -18px 18px 30px #000, -18px 18px 50px #000, -18px 18px 150px #000;
-  -webkit-clip-path: circle(20% at 0% 10%);
-          clip-path: circle(20% at 0% 10%);
-  transition: -webkit-clip-path 2.5s;
+  clip-path: circle(20% at 0% 10%);
   transition: clip-path 2.5s;
-  transition: clip-path 2.5s, -webkit-clip-path 2.5s;
 }
 .container h2:hover:nth-child(3) {
-  -webkit-clip-path: circle(120% at 0% 10%);
-          clip-path: circle(120% at 0% 10%);
+  clip-path: circle(120% at 0% 10%);
 }
 .container h2:nth-child(4) {
   color: #e91e63;
   text-shadow: -2px 2px 0 #ae0840, -4px 4px 0 #ae0840, -6px 6px 0 #ae0840, -8px 8px 0 #ae0840, -10px 10px 0 #ae0840, -10px 10px 0 #ae0840, -12px 12px 0 #ae0840, -14px 14px 0 #ae0840, -16px 16px 0 #ae0840, -18px 18px 20px #000, -18px 18px 30px #000, -18px 18px 50px #000, -18px 18px 150px #000;
-  -webkit-clip-path: circle(20% at 100% 40%);
-          clip-path: circle(20% at 100% 40%);
-  transition: -webkit-clip-path 2.5s;
+  clip-path: circle(20% at 100% 40%);
   transition: clip-path 2.5s;
-  transition: clip-path 2.5s, -webkit-clip-path 2.5s;
 }
 .container h2:hover:nth-child(4) {
-  -webkit-clip-path: circle(120% at 100% 40%);
-          clip-path: circle(120% at 100% 40%);
+  clip-path: circle(120% at 100% 40%);
   z-index: 100;
 }/*# sourceMappingURL=text-fill-hover-effects.css.map */

@@ -10,26 +10,12 @@
 /*#08f9ff33*/
 /*MODERN NAVIGATION*/
 /*#112233*/
-@font-face {
-  font-family: "Rector";
-  font-weight: 500;
-  src: url("../fonts/Rector/Web license/Rector/rectorweb-medium.woff2") format("woff2"), url("../fonts/Rector/Web license/rectorweb-medium.woff") fomrat("woff");
-}
-@font-face {
-  font-family: "ABC Social";
-  font-weight: normal;
-  src: url("../fonts/ABCSocial/ABCSocial-Regular.woff2") format("woff2"), url("../fonts/ABCSocial/ABCSocial-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: "ABC Social";
-  font-weight: 500;
-  src: url("../fonts/ABCSocial/ABCSocial-Medium.woff2") format("woff2"), url("../fonts/ABCSocial/ABCSocial-Medium.woff") format("woff");
-}
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "ABC Social", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 :root {
@@ -89,8 +75,7 @@
   --services-analytics: hsl(51, 75%, 54%);
   --services-video: hsl(120, 34%, 39%);
   --services-games: hsl(300, 43%, 51%);
-  --responsive-bar-background: hsl(200, 18%, 46%)
-      /*#607d8b*/ ;
+  --responsive-bar-background: hsl(200, 18%, 46%) /*#607d8b*/;
 }
 
 body {
@@ -118,7 +103,7 @@ header div.icon {
 }
 header div.icon a.site-name {
   color: hsl(252, 100%, 17%);
-  font-family: "Rector", serif;
+  font-family: "Montserrat", serif;
   font-weight: 500;
   font-size: max(1rem, 1.2rem + 0.5cqi);
   padding: 0 32px;
@@ -221,18 +206,17 @@ li a {
   width: 100%;
   text-decoration: none;
   border: 0;
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 li a:hover, li a:focus-visible {
   --_p: 0px;
-  background-color: hsl(3, 100%, 67%);
-  outline-color: hsl(3, 100%, 67%);
+  background-color: hsl(217, 100%, 67%);
+  outline-color: hsl(217, 100%, 67%);
   outline-offset: 0.05em;
 }
 li a:active {
-  background: hsl(3, 100%, 67%);
+  background: hsl(217, 100%, 67%);
   color: #fff;
 }/*# sourceMappingURL=file-list.css.map */

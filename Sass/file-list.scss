@@ -1,34 +1,11 @@
 @import '_colors.scss';
-
-@font-face {
-    font-family: 'Rector';
-    font-weight: 500;
-    src:
-        url('../fonts/Rector/Web\ license/Rector/rectorweb-medium.woff2') format('woff2'),
-        url('../fonts/Rector/Web\ license/rectorweb-medium.woff') fomrat('woff');
-}
-
-@font-face {
-    font-family: 'ABC Social';
-    font-weight: normal;
-    src:
-        url('../fonts/ABCSocial/ABCSocial-Regular.woff2') format('woff2'),
-        url('../fonts/ABCSocial/ABCSocial-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'ABC Social';
-    font-weight: 500;
-    src:
-        url('../fonts/ABCSocial/ABCSocial-Medium.woff2') format('woff2'),
-        url('../fonts/ABCSocial/ABCSocial-Medium.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'ABC Social', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 :root {
@@ -90,9 +67,7 @@
     --services-video: hsl(120, 34%, 39%);
     --services-games: hsl(300, 43%, 51%);
 
-    --responsive-bar-background: hsl(200, 18%, 46%)
-        /*#607d8b*/
-    ;
+    --responsive-bar-background: hsl(200, 18%, 46%) /*#607d8b*/;
 }
 
 body {
@@ -120,7 +95,7 @@ header {
 
         & a.site-name {
             color: $fontColor;
-            font-family: 'Rector', serif;
+            font-family: 'Montserrat', serif;
             font-weight: 500;
             font-size: max(1rem, 1.2rem + 0.5cqi);
             padding: 0 32px;
@@ -268,7 +243,8 @@ li a {
     padding: calc(0.5em + $cornerSize) calc(0.9em + $cornerSize);
     color: var(--dark-background);
     --_p: var(--s);
-    background: conic-gradient(from 90deg at $borderThickness $borderThickness, #0000 90deg, var(--color) 0) var(--_p) var(--_p) / calc(100% - $borderThickness - 2 * var(--_p)) calc(100% - $borderThickness - 2 * var(--_p));
+    background: conic-gradient(from 90deg at $borderThickness $borderThickness, #0000 90deg, var(--color) 0) var(--_p)
+        var(--_p) / calc(100% - $borderThickness - 2 * var(--_p)) calc(100% - $borderThickness - 2 * var(--_p));
     transition:
         0.2s linear,
         color 0s,

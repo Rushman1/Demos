@@ -122,8 +122,7 @@ body::after {
   margin: auto 20px;
   display: grid;
   grid-template-columns: 1fr 200px;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 
 header {

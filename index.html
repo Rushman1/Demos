@@ -1,374 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File List</title>
-    <link rel="stylesheet" href="./css/fontawesome.css">
-    <link rel="stylesheet" href="./css/file-list.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>File List</title>
+        <link rel="stylesheet" href="./css/fontawesome.css">
+        <link rel="stylesheet" href="./css/file-list.css">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    </head>
 
-<body>
-    <header>
-        <div class="icon">
-            <a class="ih-menubar_logo" href="#" aria-label="The Site Name" role="menuitem">
-                <svg width="128" height="40" viewBox="0 0 128 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_112_5238)">
-                        <path
-                            d="M71.0342 28.8887H72.2746V32.9404C72.6484 32.1279 73.3092 31.44 74.4088 31.44C76.2829 31.44 76.9871 32.6642 76.9871 34.1158V38.7308H75.7467V34.235C75.7467 32.9783 75.2104 32.4854 74.2463 32.4854C73.2009 32.4854 72.2746 33.3683 72.2746 35.2262V38.7254H71.0342V28.8833V28.8887ZM69.4092 37.7125C68.8567 37.7125 68.4992 37.3658 68.4992 36.7321V32.6262H69.8642V31.6079H68.4992V29.3871L67.2859 29.9396V31.6079H66.2242V32.6262H67.2859V36.8187C67.2859 37.9237 67.9088 38.7362 69.2846 38.7362H69.9075V37.7179H69.4092V37.7125ZM65.2329 28.8887H63.9925V38.7308H65.2329V28.8887V28.8887ZM59.3884 31.4237C57.525 31.4237 56.6584 32.7183 56.5067 33.7529H57.7471C57.915 32.9783 58.5596 32.4692 59.4263 32.4692C60.4446 32.4692 61.0134 32.8971 61.0134 33.4875C61.0134 34.0779 60.71 34.3433 59.7729 34.5058C58.7004 34.7008 56.16 34.7658 56.16 36.7808C56.16 37.7992 56.9454 38.8879 58.6571 38.8879C60.2442 38.8879 60.8346 37.9671 61.0025 37.4146H61.0134V37.6908C61.0134 38.0917 61.0134 38.3787 61.0404 38.7254H62.3621C62.3079 38.3787 62.2538 37.8154 62.2538 37.2792V34.2187C62.2538 33.1137 62.0046 31.4183 59.3884 31.4183V31.4237ZM58.8792 37.8858C58.0125 37.8858 57.3896 37.4579 57.3896 36.7808C57.3896 36.0658 58.0071 35.7625 59.0417 35.5837C60.5854 35.3075 60.8888 34.8958 61.0242 34.4246L61.0404 35.4158C61.0404 37.1817 59.9679 37.8804 58.8792 37.8804V37.8858ZM51.8484 38.8933C53.4354 38.8933 54.6325 38.1242 55.0334 36.6075H53.82C53.5709 37.4904 52.7746 37.8642 51.8213 37.8642C50.5538 37.8642 49.6438 36.9975 49.5463 35.5079H55.1417V35.2858C55.1146 33.455 54.3292 31.44 51.8213 31.44C49.8063 31.44 48.3492 32.9837 48.3492 35.1341C48.3492 37.2846 49.7413 38.8987 51.8484 38.8987V38.8933ZM49.5625 34.5112C49.7304 33.2871 50.5429 32.4583 51.8213 32.4583C53.0996 32.4583 53.7767 33.2708 53.8904 34.5112H49.5625ZM45.6354 28.8887V33.2437H40.8959V28.8887H39.585V38.7308H40.8959V34.3487H45.6354V38.7308H46.9463V28.8887H45.6354V28.8887ZM121.133 18.2667H122.872V19.4962C123.273 18.6675 123.906 18.0771 125.006 18.0771C126.853 18.0771 127.568 19.2904 127.568 21.04V25.395H125.802V21.4679C125.802 20.4333 125.526 19.6208 124.508 19.6208C123.554 19.6208 122.91 20.4604 122.91 22.1992V25.395H121.133V18.2667V18.2667ZM117.618 25.395H119.394V18.2667H117.618V25.395ZM117.645 17.2104H119.475V15.5583H117.645V17.2104ZM112.97 18.05C111.096 18.05 110.115 19.2742 109.91 20.4496H111.578C111.757 19.7887 112.282 19.3771 112.981 19.3771C113.793 19.3771 114.292 19.7075 114.292 20.2708C114.292 20.8775 113.853 21.0129 112.927 21.1537C111.935 21.3054 109.59 21.5004 109.59 23.4558C109.59 24.6529 110.527 25.59 112.087 25.59C113.436 25.59 114.032 24.875 114.319 24.3062H114.335V24.6637C114.335 24.8967 114.351 25.1621 114.389 25.395H116.166C116.068 24.94 116.03 24.2087 116.03 23.6562V21.0779C116.03 19.3283 115.202 18.0446 112.97 18.0446V18.05ZM112.569 24.2792C111.768 24.2792 111.356 23.8783 111.356 23.3692C111.356 22.8329 111.784 22.5404 112.737 22.3508C113.783 22.145 114.156 21.8254 114.324 21.4842V22.0908C114.324 23.7429 113.485 24.2846 112.575 24.2846L112.569 24.2792ZM108.241 24.0192C107.483 24.0192 107.304 23.5479 107.304 22.7246V19.6208H108.74V18.2721H107.304V15.8996L105.582 16.6579V18.2721H104.439V19.6208H105.582V22.9683C105.582 24.4037 106.08 25.4492 107.84 25.4221H108.696V24.0192H108.241V24.0192ZM97.1317 25.395H98.9084V22.1992C98.9084 20.4604 99.5584 19.6208 100.506 19.6208C101.525 19.6208 101.801 20.4333 101.801 21.4679V25.395H103.567V21.04C103.567 19.2904 102.852 18.0771 101.005 18.0771C99.8996 18.0771 99.2659 18.6675 98.8704 19.4962V18.2667H97.1317V25.395V25.395ZM89.0284 22.6271C89.0284 24.3767 89.7596 25.59 91.5904 25.59C92.6954 25.59 93.34 24.9996 93.7246 24.1708V25.395H95.4634V18.2667H93.6867V21.4625C93.6867 23.2012 93.0529 24.0408 92.0888 24.0408C91.1246 24.0408 90.7942 23.2283 90.7942 22.1937V18.2667H89.0284V22.6217V22.6271ZM80.3996 21.8254C80.3996 24.1275 82.0517 25.6008 84.1371 25.6008C86.2225 25.6008 87.8584 24.1275 87.8584 21.8254C87.8584 19.5233 86.2171 18.0771 84.1371 18.0771C82.0571 18.0771 80.3996 19.5396 80.3996 21.8254ZM84.1371 24.1979C82.9238 24.1979 82.1384 23.12 82.1384 21.8254C82.1384 20.5308 82.9238 19.4692 84.1371 19.4692C85.3504 19.4692 86.1359 20.5417 86.1359 21.8254C86.1359 23.1092 85.3504 24.1979 84.1371 24.1979ZM68.9488 25.395H70.7254V22.1992C70.7254 20.8071 71.0017 19.6208 72.1013 19.6208C73.0817 19.6208 73.2604 20.4333 73.2604 21.4679V25.395H74.9667V21.9879C74.9667 20.4983 75.5029 19.6154 76.3317 19.6154C77.2146 19.6154 77.4909 20.4279 77.4909 21.4625V25.3896H79.2404V21.0346C79.2404 19.285 78.3575 18.0717 76.5646 18.0717C75.53 18.0717 74.9775 18.5537 74.5821 19.4096C74.2246 18.4887 73.5638 18.0717 72.5996 18.0717C71.565 18.0717 70.9042 18.7596 70.6821 19.4367V18.2667H68.9434V25.395H68.9488ZM65.8179 18.2667H64.0792V25.395H65.8559V22.1829C65.8559 20.4442 66.4896 20.1029 67.1234 19.9512C67.3725 19.8537 67.8817 19.8537 67.9792 19.8537V18.1854C66.9879 18.2017 66.2134 18.57 65.8179 19.5233V18.2667V18.2667ZM59.2963 25.6117C61.0188 25.6117 62.2592 24.7179 62.6871 23.2987H60.9213C60.6613 23.9217 60.0275 24.1817 59.28 24.1817C58.2454 24.1817 57.4763 23.4667 57.3354 22.3183H62.7954V21.9717C62.7792 19.8646 61.6904 18.0554 59.3071 18.0554C57.1838 18.0554 55.64 19.6262 55.64 21.8037C55.64 23.9812 57.1404 25.6062 59.2909 25.6062L59.2963 25.6117ZM57.3517 21.1321C57.5196 20.0975 58.2184 19.4096 59.28 19.4096C60.4229 19.4096 60.9754 20.2112 61.0838 21.1321H57.3463H57.3517ZM54.3725 24.0137C53.6142 24.0137 53.4354 23.5425 53.4354 22.7192V19.6154H54.8709V18.2667H53.4354V15.8942L51.7129 16.6525V18.2667H50.57V19.6154H51.7129V22.9629C51.7129 24.3983 52.2113 25.4437 53.9717 25.4167H54.8275V24.0137H54.3725V24.0137ZM43.2629 25.3896H45.0396V22.1937C45.0396 20.455 45.6896 19.6154 46.6375 19.6154C47.6559 19.6154 47.9321 20.4279 47.9321 21.4625V25.3896H49.6979V21.0346C49.6979 19.285 48.9829 18.0717 47.1359 18.0717C46.0309 18.0717 45.3971 18.6621 45.0017 19.4908V18.2612H43.2629V25.3896V25.3896ZM41.4321 15.5475H39.585V25.3896H41.4321V15.5529V15.5475Z"
-                            fill="#110057" />
-                        <path
-                            d="M13.4658 22.6596L7.41 31.7758V21.4896C7.41 19.6642 5.93125 18.18 4.10042 18.18C2.26958 18.18 0.790833 19.6587 0.790833 21.4896V33.3792C0.790833 36.7592 3.53167 39.5 6.91167 39.5C9.07292 39.5 10.9742 38.3787 12.0629 36.6887L13.4604 34.5817V22.6596H13.4658Z"
-                            fill="url(#paint0_linear_112_5238)" />
-                        <path
-                            d="M13.4658 22.6596L5.9746 33.9371C5.79043 34.2025 5.48168 34.3813 5.1296 34.3813C4.56085 34.3813 4.10585 33.9208 4.10585 33.3575V18.1854C2.28043 18.1854 0.796265 19.6642 0.796265 21.495V33.3846C0.796265 35.7679 2.73001 37.7017 5.11335 37.7017C6.58668 37.7017 7.88668 36.965 8.66126 35.8438L13.4658 28.6125V22.665V22.6596Z"
-                            fill="url(#paint1_linear_112_5238)" />
-                        <path
-                            d="M13.4658 22.6596L5.97459 33.9371C5.79043 34.2025 5.48168 34.3812 5.12959 34.3812L5.11334 37.6962C6.58668 37.6962 7.88668 36.9596 8.66126 35.8383L13.4658 28.6071V22.6596Z"
-                            fill="url(#paint2_linear_112_5238)" />
-                        <path
-                            d="M4.75577 15.9202C6.99111 15.5573 8.50907 13.4511 8.14622 11.2157C7.78338 8.98039 5.67713 7.46243 3.44179 7.82528C1.20645 8.18812 -0.311506 10.2944 0.0513405 12.5297C0.414187 14.765 2.52043 16.283 4.75577 15.9202Z"
-                            fill="url(#paint3_linear_112_5238)" />
-                        <path
-                            d="M13.4659 8.15917C13.5959 3.90708 17.0842 0.5 21.3688 0.5C25.6534 0.5 29.2771 4.0425 29.2771 8.40833C29.2771 10.1417 28.7192 11.745 27.7713 13.0504L24.2938 18.2883C23.8334 18.2179 23.3621 18.1854 22.8855 18.1854C17.6855 18.1854 13.4659 22.3996 13.4659 27.605V8.15917ZM22.6634 8.43C22.6634 7.715 22.0838 7.13542 21.3688 7.13542C20.6538 7.13542 20.0742 7.715 20.0742 8.43V12.7092L22.4792 9.09083C22.593 8.89583 22.6634 8.66833 22.6634 8.43V8.43Z"
-                            fill="url(#paint4_linear_112_5238)" />
-                        <path
-                            d="M20.1175 18.5917L20.0742 18.6025V12.7038L22.4792 9.08542C22.593 8.89042 22.6634 8.66292 22.6634 8.42458C22.6634 6.79958 21.3417 5.47792 19.7167 5.47792C18.0917 5.47792 16.77 6.79958 16.77 8.42458V20.4333C14.7496 22.1612 13.4659 24.7287 13.4659 27.5942V8.28375C13.4659 4.89292 16.2121 2.14667 19.603 2.14667C22.9938 2.14667 25.74 4.89292 25.74 8.28375C25.74 9.54583 25.3609 10.7158 24.7109 11.6908L24.7325 11.6637L20.123 18.5971L20.1175 18.5917Z"
-                            fill="url(#paint5_linear_112_5238)" />
-                        <path
-                            d="M20.0742 18.6079C18.8446 18.9925 17.7234 19.6208 16.7646 20.4388V8.43C16.7646 6.805 18.0863 5.48334 19.7113 5.48334C21.3363 5.48334 22.658 6.805 22.658 8.43C22.658 7.715 22.0784 7.13542 21.3634 7.13542C20.6484 7.13542 20.0688 7.715 20.0688 8.43V18.6079H20.0742Z"
-                            fill="url(#paint6_linear_112_5238)" />
-                        <path
-                            d="M19.5975 5.48333C18.0213 5.54292 16.7646 6.8375 16.7646 8.43V20.4387C18.4113 19.0304 20.5455 18.1854 22.88 18.1854C28.08 18.1854 32.2996 22.3996 32.2996 27.605V36.1958C32.2996 38.0212 30.8209 39.5054 28.99 39.5054C27.1646 39.5054 25.6804 38.0267 25.6804 36.1958V27.605C25.6804 26.0558 24.4238 24.8046 22.88 24.8046C21.3363 24.8046 20.0796 26.0612 20.0796 27.605V36.1958C20.0796 38.0212 18.6009 39.5054 16.77 39.5054C14.9446 39.5054 13.4604 38.0267 13.4604 36.1958V8.28375C13.4604 4.89292 16.2067 2.14667 19.5975 2.14667V5.48333V5.48333Z"
-                            fill="url(#paint7_linear_112_5238)" />
-                        <path
-                            d="M28.99 39.5V27.5996C28.99 25.1404 26.9967 23.1417 24.5321 23.1417C22.0675 23.1417 20.0742 25.135 20.0742 27.5996V36.1904C20.0742 38.0158 18.5954 39.5 16.7646 39.5V27.5996C16.7646 23.3096 20.2421 19.8375 24.5267 19.8375C28.8113 19.8375 32.2888 23.315 32.2888 27.5996V36.1904C32.2888 38.0158 30.81 39.5 28.9792 39.5H28.99Z"
-                            fill="url(#paint8_linear_112_5238)" />
-                        <path
-                            d="M28.9901 39.5V27.5996C28.9901 25.1404 26.9967 23.1417 24.5321 23.1417C22.0676 23.1417 20.0742 25.135 20.0742 27.5996C20.0742 26.0504 21.3309 24.7992 22.8746 24.7992C24.4184 24.7992 25.6751 26.0558 25.6751 27.5996V36.1904C25.6751 38.0158 27.1538 39.5 28.9846 39.5H28.9901Z"
-                            fill="url(#paint9_linear_112_5238)" />
-                        <path
-                            d="M32.2996 27.5996C32.2996 23.3096 28.8221 19.8375 24.5375 19.8375C20.253 19.8375 16.7755 23.315 16.7755 27.5996V20.4388C18.4167 19.0304 20.5509 18.1854 22.8855 18.1854C28.0855 18.1854 32.305 22.3996 32.305 27.605L32.2996 27.5996Z"
-                            fill="url(#paint10_linear_112_5238)" />
-                    </g>
-                    <defs>
-                        <linearGradient id="paint0_linear_112_5238" x1="7.12833" y1="34.9175" x2="7.12833" y2="18.3533"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.13" stop-color="#FA0000" />
-                            <stop offset="0.49" stop-color="#FE4D46" />
-                            <stop offset="0.56" stop-color="#FF5D55" />
-                            <stop offset="0.64" stop-color="#FF645C" />
-                            <stop offset="0.75" stop-color="#FF7871" />
-                            <stop offset="0.85" stop-color="#FF8E88" />
-                        </linearGradient>
-                        <linearGradient id="paint1_linear_112_5238" x1="6.98751" y1="18.1421" x2="7.26376" y2="37.6638"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.14" stop-color="#FF8E88" />
-                            <stop offset="0.21" stop-color="#FF857E" />
-                            <stop offset="0.43" stop-color="#FF6F67" />
-                            <stop offset="0.64" stop-color="#FF6159" />
-                            <stop offset="0.82" stop-color="#FF5D55" />
-                        </linearGradient>
-                        <linearGradient id="paint2_linear_112_5238" x1="6.78709" y1="35.8383" x2="11.83" y2="27.1012"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.12" stop-color="#FF5D55" />
-                            <stop offset="0.69" stop-color="#FF9E9A" />
-                            <stop offset="1" stop-color="#FFBEBB" />
-                        </linearGradient>
-                        <linearGradient id="paint3_linear_112_5238" x1="4.09756" y1="15.9742" x2="4.09756" y2="7.77338"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FA0000" />
-                            <stop offset="0.16" stop-color="#FB2827" />
-                            <stop offset="0.33" stop-color="#FC4D49" />
-                            <stop offset="0.5" stop-color="#FD6965" />
-                            <stop offset="0.67" stop-color="#FE7D78" />
-                            <stop offset="0.83" stop-color="#FE8984" />
-                            <stop offset="1" stop-color="#FF8E88" />
-                        </linearGradient>
-                        <linearGradient id="paint4_linear_112_5238" x1="15.34" y1="16.945" x2="25.4042" y2="3.05667"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.43" stop-color="#FF0044" />
-                            <stop offset="0.45" stop-color="#FE0546" />
-                            <stop offset="0.61" stop-color="#FE3E64" />
-                            <stop offset="0.74" stop-color="#FD6879" />
-                            <stop offset="0.85" stop-color="#FD8287" />
-                            <stop offset="0.91" stop-color="#FD8C8C" />
-                        </linearGradient>
-                        <linearGradient id="paint5_linear_112_5238" x1="22.2084" y1="3.76625" x2="15.1288" y2="16.0242"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.18" stop-color="#FB4D4D" />
-                            <stop offset="0.25" stop-color="#FB5E5E" />
-                            <stop offset="0.41" stop-color="#FD817E" />
-                            <stop offset="0.55" stop-color="#FE9996" />
-                            <stop offset="0.68" stop-color="#FEA8A5" />
-                            <stop offset="0.79" stop-color="#FFAEAA" />
-                        </linearGradient>
-                        <linearGradient id="paint6_linear_112_5238" x1="19.6409" y1="8.83084" x2="17.4905" y2="24.16"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FA0000" />
-                            <stop offset="0.05" stop-color="#FA100E" />
-                            <stop offset="0.28" stop-color="#FF5D55" />
-                            <stop offset="0.67" stop-color="#FF746D" />
-                            <stop offset="0.92" stop-color="#FF7D77" />
-                        </linearGradient>
-                        <linearGradient id="paint7_linear_112_5238" x1="23.7738" y1="5.13125" x2="21.9809" y2="39.3917"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.03" stop-color="#FB5151" />
-                            <stop offset="0.09" stop-color="#FC6765" />
-                            <stop offset="0.16" stop-color="#FD7874" />
-                            <stop offset="0.24" stop-color="#FE857F" />
-                            <stop offset="0.35" stop-color="#FE8C86" />
-                            <stop offset="0.64" stop-color="#FF8E88" />
-                            <stop offset="0.69" stop-color="#FF7B7F" />
-                            <stop offset="0.8" stop-color="#FF4B68" />
-                            <stop offset="0.95" stop-color="#FF0044" />
-                        </linearGradient>
-                        <linearGradient id="paint8_linear_112_5238" x1="16.77" y1="29.6687" x2="32.2996" y2="29.6687"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.21" stop-color="#FF0044" />
-                            <stop offset="0.29" stop-color="#FB0659" />
-                            <stop offset="0.45" stop-color="#F11690" />
-                            <stop offset="0.68" stop-color="#E22FE8" />
-                            <stop offset="0.74" stop-color="#DF36FF" />
-                        </linearGradient>
-                        <linearGradient id="paint9_linear_112_5238" x1="24.5376" y1="23.1417" x2="24.5376" y2="39.5"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.45" stop-color="#8C00CD" />
-                            <stop offset="0.73" stop-color="#CB29F3" />
-                            <stop offset="0.81" stop-color="#DF36FF" />
-                        </linearGradient>
-                        <linearGradient id="paint10_linear_112_5238" x1="19.0613" y1="27.085" x2="31.7742" y2="19.7454"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.1" stop-color="#FF8E88" />
-                            <stop offset="0.52" stop-color="#FF9994" />
-                            <stop offset="0.63" stop-color="#FF9E99" />
-                            <stop offset="0.71" stop-color="#FE9A96" />
-                            <stop offset="0.77" stop-color="#FE918C" />
-                            <stop offset="0.82" stop-color="#FE817D" />
-                            <stop offset="0.87" stop-color="#FD6A66" />
-                            <stop offset="0.91" stop-color="#FC4C4A" />
-                            <stop offset="0.96" stop-color="#FB2827" />
-                            <stop offset="1" stop-color="#FA0000" />
-                        </linearGradient>
-                        <clipPath id="clip0_112_5238">
-                            <rect width="127.562" height="39" fill="white" transform="translate(0 0.5)" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </a>
+    <body>
+        <header>
+            <div class="icon">
+                <a class="ih-menubar_logo" href="#" aria-label="The Site Name" role="menuitem">
+                    <img src='.\images\YingYang-TriColor-Icon.png' height='40' width='40' /> </a>
 
-            <a href="#" class="site-name" role='menuitem' aria-label='Test Application Links'>Test Application Links</a>
-        </div>
-        <div class="title"></div>
-        <nav class='header-menu'>
-            <button class='menu-item has--icon'>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 576 512'>
-                    <path
-                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
-                </svg> Home
-            </button>
-            <button class='menu-item has--icon'>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 576 512'>
-                    <path
-                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
-                </svg> Home
-            </button>
-            <button class='menu-item has--icon'>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 576 512'>
-                    <path
-                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
-                </svg> Home
-            </button>
-            <button class='menu-item has--icon'>
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path
-                        d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z" />
-                </svg> Settings </button>
-        </nav>
-    </header>
-    <div class="menu-list">
-        <div>
-            <h3>Hovers/Animations</h3>
-            <ul>
-                <li><a target="_blank" href="./html/animejs-effects.html">AnimeJS Animation Effects</a></li>
-                <li><a target="_blank" href="./html/animated-cards.html">HTML + CSS Animated Cards</a></li>
-                <li><a target="_blank" href="./html/animated-card-ui-design.html">Animated Card UI Design</a></li>
-                <li><a target="_blank" href="./html/animated-stars.html">Animated Stars Background</a></li>
-                <li><a target="_blank" href="./html/rain-lightning.html">Animated Rain and Lightning Effects</a></li>
-                <li><a target="_blank" href="./html/data-clouds-rain.html">Animated Data Clouds Rain</a></li>
-                <li><a target="_blank" href="./html/css-animation-effects.html">Awesome Animation Effects</a></li>
-                <li><a target="_blank" href="./html/card-hover-effect.html">Card Hover Effect</a></li>
-                <li><a target="_blank" href="./html/card-flip-1.html">Card Hover Effect | 3D Flip</a></li>
-                <li><a target="_blank" href="./html/css-simple-animation.html">Simple CSS Animation Effects</a></li>
-                <li><a target="_blank" href="./html/product-card-hover-effects.html">Product Card Hover Effect</a></li>
-                <li><a target="_blank" href="./html/css-border-animation.html">CSS Border Animation</a></li>
-                <li><a target="_blank" href="./html/css-love.html">HTML CSS Love Animation</a></li>
-                <li><a target="_blank" href="./html/glowing-line-effects.html">Glowing Line Effects</a></li>
-                <li><a target="_blank" href="./html/glowing-corner-loader.html">Glowing Corner Loader Animation</a></li>
-                <li><a target="_blank" href="./html/hover-sections.html">Hover Sections</a></li>
-                <li><a target="_blank" href="./html/icons-hover-effects.html">CSS Icons Hover Effects</a></li>
-                <li><a target="_blank" href="./html/index.html">Charts 1</a></li>
-                <li><a target="_blank" href="./html/Index2.html">Charts 2</a></li>
-                <li><a target="_blank" href="./html/Index3.html">Charts 3</a></li>
-                <li><a target="_blank" href="./html/flashlight-project.html">Flashlight Project</a></li>
-                <li><a target="_blank" href="./html/gallery-hover.html">Gallery Hover</a></li>
-                <li><a target="_blank" href="./html/image-gallery-grid-template-areas.html">CSS Image Gallery using
-                        grid-template-area</a></li>
-                <li><a target="_blank" href="./html/glowing-corner-hover.html">Glowing Corner Hover Effects</a></li>
-                <li><a target="_blank" href="./html/light-switch.html">Light Switch</a></li>
-                <li><a target="_blank" href="./html/css-loading-animation.html">CSS Loader Animation</a></li>
-                <li><a target="_blank" href="./html/css-loading-animation-colors.html">CSS Loader Animation Colors</a>
-                </li>
-                <li><a target="_blank" href="./html/infinite-css-slideshow.html">Infinite CSS 3D Slideshow</a></li>
-                <li><a target="_blank" href="./html/product-card.html">Product Card</a></li>
-                <li><a target="_blank" href="./html/animated-background.html">Animated Background (lines)</a></li>
-                <li><a target="_blank" href="./html/animated-background-2.html">Animated Background (boxes)</a></li>
-                <li><a target="_blank" href="./html/line-stripes-animation.html">Line Stripes Animation</a></li>
-                <li><a target="_blank" href="./html/card-inverted-border.html">Card Inverted Border</a></li>
-                <li><a target="_blank" href="./html/card-effects.html">Sci-fi Card Effect</a></li>
-                <li><a target="_blank" href="./html/inverted-border-card.html">Inverted Border-Radius Card</a></li>
-                <li><a target="_blank" href="./html/image-slider.html">CSS Only Image Slider</a></li>
-                <li><a target="_blank" href="./html/responsive-image-slider.html">Responsive Image Slider</a></li>
-                <li><a target="_blank" href="./html/responsive-services-selection.html">Responsive Services
-                        Selection</a>
-                </li>
-                <li><a target="_blank" href="./html/circle-list-grow.html">Circle List Grow - Kevin Powell</a></li>
-                <li><a target='_blank' href="./html/horizontal-scrolling.html">Horizontal Scrolling</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3>Clocks</h3>
-            <ul>
-                <li><a target="_blank" href="./html/animated-clock.html">Animated Clock</a></li>
-                <li><a target="_blank" href="./html/digital-clock-1.html">Digital Clock</a></li>
-                <li><a target="_blank" href="./html/clock.html">Clock</a></li>
-                <li><a target="_blank" href="./html/countdown-timer.html">Countdown Timer</a></li>
-                <li><a target="_blank" href="./html/mini-calendar.html">Mini Calendar</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3>Wait Symbols</h3>
-            <ul>
-                <li><a target="_blank" href="./html/progress-circle.html">Progress Circle</a></li>
-                <li><a target="_blank" href="./html/infinity-animation-effects.html">Infinity | Animation Effects</a>
-                </li>
-                <li><a target="_blank" href="./html/welcome-screen-preloader.html">Welcome Screen Preloader</a></li>
+                <a href="#" class="site-name" role='menuitem' aria-label='Test Application Links'>Test Application Links</a>
+            </div>
+            <div class="title"></div>
+            <nav class='header-menu'>
+                <!-- <button class='menu-item has--icon'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 576 512'>
+                        <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                    </svg> Home
+                </button>
+                <button class='menu-item has--icon'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 576 512'>
+                        <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                    </svg> Home
+                </button>
+                <button class='menu-item has--icon'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 576 512'>
+                        <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                    </svg> Home
+                </button>
+                <button class='menu-item has--icon'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z" />
+                    </svg> Settings </button> -->
+            </nav>
+        </header>
+        <div class="menu-list">
+            <div>
+                <h3>Hovers/Animations</h3>
+                <ul>
+                    <li><a target="_blank" href="./html/animejs-effects.html">AnimeJS Animation Effects</a></li>
+                    <li><a target="_blank" href="./html/animated-cards.html">HTML + CSS Animated Cards</a></li>
+                    <li><a target="_blank" href="./html/animated-card-ui-design.html">Animated Card UI Design</a></li>
+                    <li><a target="_blank" href="./html/animated-stars.html">Animated Stars Background</a></li>
+                    <li><a target="_blank" href="./html/rain-lightning.html">Animated Rain and Lightning Effects</a></li>
+                    <li><a target="_blank" href="./html/data-clouds-rain.html">Animated Data Clouds Rain</a></li>
+                    <li><a target="_blank" href="./html/css-animation-effects.html">Awesome Animation Effects</a></li>
+                    <li><a target="_blank" href="./html/card-hover-effect.html">Card Hover Effect</a></li>
+                    <li><a target="_blank" href="./html/card-flip-1.html">Card Hover Effect | 3D Flip</a></li>
+                    <li><a target="_blank" href="./html/css-simple-animation.html">Simple CSS Animation Effects</a></li>
+                    <li><a target="_blank" href="./html/product-card-hover-effects.html">Product Card Hover Effect</a></li>
+                    <li><a target="_blank" href="./html/css-border-animation.html">CSS Border Animation</a></li>
+                    <li><a target="_blank" href="./html/css-love.html">HTML CSS Love Animation</a></li>
+                    <li><a target="_blank" href="./html/glowing-line-effects.html">Glowing Line Effects</a></li>
+                    <li><a target="_blank" href="./html/glowing-corner-loader.html">Glowing Corner Loader Animation</a></li>
+                    <li><a target="_blank" href="./html/hover-sections.html">Hover Sections</a></li>
+                    <li><a target="_blank" href="./html/icons-hover-effects.html">CSS Icons Hover Effects</a></li>
+                    <li><a target="_blank" href="./html/index.html">Charts 1</a></li>
+                    <li><a target="_blank" href="./html/Index2.html">Charts 2</a></li>
+                    <li><a target="_blank" href="./html/Index3.html">Charts 3</a></li>
+                    <li><a target="_blank" href="./html/flashlight-project.html">Flashlight Project</a></li>
+                    <li><a target="_blank" href="./html/gallery-hover.html">Gallery Hover</a></li>
+                    <li><a target="_blank" href="./html/image-gallery-grid-template-areas.html">CSS Image Gallery using
+                            grid-template-area</a></li>
+                    <li><a target="_blank" href="./html/glowing-corner-hover.html">Glowing Corner Hover Effects</a></li>
+                    <li><a target="_blank" href="./html/light-switch.html">Light Switch</a></li>
+                    <li><a target="_blank" href="./html/css-loading-animation.html">CSS Loader Animation</a></li>
+                    <li><a target="_blank" href="./html/css-loading-animation-colors.html">CSS Loader Animation Colors</a>
+                    </li>
+                    <li><a target="_blank" href="./html/infinite-css-slideshow.html">Infinite CSS 3D Slideshow</a></li>
+                    <li><a target="_blank" href="./html/product-card.html">Product Card</a></li>
+                    <li><a target="_blank" href="./html/animated-background.html">Animated Background (lines)</a></li>
+                    <li><a target="_blank" href="./html/animated-background-2.html">Animated Background (boxes)</a></li>
+                    <li><a target="_blank" href="./html/line-stripes-animation.html">Line Stripes Animation</a></li>
+                    <li><a target="_blank" href="./html/card-inverted-border.html">Card Inverted Border</a></li>
+                    <li><a target="_blank" href="./html/card-effects.html">Sci-fi Card Effect</a></li>
+                    <li><a target="_blank" href="./html/inverted-border-card.html">Inverted Border-Radius Card</a></li>
+                    <li><a target="_blank" href="./html/image-slider.html">CSS Only Image Slider</a></li>
+                    <li><a target="_blank" href="./html/responsive-image-slider.html">Responsive Image Slider</a></li>
+                    <li><a target="_blank" href="./html/responsive-services-selection.html">Responsive Services
+                            Selection</a>
+                    </li>
+                    <li><a target="_blank" href="./html/circle-list-grow.html">Circle List Grow - Kevin Powell</a></li>
+                    <li><a target='_blank' href="./html/horizontal-scrolling.html">Horizontal Scrolling</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Clocks</h3>
+                <ul>
+                    <li><a target="_blank" href="./html/animated-clock.html">Animated Clock</a></li>
+                    <li><a target="_blank" href="./html/digital-clock-1.html">Digital Clock</a></li>
+                    <li><a target="_blank" href="./html/clock.html">Clock</a></li>
+                    <li><a target="_blank" href="./html/countdown-timer.html">Countdown Timer</a></li>
+                    <li><a target="_blank" href="./html/mini-calendar.html">Mini Calendar</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Wait Symbols</h3>
+                <ul>
+                    <li><a target="_blank" href="./html/progress-circle.html">Progress Circle</a></li>
+                    <li><a target="_blank" href="./html/infinity-animation-effects.html">Infinity | Animation Effects</a>
+                    </li>
+                    <li><a target="_blank" href="./html/welcome-screen-preloader.html">Welcome Screen Preloader</a></li>
 
-            </ul>
-        </div>
-        <div>
-            <h3>Menus/Links</h3>
-            <ul>
-                <li><a target="_blank" href="./html/animated-menu.html">Animated Menu</a></li>
-                <li><a target="_blank" href="./html/animated-menu-indicator.html">Animated Sliding Menu Indicator</a>
-                </li>
-                <li><a target="_blank" href="./html/animated-tab-bar-nav.html">Animated Tab Bar Navigation</a></li>
-                <li><a target="_blank" href="./html/radial-octagon-menu.html">Animated Octagon Menu</a></li>
-                <li><a target="_blank" href="./html/menu-hover-effects.html">Menu Hover Effects</a></li>
-                <li><a target="_blank" href="./html/menu-hover-effects-2.html">Modern Menu Hover Effects</a></li>
-                <li><a target="_blank" href="./html/menu-hover-effects-3.html">Menu Hover Effects 2</a></li>
-                <li><a target="_blank" href="./html/creative-menu-animation-effects.html">Menu Hover Effects 3</a></li>
-                <li><a target="_blank" href="./html/menu-change-on-scroll.html">Menu Change on Scroll</a></li>
-                <li><a target="_blank" href="./html/socialmedia-icons-hover-effects.html">Social Media Menu Hover
-                        Effects
-                        2</a></li>
-                <li><a target="_blank" href="./html/drop-down-menu.html">Dynamic Drop Down Menu</a></li>
-                <li><a target="_blank" href="./html/scrollspy-menu.html">Scrollspy Menu</a></li>
-                <li><a target="_blank" href="./html/navigation.html">Navigation 1</a></li>
-                <li><a target="_blank" href="./html/nav2.html">Navigation 2</a></li>
-                <li><a target="_blank" href="./html/modern-navigation-home-kp.html">Modern Navigation Kevin Powell</a>
-                </li>
-                <li><a target="_blank" href="./html/navigation-3.html">Navigation 3</a></li>
-                <li><a target="_blank" href="./html/navigation-4.html">Navigation 4</a></li>
-                <li><a target="_blank" href="./html/sidebar-nav.html">Navigation Sidebar</a></li>
-                <li><a target="_blank" href="./html/sidebar-menu.html">Dashboard Navigation Sidebar</a></li>
-                <li><a target="_blank" href="./html/tab-navigation.html">Navigation Tab</a></li>
-                <li><a target="_blank" href="./html/nav-3.html">Magic Navigation</a></li>
-                <li><a target="_blank" href="./html/responsive-tab-menu.html">Responsive Navigation Bar</a></li>
-                <li><a target="_blank" href="./html/css-only-nav-tab.html">CSS Only Nav Tab</a></li>
-                <li><a target="_blank" href="./html/nine-dots-menu.html">9 Dots Menu</a></li>
-                <li><a target="_blank" href="./html/slider-menu.html">Slider Menu</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3>Site Designs</h3>
-            <ul>
-                <li><a target="_blank" href="./html/animated-footer.html">Animated Footer</a></li>
-                <li><a target="_blank" href="./html/animated-team-page.html">Animated Team Page</a></li>
-                <li><a target="_blank" href="./html/bullet-points-big.html">Bullet Points Design</a></li>
-                <li><a target="_blank" href="./html/button-change.html">Button Change</a></li>
-                <li><a target="_blank" href="./html/dark-mode.html">Dark Mode</a></li>
-                <li><a target="_blank" href="./html/split-menu-test1.html">Split Menu</a></li>
-                <li><a target="_blank" href="./html/split-menu-test-2.html">Split Menu 2</a></li>
-                <li><a target="_blank" href="./html/sticky-header.html">CSS Sticky Header</a></li>
-                <li><a target="_blank" href="./html/parallax.html">Parallax</a></li>
-                <li><a target="_blank" href="./html/popup.html">Popup</a></li>
-                <li><a target="_blank" href="./html/profile-card.html">Profile Card</a></li>
-                <li><a target="_blank" href="./html/html-objects-styling-test.html">Html Objects Styling Test</a></li>
-                <li><a target="_blank" href="./html/TableModule.html">Table (jQuery)</a></li>
-                <li><a target="_blank" href="./html/grocery-list.html">Grocery List</a></li>
-                <li><a target="_blank" href="./html/scroll-to-reveal.html">Scroll To Reveal</a></li>
-                <li><a target="_blank" href="./html/infinite-scroll.html">Infinite Scroll Animation</a></li>
-                <li><a target="_blank" href="./html/text-fill-hover-effects.html">Creative Fill Text Hover Effects</a>
-                </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Menus/Links</h3>
+                <ul>
+                    <li><a target="_blank" href="./html/animated-menu.html">Animated Menu</a></li>
+                    <li><a target="_blank" href="./html/animated-menu-indicator.html">Animated Sliding Menu Indicator</a>
+                    </li>
+                    <li><a target="_blank" href="./html/animated-tab-bar-nav.html">Animated Tab Bar Navigation</a></li>
+                    <li><a target="_blank" href="./html/radial-octagon-menu.html">Animated Octagon Menu</a></li>
+                    <li><a target="_blank" href="./html/menu-hover-effects.html">Menu Hover Effects</a></li>
+                    <li><a target="_blank" href="./html/menu-hover-effects-2.html">Modern Menu Hover Effects</a></li>
+                    <li><a target="_blank" href="./html/menu-hover-effects-3.html">Menu Hover Effects 2</a></li>
+                    <li><a target="_blank" href="./html/creative-menu-animation-effects.html">Menu Hover Effects 3</a></li>
+                    <li><a target="_blank" href="./html/menu-change-on-scroll.html">Menu Change on Scroll</a></li>
+                    <li><a target="_blank" href="./html/socialmedia-icons-hover-effects.html">Social Media Menu Hover
+                            Effects
+                            2</a></li>
+                    <li><a target="_blank" href="./html/drop-down-menu.html">Dynamic Drop Down Menu</a></li>
+                    <li><a target="_blank" href="./html/scrollspy-menu.html">Scrollspy Menu</a></li>
+                    <li><a target="_blank" href="./html/navigation.html">Navigation 1</a></li>
+                    <li><a target="_blank" href="./html/nav2.html">Navigation 2</a></li>
+                    <li><a target="_blank" href="./html/modern-navigation-home-kp.html">Modern Navigation Kevin Powell</a>
+                    </li>
+                    <li><a target="_blank" href="./html/navigation-3.html">Navigation 3</a></li>
+                    <li><a target="_blank" href="./html/navigation-4.html">Navigation 4</a></li>
+                    <li><a target="_blank" href="./html/sidebar-nav.html">Navigation Sidebar</a></li>
+                    <li><a target="_blank" href="./html/sidebar-menu.html">Dashboard Navigation Sidebar</a></li>
+                    <li><a target="_blank" href="./html/tab-navigation.html">Navigation Tab</a></li>
+                    <li><a target="_blank" href="./html/nav-3.html">Magic Navigation</a></li>
+                    <li><a target="_blank" href="./html/responsive-tab-menu.html">Responsive Navigation Bar</a></li>
+                    <li><a target="_blank" href="./html/css-only-nav-tab.html">CSS Only Nav Tab</a></li>
+                    <li><a target="_blank" href="./html/nine-dots-menu.html">9 Dots Menu</a></li>
+                    <li><a target="_blank" href="./html/slider-menu.html">Slider Menu</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Site Designs</h3>
+                <ul>
+                    <li><a target="_blank" href="./html/animated-footer.html">Animated Footer</a></li>
+                    <li><a target="_blank" href="./html/animated-team-page.html">Animated Team Page</a></li>
+                    <li><a target="_blank" href="./html/bullet-points-big.html">Bullet Points Design</a></li>
+                    <li><a target="_blank" href="./html/button-change.html">Button Change</a></li>
+                    <li><a target="_blank" href="./html/dark-mode.html">Dark Mode</a></li>
+                    <li><a target="_blank" href="./html/split-menu-test1.html">Split Menu</a></li>
+                    <li><a target="_blank" href="./html/split-menu-test-2.html">Split Menu 2</a></li>
+                    <li><a target="_blank" href="./html/sticky-header.html">CSS Sticky Header</a></li>
+                    <li><a target="_blank" href="./html/parallax.html">Parallax</a></li>
+                    <li><a target="_blank" href="./html/popup.html">Popup</a></li>
+                    <li><a target="_blank" href="./html/profile-card.html">Profile Card</a></li>
+                    <li><a target="_blank" href="./html/html-objects-styling-test.html">Html Objects Styling Test</a></li>
+                    <li><a target="_blank" href="./html/TableModule.html">Table (jQuery)</a></li>
+                    <li><a target="_blank" href="./html/grocery-list.html">Grocery List</a></li>
+                    <li><a target="_blank" href="./html/scroll-to-reveal.html">Scroll To Reveal</a></li>
+                    <li><a target="_blank" href="./html/infinite-scroll.html">Infinite Scroll Animation</a></li>
+                    <li><a target="_blank" href="./html/text-fill-hover-effects.html">Creative Fill Text Hover Effects</a>
+                    </li>
 
-            </ul>
-        </div>
-        <div>
-            <h3>Glassmorphism</h3>
-            <ul>
-                <li><a target="_blank" href="./html/glassmorphism-card-hover-effects.html">Glassmorphism Card Hover
-                        Effect</a></li>
-                <li><a target="_blank" href="./html/glassmorphism-list-hover-effects.html">Glassmorphism List Hover
-                        Effect</a></li>
-                <li><a target="_blank" href="./html/glass.html">Glass</a></li>
-                <li><a target="_blank" href="./html/glassmorphism-social-media-share.html">Glassmorphism Social Media
-                        Share
-                        Button</a></li>
-                <li><a target="_blank" href="./html/clarity-glass-animation-effects.html">CSS Only Clarity Glass
-                        Animation
-                        Effects</a></li>
-                <li><a target="_blank" href="./html/glassmorphism-card-effects.html">Real Glassmorphism Card Hover
-                        Effets</a></li>
-                <li><a target="_blank" href="./html/glassmorphism-login.html">Login / Registration</a></li>
-                <li><a target="_blank" href="./html/glassmorphism-cards.html">CSS Glassmorphism Cards Hover Effects</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h3>Misc</h3>
-            <ul>
-                <li><a target="_blank" href="./html/file-upload-test.html">File Upload Test</a></li>
-                <li><a target="_blank" href="./html/Font-size-test.html">Font-Size Test</a></li>
-                <li><a target="_blank" href="./html/input-field.html">Input Field</a></li>
-                <li><a target="_blank" href="./html/search-box.html">Search Box</a></li>
-                <li><a target="_blank" href="./html/creative-text-loading.html">CSS Text Animation Effects</a></li>
-                <li><a href="./html/creative-radio-buttons.html" target="_blank" rel="noopener noreferrer">Creative
-                        Radio Buttons</a></li>
-                <li><a href="./html/timeline-display.html" target='_blank' rel='noopener noreferrer'>Timeline
-                        Display</a></li>
-                <li><a href="./html/timline-display-alternate.html" target='_blank' rel='noopener noreferrer'>Timeline
-                        Display Alternate</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Glassmorphism</h3>
+                <ul>
+                    <li><a target="_blank" href="./html/glassmorphism-card-hover-effects.html">Glassmorphism Card Hover
+                            Effect</a></li>
+                    <li><a target="_blank" href="./html/glassmorphism-list-hover-effects.html">Glassmorphism List Hover
+                            Effect</a></li>
+                    <li><a target="_blank" href="./html/glass.html">Glass</a></li>
+                    <li><a target="_blank" href="./html/glassmorphism-social-media-share.html">Glassmorphism Social Media
+                            Share
+                            Button</a></li>
+                    <li><a target="_blank" href="./html/clarity-glass-animation-effects.html">CSS Only Clarity Glass
+                            Animation
+                            Effects</a></li>
+                    <li><a target="_blank" href="./html/glassmorphism-card-effects.html">Real Glassmorphism Card Hover
+                            Effets</a></li>
+                    <li><a target="_blank" href="./html/glassmorphism-login.html">Login / Registration</a></li>
+                    <li><a target="_blank" href="./html/glassmorphism-cards.html">CSS Glassmorphism Cards Hover Effects</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Misc</h3>
+                <ul>
+                    <li><a target="_blank" href="./html/file-upload-test.html">File Upload Test</a></li>
+                    <li><a target="_blank" href="./html/Font-size-test.html">Font-Size Test</a></li>
+                    <li><a target="_blank" href="./html/input-field.html">Input Field</a></li>
+                    <li><a target="_blank" href="./html/search-box.html">Search Box</a></li>
+                    <li><a target="_blank" href="./html/creative-text-loading.html">CSS Text Animation Effects</a></li>
+                    <li><a href="./html/creative-radio-buttons.html" target="_blank" rel="noopener noreferrer">Creative
+                            Radio Buttons</a></li>
+                    <li><a href="./html/timeline-display.html" target='_blank' rel='noopener noreferrer'>Timeline
+                            Display</a></li>
+                    <li><a href="./html/timline-display-alternate.html" target='_blank' rel='noopener noreferrer'>Timeline
+                            Display Alternate</a></li>
 
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <footer>
-        <nav class='footer-menu'>
-            <img src="images/Logos/ih-logo-156x48-on-dark.png" alt="">
-        </nav>
-        <div class="footer--sub">
-            <div class="footer--copyright">Copyright © 2024 Intermountain Health, all rights reserved</div>
-            <div class="footer--version">TCR Version 2.0.0</div>
-        </div>
-    </footer>
-</body>
-<script src="https://code.jquery.com/jquery-3.7.0.min.js"
-    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-<script src="../scripts/list-script.js" type="text/javascript"></script>
+        <footer>
+            <nav class='footer-menu'>
+                <img src="images/Logos/ih-logo-156x48-on-dark.png" alt="">
+            </nav>
+            <div class="footer--sub">
+                <div class="footer--copyright">Copyright © 2024 Intermountain Health, all rights reserved</div>
+                <div class="footer--version">TCR Version 2.0.0</div>
+            </div>
+        </footer>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="../scripts/list-script.js" type="text/javascript"></script>
 
 </html>

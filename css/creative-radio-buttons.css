@@ -86,9 +86,7 @@ label {
   font-size: 2em;
 }
 label input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 label input:checked ~ span.check {
   transform: rotate(-45deg) translate(7px, -7px);
