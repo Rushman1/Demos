@@ -79,12 +79,25 @@ body {
   align-items: center;
 }
 
+.spinner-shadow {
+  width: 270px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform: translate(-54%, 13%);
+  filter: blur(10px);
+  opacity: 0.8;
+  animation: shadowHue 6s linear infinite;
+}
+
 .spinner-wrapper {
   display: inline-block;
   position: relative;
   width: 3rem;
   height: 3rem;
-  transform-style: preserve-3d;
+  z-index: 10;
   animation: spin3D 6s linear infinite reverse;
 }
 
@@ -139,5 +152,19 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes shadowHue {
+  0% {
+    background: rgba(255, 0, 0, 0.5);
+  }
+  33% {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  66% {
+    background: rgba(205, 246, 0, 0.817);
+  }
+  100% {
+    background: rgba(255, 0, 0, 0.5);
   }
 }/*# sourceMappingURL=spinning-icon.css.map */
