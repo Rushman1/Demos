@@ -1,0 +1,25 @@
+@import '_base';
+@import '_sccolorslight';
+
+body {
+    background-color: $backgroundColor;
+}
+
+nav {
+    position: fixed;
+    right: 20%;
+    top: 150px;
+
+    & ul {
+        display: flex;
+        gap: 10px;
+
+        & li {
+            list-style: none;
+        }
+    }
+}
+
+#dark_mode {
+    margin: 10px;
+}

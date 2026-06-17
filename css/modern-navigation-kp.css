@@ -1,3 +1,16 @@
+.training-callout {
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 :root {
   --background: hsl(190, 100%, 7%);
   --menu-background: #000;

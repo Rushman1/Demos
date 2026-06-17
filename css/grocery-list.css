@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   display: flex;
@@ -92,7 +92,7 @@ body {
   color: rgba(0, 0, 0, 0.2);
 }
 .container ol li.done p::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 5px;
   right: 35px;
@@ -102,4 +102,16 @@ body {
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
+}
+.training-callout {
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }

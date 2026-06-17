@@ -1,0 +1,73 @@
+@import '_base.scss';
+
+body {
+    background-color: #eeeeea;
+}
+
+.spinner-container {
+    perspective: 800px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    transform-style: preserve-3d;
+    animation: spin3D 6s linear infinite reverse;
+}
+
+.side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+}
+
+.front {
+    transform: translateZ(2px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(2px);
+}
+
+.edge {
+    position: absolute;
+    background: #ccc; // Or something lively!
+    width: 3rem;
+    height: 3rem;
+    transform-style: preserve-3d;
+    border-radius: 50%;
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(1.5rem);
+}
+.left {
+    transform: rotateY(-90deg) translateZ(1.5rem);
+}
+.top {
+    transform: rotateX(90deg) translateZ(1.5rem);
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(1.5rem);
+}
+
+@keyframes spin3D {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

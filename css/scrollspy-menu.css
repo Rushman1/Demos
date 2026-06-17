@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
 section {
@@ -97,7 +97,7 @@ header nav a.active .text {
   transition: 0.5s;
 }
 .indicator::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 5px;
   left: -28px;
@@ -108,7 +108,7 @@ header nav a.active .text {
   box-shadow: 15px 18px white;
 }
 .indicator::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 5px;
   right: -28px;
@@ -132,4 +132,16 @@ header nav a:nth-child(4).active ~ .indicator {
 }
 header nav a:nth-child(5).active ~ .indicator {
   transform: translateX(calc(70px * 4));
+}
+.training-callout {
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }

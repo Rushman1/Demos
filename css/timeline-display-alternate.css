@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
 .training-callout {
+  color: black;
   border: 1px solid lightgray;
   border-radius: 10px;
   width: fit-content;
@@ -245,11 +246,6 @@ p {
   position: relative;
   padding: 5px 0px 5px 10px;
   padding-right: 18px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  flex-direction: column;
-  text-align: end;
 }
 .template-holder > div.outer-template-holder:nth-child(even) > div.inner-template-holder::after {
   content: "";
@@ -271,6 +267,13 @@ p {
   top: 50%;
   left: calc(100% - 5px);
   transform: translateY(-50%);
+}
+.template-holder > div.outer-template-holder:nth-child(even) > div.inner-template-holder {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: end;
 }
 .template-holder > div.outer-template-holder:nth-child(even) > div.inner-template-holder .line-item-template__tags {
   display: flex;

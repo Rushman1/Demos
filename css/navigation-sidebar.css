@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 :root {
   --clr: #14161e;
@@ -39,7 +39,7 @@ body {
   border-bottom-left-radius: 50px;
 }
 .sidebar ul li.active::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -20px;
   right: 0px;
@@ -51,7 +51,7 @@ body {
   box-shadow: 5px 5px 0 5px var(--clr);
 }
 .sidebar ul li.active::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -20px;
   right: 0px;
@@ -96,7 +96,7 @@ body {
   color: white;
 }
 .sidebar ul li.active a .icon::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 5px;
   width: 60px;
@@ -161,7 +161,7 @@ body {
   align-items: center;
 }
 .menuToggle::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 30px;
   height: 3px;
@@ -171,7 +171,7 @@ body {
   transition: 0.5s;
 }
 .menuToggle::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 30px;
   height: 3px;
@@ -185,4 +185,16 @@ body {
 }
 .menuToggle.active::after {
   transform: translateY(0px) rotate(-45deg);
+}
+.training-callout {
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }

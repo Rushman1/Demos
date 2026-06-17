@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 :root {
   --background-color: #151517;
@@ -51,7 +51,7 @@ div#indicator {
   display: none;
 }
 div#indicator::before {
-  content: "";
+  content: '';
   position: absolute;
   left: -30px;
   width: 50px;
@@ -64,7 +64,7 @@ div#indicator::before {
   transition: 0.5s;
 }
 div#indicator::after {
-  content: "";
+  content: '';
   position: absolute;
   right: -30px;
   width: 50px;
@@ -87,4 +87,16 @@ div#indicator.change::after {
   box-shadow: 10px 30px var(--nav-indicator-background),
     20px 60px var(--nav-indicator-background), 15px 15px var(--nav-background),
     25px 45px var(--nav-background);
+}
+.training-callout {
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }

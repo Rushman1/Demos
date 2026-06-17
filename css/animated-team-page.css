@@ -222,6 +222,18 @@ footer .wave#wave4 {
   transition: 0.5s;
 }
 
+.training-callout {
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
 @keyframes animateSquare {
   0% {
     transform: rotate(0deg);

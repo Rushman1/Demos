@@ -122,6 +122,18 @@ footer .wave#wave4 {
   animation: animateWave_02 3s linear infinite;
 }
 
+.training-callout {
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
 @keyframes animateWave {
   0% {
     background-position-x: 1000px;

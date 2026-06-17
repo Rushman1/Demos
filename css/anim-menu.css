@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 62.5%; /* 10 px */
 }
 
@@ -66,11 +66,11 @@ body {
   padding: 0.5rem 2rem;
 }
 .toggle::before {
-  content: "Menu";
+  content: 'Menu';
   margin-right: 1rem;
 }
 .toggle.active::before {
-  content: "Close";
+  content: 'Close';
 }
 .toggle span {
   position: relative;
@@ -78,7 +78,7 @@ body {
   height: 5rem;
 }
 .toggle span::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 2rem;
   left: 0;
@@ -88,7 +88,7 @@ body {
   transition: var(--base-transition);
 }
 .toggle span::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 2rem;
   left: 0;
@@ -135,6 +135,19 @@ ul li a {
   color: var(--font-color);
 }
 ul li a:hover {
-    background: hsl(0, 0%, 96%);
-    transition: 0s;
+  background: hsl(0, 0%, 96%);
+  transition: 0s;
+}
+
+.training-callout {
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
